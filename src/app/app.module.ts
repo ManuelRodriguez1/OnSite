@@ -19,6 +19,7 @@ import { environment } from '../environments/environment';
 //JoinPro
 
 import { RegistroComponent } from './components/JoinPro/registro/registro.component';
+import { SelectComponent } from './components/JoinPro/registro/select/select.component';
 
 //Fin Librerias de autenticaciòn
 @NgModule({
@@ -28,7 +29,8 @@ import { RegistroComponent } from './components/JoinPro/registro/registro.compon
     CrearUsuarioComponent,
     InicioSesionComponent,
     RecordarPasswordComponent,
-    RegistroComponent
+    RegistroComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,

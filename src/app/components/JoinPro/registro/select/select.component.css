@@ -1,0 +1,8 @@
+.arrowd{
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -29,5 +29,15 @@ div,span,p,h1,h2,h3,label,button,input{
 }
 .button{
     float: right;
-    margin-top: 78px;
+}
+.back{
+    float: left;
+}
+.botones{
+    width: 871px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 101px;
+    left: 50%;
+    transform: translateX(-50%);
 }
