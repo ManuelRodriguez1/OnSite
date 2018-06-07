@@ -14,8 +14,11 @@ import { RecordarPasswordComponent } from './components/Login/recordar-password/
 //Inicio Librerias de autenticaciòn
 import * as firebase from 'firebase/app';
 import { environment } from '../environments/environment';
-//import { AngularFireModule } from 'angularfire2';
+// import { AngularFireModule } from 'angularfire2';
 
+//JoinPro
+
+import { RegistroComponent } from './components/JoinPro/registro/registro.component';
 
 //Fin Librerias de autenticaciòn
 @NgModule({
@@ -24,7 +27,8 @@ import { environment } from '../environments/environment';
     LibreriaComponent,
     CrearUsuarioComponent,
     InicioSesionComponent,
-    RecordarPasswordComponent
+    RecordarPasswordComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
