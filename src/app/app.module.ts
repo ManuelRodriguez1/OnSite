@@ -7,18 +7,31 @@ import { LibreriaComponent } from './components/libreria/libreria.component';
 
 //Rutas
 import { app_routing } from './routes/routes';
+import { CrearUsuarioComponent } from './components/Login/crear-usuario/crear-usuario.component';
+import { InicioSesionComponent } from './components/Login/inicio-sesion/inicio-sesion.component';
+import { RecordarPasswordComponent } from './components/Login/recordar-password/recordar-password.component';
+
+//Inicio Librerias de autenticaciòn
+import * as firebase from 'firebase/app';
+import { environment } from '../environments/environment';
+//import { AngularFireModule } from 'angularfire2';
 
 
+//Fin Librerias de autenticaciòn
 @NgModule({
   declarations: [
     AppComponent,
-    LibreriaComponent
+    LibreriaComponent,
+    CrearUsuarioComponent,
+    InicioSesionComponent,
+    RecordarPasswordComponent
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    //AngularFireModule.initializeApp(environment.firebase),
   ],
-  providers: [],
+  //providers: [AuthGuard,AngularFirestore,MatStepperIntl,ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
