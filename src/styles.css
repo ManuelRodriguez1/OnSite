@@ -205,6 +205,11 @@ body{
     line-height: 20px;   
     text-align: center;
     text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+}
+.button:focus{
+    outline: none;
 }
 .span{
     color: #2F80ED;
