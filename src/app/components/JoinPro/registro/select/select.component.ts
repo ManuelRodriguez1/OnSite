@@ -10,7 +10,9 @@ export class SelectComponent implements OnInit {
   
   placeholder = 'Select Skills.';
 
-  list = {"hola1": "hola2"};
+  list = [
+    { "categoria" : "" }
+  ];
   constructor() { }
 
   ngOnInit() {
