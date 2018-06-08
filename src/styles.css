@@ -159,10 +159,11 @@ body{
     font-weight: 600;
 }
 .input{
-    width: 100%;
+    width: calc(100% - 25px);
     height: 45px;
     border: solid 1px #2F80ED;
     color: rgba(0, 0, 0, 0.5);
+    padding: 0;
     padding-left: 23px;
     border-radius: 17px;
     font-size: 20px;
@@ -204,4 +205,14 @@ body{
     line-height: 20px;   
     text-align: center;
     text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+}
+.button:focus{
+    outline: none;
+}
+.span{
+    color: #2F80ED;
+    line-height: 20px;
+    font-size: 16px;
 }

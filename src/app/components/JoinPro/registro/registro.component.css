@@ -1,0 +1,33 @@
+div,span,p,h1,h2,h3,label,button,input{
+    overflow: hidden;
+    position: relative;
+}
+.contenedor{
+    max-width: 871px;
+    margin: 0 auto;
+}
+.t1{
+    margin-top: 112px;
+}
+.cont1{
+    margin-top: 57px;
+}
+.colum{
+    margin-top: 14px;
+    width: 394px;
+}
+.der{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+ .colum{
+    margin-top: 22px;
+}
+.last{
+    width: 100%;
+}
+.button{
+    float: right;
+    margin-top: 78px;
+}

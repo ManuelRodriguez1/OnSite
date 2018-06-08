@@ -23,6 +23,10 @@ import { AuthGuard } from './service/auth.service';
 import { HireComponent } from './components/hire/hire.component';
 import { HeaderComponent } from './components/header/header.component';
 
+//JoinPro
+
+import { RegistroComponent } from './components/JoinPro/registro/registro.component';
+
 //Fin Librerias de autenticaciòn
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import { HeaderComponent } from './components/header/header.component';
     InicioSesionComponent,
     RecordarPasswordComponent,
     HireComponent,
-      HeaderComponent
+    HeaderComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
