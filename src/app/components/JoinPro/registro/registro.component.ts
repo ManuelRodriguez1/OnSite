@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
+  next = 0;
   constructor() { }
 
   ngOnInit() {
   }
 
+  seguir(){
+    this.next++;
+  }
+
+  back(){
+    this.next--;
+  }
+
+  
 }

@@ -1,5 +1,5 @@
-<div class="contenedor">
-
+<div class="contenedor" >
+<section *ngIf="next == 0">
   <div class="t1">
     <h1 class="h1">Tell us more about <label class="label">you.</label></h1>
   </div>
@@ -38,6 +38,18 @@
             <input type="text" class="input" placeholder="Enter city or zipcode.">
         </div>
       </div>
-      <button class="button">Next</button>
-
+  </section>    
+  <section *ngIf="next == 1">
+      <app-select></app-select>
+  </section>
+      
 </div>
+
+<div class="botones">
+    <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
+    <button class="button" (click)="seguir()">Next</button>
+</div>
+
+
+
+  
