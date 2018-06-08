@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LibreriaComponent } from './components/libreria/libreria.component';
 
 //Rutas
-import { app_routing } from './routes/routes';
+import { routes } from './routes/routes';
 import { CrearUsuarioComponent } from './components/Login/crear-usuario/crear-usuario.component';
 import { InicioSesionComponent } from './components/Login/inicio-sesion/inicio-sesion.component';
 import { RecordarPasswordComponent } from './components/Login/recordar-password/recordar-password.component';
@@ -14,8 +14,14 @@ import { RecordarPasswordComponent } from './components/Login/recordar-password/
 //Inicio Librerias de autenticaciòn
 import * as firebase from 'firebase/app';
 import { environment } from '../environments/environment';
-//import { AngularFireModule } from 'angularfire2';
-
+import { HttpModule } from '@angular/http';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthGuard } from './service/auth.service';
+import { HireComponent } from './components/hire/hire.component';
+import { HeaderComponent } from './components/header/header.component';
 
 //Fin Librerias de autenticaciòn
 @NgModule({
@@ -24,12 +30,17 @@ import { environment } from '../environments/environment';
     LibreriaComponent,
     CrearUsuarioComponent,
     InicioSesionComponent,
-    RecordarPasswordComponent
+    RecordarPasswordComponent,
+    HireComponent,
+      HeaderComponent
   ],
   imports: [
     BrowserModule,
-    app_routing,
-    //AngularFireModule.initializeApp(environment.firebase),
+    routes,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   //providers: [AuthGuard,AngularFirestore,MatStepperIntl,ServiceService],
   bootstrap: [AppComponent]

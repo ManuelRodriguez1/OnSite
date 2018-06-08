@@ -1,0 +1,10 @@
+
+  <nav  role="navigation">
+    <div >
+
+      <ul class="">
+        <li *ngIf="Sesion==false"><a routerLink="login">Log In</a></li>
+        <li *ngIf="Sesion" ><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
