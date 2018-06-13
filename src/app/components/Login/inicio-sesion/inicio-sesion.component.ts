@@ -15,7 +15,7 @@ error: any[];
   constructor(public af: AngularFireAuth,private router: Router) {
     this.af.authState.subscribe(authState => {
     if(authState) {
-   this.router.navigateByUrl('/Hire');
+   this.router.navigateByUrl('/registroHire');
     }
     });
    }

@@ -20,13 +20,14 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthGuard } from './service/auth.service';
-import { HireComponent } from './components/hire/hire.component';
+import { HireComponent } from './components/JoinHire/hire.component';
 import { HeaderComponent } from './components/header/header.component';
 
 //JoinPro
 
 import { RegistroComponent } from './components/JoinPro/registro/registro.component';
 import { SelectComponent } from './components/JoinPro/registro/select/select.component';
+import { HomeComponent } from './components/home/home.component';
 
 //Fin Librerias de autenticaciòn
 @NgModule({
@@ -39,7 +40,8 @@ import { SelectComponent } from './components/JoinPro/registro/select/select.com
     HireComponent,
     HeaderComponent,
     RegistroComponent,
-    SelectComponent
+    SelectComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

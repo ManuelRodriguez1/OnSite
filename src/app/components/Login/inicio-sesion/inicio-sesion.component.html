@@ -1,35 +1,30 @@
-<div class="center">
-  <div class="principal">
-    <h5 class="indigo-text">Please, login into your account</h5>
-    <div class="container">
-      <div >
-        <span class="error" *ngIf="error" >{{ error }}</span>
-
-        <form  #formData='ngForm' (ngSubmit)="onSubmit(formData)"  >
-
-          <div >
-            <div>
-              <input class='validate' type='email' (ngModel)="email" name='email' id='email' required/>
-              <label for='email'>Enter your email</label>
-            </div>
-          </div>
-          <div >
-            <div >
-              <input class='validate' type='password'  (ngModel)="password" name='password' id='password' required/>
-              <label for='password'>Enter your password</label>
-            </div>
-            <label style='float: right;'>
-							<a class='pink-text' routerLink='../Recuperar'><b>Forgot Password?</b></a>
-						</label>
-          </div>
-          <br />
-          <div class="principal">
-            <div>
-              <button type='submit' name='btn_login' [disabled]="!formData.valid" >Log in</button>
-            </div>
-          </div>
-        </form>
+<div class="LoginCaja">
+<div class="LoginCaja2">
+  <form  #formData='ngForm' (ngSubmit)="onSubmit(formData)"  >
+    <div class="logoLogin">
+    </div>
+    <div >
+      <div>
+        <input class='validate' id="exampleInputEmail1"  type='email' (ngModel)="email" name='email'  placeholder="Username" required/>
       </div>
     </div>
-  </div>
+    <div >
+      <div >
+        <input class='validate' type='password' id="exampleInputPassword1" (ngModel)="password" name='password'   placeholder="Password" required/>
+      </div>
+      <label>
+        <a class='forgpass' routerLink='../Recuperar'><b>Forgot Password?</b></a>
+      </label>
+    </div>
+    <br />
+    <div class="principal">
+      <div>
+        <button  [disabled]="!formData.valid" class="button btnrigh">Login</button>
+      </div>
+    </div>
+      <!--span class="error" *ngIf="error" >ewdrqefewfwe{{ error }}</span-->
+  </form>
+
+  <span class="error" *ngIf="error" >{{ error }}</span>
+</div>
 </div>
