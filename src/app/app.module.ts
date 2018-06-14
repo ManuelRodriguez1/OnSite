@@ -7,7 +7,7 @@ import { LibreriaComponent } from './components/libreria/libreria.component';
 
 //Rutas
 import { routes } from './routes/routes';
-import { CrearUsuarioComponent } from './components/Login/crear-usuario/crear-usuario.component';
+//import { CrearUsuarioComponent } from './components/Login/crear-usuario/crear-usuario.component';
 import { InicioSesionComponent } from './components/Login/inicio-sesion/inicio-sesion.component';
 import { RecordarPasswordComponent } from './components/Login/recordar-password/recordar-password.component';
 
@@ -15,6 +15,9 @@ import { RecordarPasswordComponent } from './components/Login/recordar-password/
 import * as firebase from 'firebase/app';
 import { environment } from '../environments/environment';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
@@ -28,22 +31,26 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegistroComponent } from './components/JoinPro/registro/registro.component';
 import { SelectComponent } from './components/JoinPro/registro/select/select.component';
 import { HomeComponent } from './components/home/home.component';
+import { HirePriComponent } from './components/hire-pri/hire-pri.component';
 
 //Fin Librerias de autenticaciòn
 @NgModule({
   declarations: [
     AppComponent,
     LibreriaComponent,
-    CrearUsuarioComponent,
+  //  CrearUsuarioComponent,
     InicioSesionComponent,
     RecordarPasswordComponent,
     HireComponent,
     HeaderComponent,
     RegistroComponent,
     SelectComponent,
-    HomeComponent
+    HomeComponent,
+    HirePriComponent
   ],
   imports: [
+    HttpModule,
+    HttpClientModule,
     BrowserModule,
     routes,
     FormsModule,

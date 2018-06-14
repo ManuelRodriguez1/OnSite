@@ -9,7 +9,8 @@ export class AppComponent implements OnInit {
   title = 'app';
 
 
-  ngOnInit() {  var concc=1;
+  ngOnInit() {
+    /*  var concc=1;
     $(document).ready(function(){
 
           $(".btn111").click(function(){
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
             }
 
           });
-      });
+      });*/
     }
+
 }

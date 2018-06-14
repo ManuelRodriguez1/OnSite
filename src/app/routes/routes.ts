@@ -1,7 +1,8 @@
 
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrearUsuarioComponent } from '../components/Login/crear-usuario/crear-usuario.component';
+//import { CrearUsuarioComponent } from '../components/Login/crear-usuario/crear-usuario.component';
+import { HirePriComponent} from '../components/hire-pri/hire-pri.component';
 import { InicioSesionComponent } from '../components/Login/inicio-sesion/inicio-sesion.component';
 import { LibreriaComponent } from '../components/libreria/libreria.component';
 import { HireComponent } from '../components/JoinHire/hire.component';
@@ -11,7 +12,7 @@ import { HomeComponent } from '../components/home/home.component';
 import { RegistroComponent } from '../components/JoinPro/registro/registro.component';
 export const router: Routes = [
   { path: 'libreria', component: LibreriaComponent },
-  { path: 'Registry', component: CrearUsuarioComponent },
+  { path: 'HirePriComponent', component: HirePriComponent },
   { path: 'login', component: InicioSesionComponent },
   { path: 'registroHire', component: HireComponent },
   { path: 'registroPro', component: RegistroComponent },
