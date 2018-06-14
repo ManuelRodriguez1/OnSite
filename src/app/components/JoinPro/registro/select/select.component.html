@@ -4,14 +4,51 @@
     </div>
 
     <div class="colum last">
-        <input type="text" readonly class="input" placeholder="{{placeholder}}">
+        <input type="text" (click)="menu()" readonly class="input" placeholder="{{placeholder}}">
 
-        <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15">
+        <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
 
     </div>
     
-    <div class="list">
-      <div class="seleccion"></div>
+    <div class="list" [ngClass]="aparecer">
+      <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.categorias)">
+        <p>{{l.categorias}}</p>
+      </div>
+    </div>
+
+    <div class="selecciones" *ngIf="skill != ''">
+      <div class="tags">
+        <p>{{skill}}</p>
+        <div class="x" (click)="cerrar()"></div>
+      </div>
     </div>
 
 
+    <div class="t1" *ngIf="skill != ''">
+        <h1 class="h1">Let’s get <label class="label">specific.</label></h1>
+      </div>
+
+      <div class="colum last" *ngIf="skill != ''">
+          <input type="text" (click)="menu2()" readonly class="input" placeholder="What {{skill}} skills do you have?">
+  
+          <img (click)="menu2()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar2">
+  
+      </div>
+
+      <div class="list" [ngClass]="aparecer2" *ngIf="skill != ''">
+          <div class="seleccion" *ngFor="let l of list2" (click)="almacenar2(l.especifico)">
+            <p>{{l.especifico}}</p>
+          </div>
+        </div>
+
+        <div class="selecciones" *ngIf="skill2 != ''">
+            <div class="tags">
+                <p>{{skill}}</p>
+                <div class="x" (click)="cerrar()"></div>
+              </div>
+          <div class="tagswhite">
+            <p>{{skill2}}</p>
+            <div class="x" (click)="cerrar2()"></div>
+          </div>
+          <span>Average rate: $10-12/hour</span>
+        </div>

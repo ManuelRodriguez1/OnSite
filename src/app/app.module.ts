@@ -12,16 +12,19 @@ import { InicioSesionComponent } from './components/Login/inicio-sesion/inicio-s
 import { RecordarPasswordComponent } from './components/Login/recordar-password/recordar-password.component';
 
 //Inicio Librerias de autenticaciòn
-import * as firebase from 'firebase/app';
+// import * as firebase from 'firebase/app';
 import { environment } from '../environments/environment';
-import { HttpModule } from '@angular/http';
-import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
+
+// import { HttpModule } from '@angular/http';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+// import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AuthGuard } from './service/auth.service';
+// import { AuthGuard } from './service/auth.service';
 import { HireComponent } from './components/hire/hire.component';
 import { HeaderComponent } from './components/header/header.component';
+
 
 //JoinPro
 
@@ -29,6 +32,14 @@ import { RegistroComponent } from './components/JoinPro/registro/registro.compon
 import { SelectComponent } from './components/JoinPro/registro/select/select.component';
 
 //Fin Librerias de autenticaciòn
+
+//Servicio
+
+import { ServiceService } from './service/service.service';
+import { ReviewsComponent } from './components/JoinPro/registro/reviews/reviews.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +50,9 @@ import { SelectComponent } from './components/JoinPro/registro/select/select.com
     HireComponent,
     HeaderComponent,
     RegistroComponent,
-    SelectComponent
+    SelectComponent,
+    ReviewsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -48,8 +61,10 @@ import { SelectComponent } from './components/JoinPro/registro/select/select.com
     ReactiveFormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   //providers: [AuthGuard,AngularFirestore,MatStepperIntl,ServiceService],
+  providers:[ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

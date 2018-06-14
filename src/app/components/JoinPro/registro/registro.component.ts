@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { SelectComponent } from './select/select.component';
+import { selector } from 'rxjs/operator/publish';
 
 @Component({
   selector: 'app-registro',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+
+  @ViewChild(SelectComponent) select: SelectComponent;
 
   next = 0;
   constructor() { }
@@ -18,6 +22,10 @@ export class RegistroComponent implements OnInit {
   }
 
   back(){
+    this.next--;
+  }
+
+  cerrar(){
     this.next--;
   }
 
