@@ -22,7 +22,9 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 // import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 // import { AuthGuard } from './service/auth.service';
-import { HireComponent } from './components/hire/hire.component';
+
+import { AuthGuard } from './service/auth.service';
+import { HireComponent } from './components/JoinHire/hire.component';
 import { HeaderComponent } from './components/header/header.component';
 
 
@@ -30,6 +32,7 @@ import { HeaderComponent } from './components/header/header.component';
 
 import { RegistroComponent } from './components/JoinPro/registro/registro.component';
 import { SelectComponent } from './components/JoinPro/registro/select/select.component';
+import { HomeComponent } from './components/home/home.component';
 
 //Fin Librerias de autenticaciòn
 
@@ -52,7 +55,7 @@ import { ReviewsComponent } from './components/JoinPro/registro/reviews/reviews.
     RegistroComponent,
     SelectComponent,
     ReviewsComponent,
-    
+    HomeComponent
   ],
   imports: [
     BrowserModule,

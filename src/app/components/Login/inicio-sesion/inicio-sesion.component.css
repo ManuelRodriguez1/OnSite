@@ -1,0 +1,109 @@
+
+#exampleInputEmail1,#exampleInputPassword1{
+  outline: 0;
+  height:  43px;
+  font-family:  "Archivo";
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 17px;
+  width: 98%;
+  color: rgba(0, 0, 0, 0.5);
+  border-color: transparent;
+  margin-top: 25px;
+  padding-left: 20px;
+padding-right: 20px;
+width: calc(311px - 40px);
+}
+#exampleInputEmail1{
+margin-top: 50px !important;
+}
+
+.LoginCaja{
+  width: 430px;
+  height: 100%;
+  background: #E0E0E0;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  left: -450px;
+box-shadow: 10px 4px 21px rgba(0, 0, 0, 0.46);
+}
+.LoginCaja2{
+  position: absolute;
+overflow: hidden;
+width: 315px;
+height: 550px;
+   margin-top: 45px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.logoLogin{
+ background-image: url("/../../../../assets/login/Profile_IMage.png");
+  width: 101px;
+  height:101px;
+  left: 50%;
+transform: translateX(-50%);
+position: relative;
+}
+
+
+:focus {
+outline: 0;
+}
+
+.forgpass{
+  font-family: "Archivo";
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+  position: absolute;
+}
+.formXgroup{
+  margin-top: 50px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btnrigh{
+right: 0;
+position: absolute;
+margin-top: 52px;
+}
+
+.forgpass{
+  font-family: "Archivo";
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btnPrincipal1{
+  left:0px;
+  -webkit-animation: btnPrincipal 0.5s ease;
+  animation: btnPrincipal 0.5s ease-out;
+}
+.btnPrincipal2{
+  left:-450px;
+  -webkit-animation: btnPrincipal2 0.5s ease;
+  animation: btnPrincipal2 0.5s ease-out;
+}
+.error{
+  bottom: 0;
+position: absolute;
+}
+@keyframes btnPrincipal {
+    from {left: -450px;}
+    to {left: 0px;}
+}
+@keyframes btnPrincipal2 {
+    from {left: 0px;}
+    to {left: -450px;}
+}
+.form-control:focus{
+  box-shadow: none !important;
+  border-color: none;
+}

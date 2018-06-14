@@ -203,10 +203,12 @@ body{
     font-weight: bold;
     font-size: 18px;
     line-height: 20px;   
+    line-height: 20px;
     text-align: center;
     text-transform: capitalize;
     cursor: pointer;
     border: none;
+    font-family: "Archivo";
 }
 .button:focus{
     outline: none;
