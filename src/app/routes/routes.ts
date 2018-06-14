@@ -10,13 +10,14 @@ import { AuthGuard } from '../service/auth.service';
 import { HomeComponent } from '../components/home/home.component';
 //JoinPro
 import { RegistroComponent } from '../components/JoinPro/registro/registro.component';
+
 export const router: Routes = [
   { path: 'libreria', component: LibreriaComponent },
   { path: 'HirePriComponent', component: HirePriComponent },
   { path: 'login', component: InicioSesionComponent },
   { path: 'registroHire', component: HireComponent },
   { path: 'registroPro', component: RegistroComponent },
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent }
     //  { path: 'members', component: AuthGuard, canActivate: [AuthGuard] }//login
    ]
 
