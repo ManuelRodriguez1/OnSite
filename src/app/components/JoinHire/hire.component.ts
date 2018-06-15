@@ -3,8 +3,6 @@ import * as firebase from 'firebase/app';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
 
-//import { HttpClientModule } from '@angular/common/http'; import { HttpModule } from '@angular/http'; se agrega en app modulos
-
 
 @Component({
   selector: 'app-hire',
