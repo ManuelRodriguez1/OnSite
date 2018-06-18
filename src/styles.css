@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i');
+/* @import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i'); */
 /*Reset*/
 
 html,
@@ -229,7 +229,7 @@ body{
     box-shadow: 3px 1px 24px -3px black;
     cursor: pointer;
 }
-.xblue{
+.xblue, .xcruz{
     width: 27px;
     height: 27px;
     border-radius: 50%;
@@ -239,6 +239,9 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+}
+.xcruz{
+    background-image: url('./assets/icons/cruz.png');
 }
 .tagswhite{
     width: 227px;
