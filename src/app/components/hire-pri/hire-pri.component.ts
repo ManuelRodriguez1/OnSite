@@ -3,6 +3,7 @@ import { Component, OnInit,AfterViewInit} from '@angular/core';
   import * as firebase from 'firebase/app';
   import { Router } from '@angular/router';
   import * as $ from 'jquery';
+  declare var Swiper: any;
 
 @Component({
   selector: 'app-hire-pri',
@@ -10,7 +11,7 @@ import { Component, OnInit,AfterViewInit} from '@angular/core';
   styleUrls: ['./hire-pri.component.css','../JoinPro/registro/select/select.component.css']
 })
 export class HirePriComponent implements AfterViewInit {
-     mySwiper: Swiper;
+     mySwiper = Swiper;
       Sesion = true;
       constructor(public af: AngularFireAuth,private router: Router) {
         this.af.authState.subscribe(auth => {
