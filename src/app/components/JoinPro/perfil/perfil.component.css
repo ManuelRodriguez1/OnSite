@@ -1,0 +1,86 @@
+.menu{
+    width: 225px;
+    box-shadow: 12px 1px 18px rgba(0, 0, 0, 0.46);
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+}
+.perfil{
+    margin-top: 25px;
+    text-align: center;
+}
+.imagen{
+    width: 71px;
+    height: 71px;
+    margin: 0 auto;
+    background-image: url('../../../../assets/login/blueprofileicon.png')
+}
+.perfil p{
+    margin-top: 13px;
+    line-height: 20px;
+    color: #2F80ED;
+    font-size: 11px;
+}
+.perfil label{
+    margin-top: 8px;
+    font-size: 8px;
+    position: relative;
+    left: 7px;
+}
+.perfil label::before{
+    content: '';
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: -17px;
+    top: -3px;
+    background-image: url('../../../../assets/icons/check.png');
+}
+.opciones{
+    margin-top: 8px;
+}
+.opcion{
+    height: 31px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 31px;
+    color: #2F80ED;
+    cursor: pointer;
+    position: relative;
+}
+.opcion p{
+    margin-left: 29px;
+}
+.opcion::after{
+    content: '';
+    position: absolute;
+    right: 23px;
+    top: 9px;
+    width: 12px;
+    height: 12px;
+    background-image: url('../../../../assets/icons/miniflechaAzul.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.opcion:hover{
+    background-color: #2F80ED;
+    color: white;
+}
+.opcion:hover::after{
+    background-image: url('../../../../assets/icons/arrowwhite.png');
+}
+.select{
+    background-color: #2F80ED;
+    color: white;
+}
+.select::after{
+    background-image: url('../../../../assets/icons/arrowwhite.png');
+}
+.content{
+    margin-left: 225px;
+    background-color: #E0E0E0;
+    position: fixed;
+    width: calc(100% - 225px);
+    overflow: hidden;
+    height: 100%;
+}
