@@ -1,0 +1,88 @@
+.contenedor{
+    margin: 0 auto;
+    margin-top: 88px;
+    width: 868px;
+}
+.t1{
+    overflow: hidden;
+}
+.text{
+    float: left;
+    font-size: 40px;
+    line-height: 45px;
+}
+.search{
+    float: right;
+    width: 534px;
+}
+.chat{
+    margin-top: 67px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 17px;
+    height: 401px;
+}
+.column1{
+    width: 336px;
+    float: left;
+}
+.column2{
+    width: 539px;
+    float: right;
+}
+.people{
+    border-bottom: #BDBDBD solid 1px;
+}
+.first{
+    color: #2F80ED;
+    font-size: 18px;
+    line-height: 45px;
+    margin-top: 16px;
+    margin-left: 31px;
+}
+.perfil{
+    margin-top: 9px;
+    margin-left: 31px;
+    overflow: hidden;
+    margin-bottom: 11px;
+}
+.image{
+    width: 41px;
+    height: 41px;
+    float: left;
+    background-color: gray;
+    border-radius: 50%;
+}
+.datos{
+    float: left;
+    margin-left: 10px;
+}
+.second{
+    font-size: 14px;
+}
+.disp{
+    margin-top: 11px;
+    position: relative;
+}
+.color{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+.third{
+    font-size: 12px;
+    color: #828282;
+    margin-left: 18px;
+    line-height: 17px;
+}
+.green{
+    background-color: #219653;
+}
+.red{
+    background-color: #F30000;
+}
+.yellow{
+    background-color: #F2C94C;
+}

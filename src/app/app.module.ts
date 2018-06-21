@@ -47,6 +47,7 @@ import { ServiceService } from './service/service.service';
 import { ReviewsComponent } from './components/JoinPro/registro/reviews/reviews.component';
 import { PerfilComponent } from './components/JoinPro/perfil/perfil.component';
 import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.component';
+import { InboxComponent } from './components/JoinPro/perfil/inbox/inbox.component';
 
 
 
@@ -66,7 +67,8 @@ import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.co
     HirePriComponent,
     ReviewsComponent,
     PerfilComponent,
-    HomeproComponent
+    HomeproComponent,
+    InboxComponent
 
   ],
   imports: [
