@@ -4,6 +4,7 @@
     overflow: hidden;
     position: fixed;
     height: 100%;
+    z-index: 1;
 }
 .perfil{
     margin-top: 25px;
@@ -13,7 +14,7 @@
     width: 71px;
     height: 71px;
     margin: 0 auto;
-    background-image: url('../../../../assets/login/blueprofileicon.png')
+    background-image: url('../../../../assets/login/blueprofileicon.svg');
 }
 .perfil p{
     margin-top: 13px;
