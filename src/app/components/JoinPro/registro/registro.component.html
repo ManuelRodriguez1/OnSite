@@ -52,7 +52,7 @@
 
 <div class="botones">
     <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
-    <button class="button" (click)="seguir()">Next</button>
+    <button class="button" (click)="seguir()"><label *ngIf="next < 3">Next</label><label *ngIf="next == 3">Finish</label></button>
 </div>
 
 <div class="modal" *ngIf="next == 2">
