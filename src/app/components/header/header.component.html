@@ -1,10 +1,12 @@
 
-  <nav  role="navigation">
-    <div >
-
-      <ul class="">
-        <li *ngIf="Sesion==false"><a routerLink="login">Log In</a></li>
-        <li *ngIf="Sesion" ><a (click)="logout()">Logout</a></li>
+    <div class="header">
+      <div class="logo"></div>
+      <ul class="menu">
+        <li>Contact</li>
+        <li>Marketplace</li>
+        <li>Join as OnSite Pro </li>
+        <li *ngIf="Sesion==false"><a [routerLink]="['/login']">Log In</a></li>
+        <li>My Account</li>
+        <!-- <li *ngIf="Sesion" ><a (click)="logout()">Logout</a></li> -->
       </ul>
     </div>
-  </nav>

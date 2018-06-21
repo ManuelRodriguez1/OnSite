@@ -1,0 +1,32 @@
+.header{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 21px;
+    line-height: 20px;
+    font-family: 'Abel', sans-serif;
+    overflow: hidden;
+}
+.logo{
+    width: 214px;
+    height: 45px;
+    content: 'logo';
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    margin-left: 4px;
+    background-color: pink;
+}
+.menu{
+    display: inline-flex;
+    float: right;
+    margin-top: 33px; 
+}
+li{
+    margin-right: 65px;
+}
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+a:visited{
+    color: rgba(0, 0, 0, 0.5);
+}

@@ -4,6 +4,7 @@
     overflow: hidden;
     position: fixed;
     height: 100%;
+    z-index: 1;
 }
 .perfil{
     margin-top: 25px;
