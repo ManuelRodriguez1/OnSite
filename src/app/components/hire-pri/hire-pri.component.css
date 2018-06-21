@@ -356,6 +356,10 @@ margin-left: 6px;
 .itemsprincipales:hover .t1m{
   color: #FFFFFF !important;
 }
+.itemsprincipales:hover .flechateam{
+background-image: url("../../../assets/icons/flechaabajomenu.svg") !important;
+}
+flechaabajomenu
 .menuExplore{
   margin-top: -100px;
 }
@@ -363,8 +367,7 @@ margin-left: 6px;
   overflow: hidden !important;
 }
 .list::after{
-background: #FFFFFF;
-right: 0px;
+display: none;
 }
 .list::before{
   left: 0px;

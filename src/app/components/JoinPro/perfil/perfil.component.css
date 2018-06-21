@@ -13,7 +13,7 @@
     width: 71px;
     height: 71px;
     margin: 0 auto;
-    background-image: url('../../../../assets/login/blueprofileicon.png')
+    background-image: url('../../../../assets/login/blueprofileicon.svg');
 }
 .perfil p{
     margin-top: 13px;

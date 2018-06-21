@@ -9,9 +9,9 @@ declare var Swiper;
   templateUrl: './hire-pri.component.html',
   styleUrls: ['./hire-pri.component.css','../JoinPro/registro/select/select.component.css']
 })
-export class HirePriComponent implements AfterViewInit {
+export class HirePriComponent implements AfterViewInit  {
      mySwiper = Swiper;
-    menuVista="Home";
+     menuVista="Home";
       Sesion = true;
       placeholder="What type of job do you need help with?";
       aparecer = '';
@@ -81,6 +81,7 @@ export class HirePriComponent implements AfterViewInit {
        }
 
          ngAfterViewInit() {
+
            this.mySwiper =  new Swiper('.swiper-container', {
               spaceBetween: 15,
               direction: 'horizontal',
@@ -91,14 +92,21 @@ export class HirePriComponent implements AfterViewInit {
               scrollbar: '.swiper-scrollbar',
             });
          }
-  ngOnInit() {
 
-  //  $(".LoginCaja").css({"left":"0","width":"225px","background":"#FFFFFF"});
-    //$(".LoginCaja").css("display","none");
 
-  }
+
   home(){
     this.menuVista="Home";
+    this.mySwiper =  new Swiper('.swiper-container', {
+       spaceBetween: 15,
+       direction: 'horizontal',
+       loop: true,
+       centeredSlides	:true,
+       slidesPerView: 3,
+       slideToClickedSlide	: true,
+       scrollbar: '.swiper-scrollbar',
+     });
+     this.ngAfterViewInit();
   }
   inbox(){
     this.menuVista="Inbox";

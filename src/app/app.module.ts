@@ -65,12 +65,8 @@ import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.co
     HomeComponent,
     HirePriComponent,
     ReviewsComponent,
-<<<<<<< HEAD
-
-=======
     PerfilComponent,
     HomeproComponent
->>>>>>> master
 
   ],
   imports: [
