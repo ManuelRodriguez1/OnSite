@@ -1,0 +1,263 @@
+.sectionbody{
+  background:#E0E0E0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+}
+.menuYaLoguiado{
+  width: 225px;
+  background: #FFFFFF;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+box-shadow: 10px 4px 21px rgba(0, 0, 0, 0.46);
+float: left;
+overflow: hidden;
+position: relative;
+}
+.Contenidohire{
+  float: left;
+    width: calc(100% - 225px);
+height: 100%;
+overflow: hidden;
+display: inline-flex;
+position: absolute;
+}
+.logabajo{
+  position: absolute;
+left: 0%;
+right: 0%;
+bottom: 0%;
+height: 70px;
+background: #2F80ED;
+font-family: 'Archivo';
+font-weight: bold;
+font-size: 17px;
+line-height:  20px;
+text-align: center;
+color: #FFFFFF;
+}
+.PlusButton{
+  background-image: url("../../../assets/icons/PlusButton.png");
+  height: 40px;
+  width: 40px;
+  float: left;
+  background-size: cover;
+}
+.plustitulo{
+  float: left;
+  line-height: 35px;
+}
+.blueprofileicon{
+  background-image: url("../../../assets/login/blueprofileicon.png");
+  height: 71px;
+  width: 71px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+.profilleloguiado{
+
+  position: relative;
+  height:200px;
+}
+.nomsi{
+  font-family: "Archivo";
+  font-weight:bold;
+font-size: 11px;
+line-height: 20px;
+text-align: center;
+color:#2F80ED;
+position: absolute;
+bottom: 35px;
+left: 50%;
+transform: translate(-50%);
+}
+.centradoFinal{
+  position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      margin-left: 20px;
+}
+.t1m{
+  font-family: "Archivo";
+  font-weight:bold;
+font-size: 17px;
+line-height: 20px;
+color: #2F80ED;
+height: 36px;
+display: inline-flex;
+margin-left: 25px;
+}
+.flechateam{
+  display: inline-flex;
+  height: 10px;
+  width: 10px;
+  background-image: url("../../../assets/icons/miniflechaAzul.png");
+  background-size: contain;
+background-repeat: no-repeat;
+float: right;
+    margin-right: 25px;
+}
+.conxenhireright{
+  width: 915px;
+  height: 515px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+.relaselect{
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-container {
+width:  913px;
+height: 364px;
+margin-top: 50px;
+}
+.swiper-slide{
+width: 295px;
+height:  329px;
+background: #FFFFFF;
+border-radius: 17px;
+overflow: hidden;
+}
+.v1{
+  height: 130px;
+
+}
+.v2{
+  height: 125px;
+
+}
+.v3{
+  height: 75px;
+
+}
+.parte1arriba{
+  width: 175px;
+  height: 100%;
+  background: ping;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  border-bottom: 2px solid #BDBDBD;
+}
+
+  .swiper-container-horizontal>.swiper-scrollbar {
+height: 9px;
+  width: 100%;
+  left: 0%;
+}
+.view{
+width: 84px;
+height: 28px;
+border-radius: 5px;
+background: #2F80ED;
+box-shadow:  0px, 2px, 10px rgba(0, 0, 0, 0.25);
+font-family:  "Archivo";
+font-weight: 500;
+font-size: 14px;
+line-height: 30px;
+text-align: center;
+color: #FFFFFF;
+position: absolute;
+margin-left: 10px;
+margin-top: 10px;
+}
+.antesjzbola{
+  position: relative;
+  height: 75px;
+}
+.jzbola{
+  height: 53px;
+  width: 53px;
+  border-radius: 50%;
+  font-family:  "Archivo";
+  font-weight: bold;
+font-style:  italic;
+font-size: 15px;
+line-height:52px;
+text-align:center;
+background: #CFDCE6;
+left: 50%;
+transform: translateX(-50%);
+position: absolute;
+margin-top: 20px;
+
+}
+.bolasx {
+  height: 11px;
+  width: 37px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.bolasx >span {
+  position: relative;
+background: #D0C4C4;
+height: 9px;
+width: 9px;
+float: left;
+margin-right: 5px;
+border-radius: 50%;
+
+}
+.bolasx >span img{
+  position: absolute;
+  top: 50%;
+  left: 47.6%;
+  transform: translate(-50%,-50%);
+  height: 4px;
+  width: 4px;
+}
+
+
+.bolasx>span:nth-last-of-type(1){
+margin-right: 0px;
+}
+
+.v3>div{
+  height: 100%;
+  border-right:  2px solid #BDBDBD;
+  border-top:  2px solid #BDBDBD;
+  width: 96.5px;
+  float: left;
+
+}
+.v3>div img{
+  top: 50%;
+      left: 50%;
+      position: relative;
+      transform: translate(-50%,-50%);
+
+}
+.v3>div:nth-last-of-type(1){
+    border-right: none;
+}
+.bolaxrojo{
+  background: #EB5757 !important;
+}
+.nombretrabajo{
+  font-family: "Archivo";
+  font-weight: 500;
+  font-size: 13px;
+line-height: 20px;
+text-align: center;
+color: #000000;
+position: relative;
+}
+.profesion{
+  font-family: "Archivo";
+  font-weight: 600;
+    font-size: 16px;
+  line-height:  20px;
+text-align: center;
+color:   #2F80ED;
+}

@@ -22,7 +22,7 @@ export class CrearUsuarioComponent  {
             formData.value.password
            ).then(
              (success) => {
-             this.router.navigate(['/login'])
+             this.router.navigate(['/HirePriComponent'])
            }).catch(
              (err) => {
              this.error = err.message;

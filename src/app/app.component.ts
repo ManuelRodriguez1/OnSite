@@ -9,8 +9,9 @@ export class AppComponent implements OnInit {
   title = 'app';
 
 
-  ngOnInit() {  var concc=1;
-    // $(document).ready(function(){
+  ngOnInit() {
+    //  var concc=1;
+  // $(document).ready(function(){
 
     //       $(".btn111").click(function(){
     //         if(concc==1){
@@ -23,7 +24,6 @@ export class AppComponent implements OnInit {
     //           concc=1;
     //         }
 
-    //       });
-    //   });
+      //    });
     }
 }
