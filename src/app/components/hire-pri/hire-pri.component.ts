@@ -11,7 +11,64 @@ declare var Swiper;
 })
 export class HirePriComponent implements AfterViewInit {
      mySwiper = Swiper;
+    menuVista="Home";
       Sesion = true;
+      placeholder="What type of job do you need help with?";
+      aparecer = '';
+      rotar = '';
+      click = false;
+
+      list = [
+        {
+          "categorias": "Concrete"
+        },
+        {
+          "categorias": "Decorator"
+        },
+        {
+          "categorias": "Drywall"
+        },
+        {
+          "categorias": "Electrical"
+        },
+        {
+          "categorias": "Excavation"
+        },
+        {
+          "categorias": "Flooring"
+        },
+        {
+          "categorias": "General Labor"
+        },
+        {
+          "categorias": "Insulation"
+        },
+        {
+          "categorias": "Interior Finish Carpentry"
+        },
+        {
+          "categorias": "Ironworker"
+        },
+        {
+          "categorias": "Landscaper"
+        },
+        {
+          "categorias": "Mason"
+        },
+        {
+          "categorias": "Plastering"
+        },
+        {
+          "categorias": "Plumbing"
+        },
+        {
+          "categorias": "Roofer"
+        },
+        {
+          "categorias": "Waterproof Installation"
+        }
+      ];
+
       constructor(public af: AngularFireAuth,private router: Router) {
         this.af.authState.subscribe(auth => {
           if(auth) {
@@ -24,7 +81,7 @@ export class HirePriComponent implements AfterViewInit {
        }
 
          ngAfterViewInit() {
-            this.mySwiper =  new Swiper('.swiper-container', {
+           this.mySwiper =  new Swiper('.swiper-container', {
               spaceBetween: 15,
               direction: 'horizontal',
               loop: true,
@@ -39,6 +96,33 @@ export class HirePriComponent implements AfterViewInit {
   //  $(".LoginCaja").css({"left":"0","width":"225px","background":"#FFFFFF"});
     //$(".LoginCaja").css("display","none");
 
+  }
+  home(){
+    this.menuVista="Home";
+  }
+  inbox(){
+    this.menuVista="Inbox";
+  }
+  projects(){
+    this.menuVista="Projects";
+  }
+  ex
+  track(){
+    this.menuVista="Track";
+  }
+  explore(){
+    this.menuVista="Explore";
+  }
+  menu(){
+    this.click = !this.click;
+    if(this.click == true){
+      this.aparecer = 'desplegar';
+      this.rotar = 'arrow2';
+    }else{
+
+      this.aparecer = '';
+      this.rotar = '';
+    }
   }
 
 }

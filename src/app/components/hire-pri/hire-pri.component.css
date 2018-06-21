@@ -20,7 +20,7 @@ position: relative;
   float: left;
     width: calc(100% - 225px);
 height: 100%;
-overflow: hidden;
+overflow: scroll;
 display: inline-flex;
 position: absolute;
 }
@@ -50,7 +50,7 @@ color: #FFFFFF;
   line-height: 35px;
 }
 .blueprofileicon{
-  background-image: url("../../../assets/login/blueprofileicon.png");
+  background-image: url("../../../assets/login/blueprofileicon.svg");
   height: 71px;
   width: 71px;
   top: 50%;
@@ -85,11 +85,12 @@ transform: translate(-50%);
   font-family: "Archivo";
   font-weight:bold;
 font-size: 17px;
-line-height: 20px;
+
 color: #2F80ED;
 height: 36px;
 display: inline-flex;
 margin-left: 25px;
+line-height: 36px;
 }
 .flechateam{
   display: inline-flex;
@@ -99,7 +100,12 @@ margin-left: 25px;
   background-size: contain;
 background-repeat: no-repeat;
 float: right;
-    margin-right: 25px;
+    margin-right: 36px;
+    cursor: pointer;
+    top: 50%;
+position: absolute;
+transform: translateY(-50%);
+right: 0;
 }
 .conxenhireright{
   width: 915px;
@@ -125,10 +131,17 @@ height:  329px;
 background: #FFFFFF;
 border-radius: 17px;
 overflow: hidden;
+float: left;
 }
 .v1{
   height: 130px;
 
+}
+.seleccion{
+  background: #FFFFFF;
+}
+.last{
+  position: relative;
 }
 .v2{
   height: 125px;
@@ -260,4 +273,100 @@ position: relative;
   line-height:  20px;
 text-align: center;
 color:   #2F80ED;
+}
+.estrelladivprincipal{
+  width: 132px;
+  height: 25px;
+  padding-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+
+.estrelladivprincipal >span{
+  width: 23px;
+  height: 23px;
+background-image: url("../../../assets/icons/estrella.svg");
+background-repeat: no-repeat;
+position: relative;
+    float: left;
+    margin-right: 4px;
+}
+
+.estrelladivprincipal >span:nth-last-of-type(1){
+    margin-right: 0px;
+}
+  .lkefttgext{
+
+  text-align: left;
+    margin-top: 19px;
+  padding-left: 20px;
+      padding-right: 40px;
+  }
+  .textoPrincipalazulta{
+    font-family: "Archivo";
+    font-weight:500;
+    font-size: 14px;
+    line-height: 20px;
+      color: #2F80ED;
+  }
+  .rigtgext{
+        margin-top: -3px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+  .lkefttgext>span{
+    font-weight: bold;
+  }
+  .swiper-scrollbar{
+    opacity: 1 !important;
+  }
+.textoselectabajo{
+  font-family: "Archivo";
+  font-size: 12px;
+  line-height: 20px;
+    color: #828282;
+    float: right;
+margin-top: 4px;
+}
+.textoselectabajo1{
+  float: left;
+}
+.textoselectabajo2{
+  background-image: url("../../../assets/icons/Downbuttongris.svg");
+  width: 13px;
+  height: 9px;
+  float: left;
+  margin-top: 6px;
+margin-left: 6px;
+
+}
+.itemsprincipales{
+  position: relative;
+  cursor: pointer;
+}
+.itemsprincipales:hover{
+  color: #FFFFFF !important;
+  background: #2F80ED;
+
+}
+.itemsprincipales:hover .t1m{
+  color: #FFFFFF !important;
+}
+.menuExplore{
+  margin-top: -100px;
+}
+.desplegar{
+  overflow: hidden !important;
+}
+.list::after{
+background: #FFFFFF;
+right: 0px;
+}
+.list::before{
+  left: 0px;
+  background: #FFFFFF;
 }
