@@ -10,7 +10,7 @@ declare var Swiper;
   styleUrls: ['./hire-pri.component.css','../JoinPro/registro/select/select.component.css']
 })
 export class HirePriComponent implements AfterViewInit  {
-     mySwiper = Swiper;
+     //mySwiper = Swiper;
      menuVista="Home";
       Sesion = true;
       placeholder="What type of job do you need help with?";
@@ -82,7 +82,7 @@ export class HirePriComponent implements AfterViewInit  {
 
          ngAfterViewInit() {
 
-           this.mySwiper =  new Swiper('.swiper-container', {
+           /*this.mySwiper =  new Swiper('.swiper-container', {
               spaceBetween: 15,
               direction: 'horizontal',
               loop: true,
@@ -90,23 +90,14 @@ export class HirePriComponent implements AfterViewInit  {
               slidesPerView: 3,
               slideToClickedSlide	: true,
               scrollbar: '.swiper-scrollbar',
-            });
+            });*/
          }
 
 
 
   home(){
     this.menuVista="Home";
-    this.mySwiper =  new Swiper('.swiper-container', {
-       spaceBetween: 15,
-       direction: 'horizontal',
-       loop: true,
-       centeredSlides	:true,
-       slidesPerView: 3,
-       slideToClickedSlide	: true,
-       scrollbar: '.swiper-scrollbar',
-     });
-     this.ngAfterViewInit();
+  //   this.ngAfterViewInit();
   }
   inbox(){
     this.menuVista="Inbox";
