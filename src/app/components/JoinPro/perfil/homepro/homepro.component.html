@@ -8,12 +8,45 @@
     <p>Sort: Newest Jobs</p>
   </div>
   <div class="tarjetas">
-    <div class="target">
-      <div class="perfil"></div>
-      <div class="puntos">
-        <div class="pto red"></div>
-        <div class="pto"></div>
-        <div class="pto"></div>
+    <div class="target" *ngFor="let l of list">
+      <div class="t1" [class.mostrar]="clicked === l" (click)="clicked = l2">
+        <div class="map"></div>
+        <div class="minicont">
+          <div class="direccion">
+            <p>
+                1234 Meadow Dr.<br>Unit 123<br>Wynwood, FL 33127
+            </p>
+          </div>
+          <div class="ir"></div>
+        </div>
+      </div>
+      <div class="t2" [class.t2baja]="clicked === l" >
+        <div class="perfil"></div>
+        <div class="puntos">
+          <div class="pto red"></div>
+          <div class="pto"></div>
+          <div class="pto"></div>
+        </div>
+        <div class="nombre">
+          <p>Jimmy needs help with</p>
+        </div>
+        <div class="proyecto">
+          <p>Drywall</p>
+        </div>
+        <div class="linea"></div>
+        <div class="text">
+          <p>
+            <label>Work Area Radius:</label> 50 miles from <br>33156 
+          </p>
+        </div>
+        <div class="link" (click)="clicked = l">
+          <p>See Project Details</p>
+        </div>
+        <div class="icons">
+          <div class="icon"></div>
+          <div class="line"></div>
+          <div class="icon"></div>
+        </div>
       </div>
     </div>
   </div>
