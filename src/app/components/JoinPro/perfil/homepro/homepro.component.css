@@ -4,6 +4,7 @@
     width: 911px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 119px;
 }
 .h1{
     color: black;
@@ -48,11 +49,16 @@
 }
 .tarjetas{
     margin-top: 53px;
+    display: -webkit-box;
+    overflow-x: scroll;
+    height: fit-content;
 }
 .target{
     width: 295px;
-    overflow: hidden;
-    background-color: white;
+    overflow: visible;
+    text-align: center;
+    margin-right: 11px;
+    margin-bottom: 25px;
 }
 .perfil{
     width: 53px;
@@ -78,10 +84,142 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 3px;
+    cursor: pointer;
 }
 .pto:first-child{
     margin-left: 0;
 }
 .red{
     background-color: #EB5757;
+}
+.nombre{
+    line-height: 22px;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.proyecto{
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+.linea{
+    width: 174px;
+    margin: 0 auto;
+    margin-top: 22px;
+    height: 1px;
+    background-color: #BDBDBD;
+}
+.text{
+    line-height: 20px;
+    font-size: 14px;
+    color: #2F80ED;
+    margin-top: 29px;
+    margin-left: 22px;
+    text-align: left;
+}
+.text label{
+    font-weight: bold;
+}
+.link{
+    font-size: 15px;
+    line-height: 20px;
+    color: #2F80ED;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.icons{
+    margin-top: 15px;
+    border-top: #BDBDBD solid 1px;
+    position: relative;
+}
+.icon{
+    width: 50%;
+    float: left;
+    height: 77px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.icon:first-child{
+    background-image: url('../../../../../assets/icons/MessageButton.svg');
+}
+.icon:last-child{
+    background-image: url('../../../../../assets/icons/Call.svg');
+}
+.line{
+    position: absolute;
+    top: 0;
+    height: 77px;
+    width: 1px;
+    background-color: #BDBDBD;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tarjetas::-webkit-scrollbar {
+    height: 9px;
+} 
+.tarjetas::-webkit-scrollbar-track {
+    background: #BDBDBD;
+} 
+.tarjetas::-webkit-scrollbar-thumb {
+    background: #828282;
+}
+.t1{
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.t2, .t1{
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+}
+.t2{
+    border-radius: 17px;   
+    z-index: 2;
+    margin-top: -260px;
+    transition: 0.5s;
+}
+.map{
+    margin: 10px;
+    height: 138px;
+    background: #2F80ED;
+    border-radius: 4px;
+}
+.minicont{
+    margin-bottom: 43px;
+    overflow: hidden;
+}
+.direccion{
+    margin-top: 5px;
+    line-height: 18px;
+    font-size: 13px;
+    margin-left: 16px;
+    float: left;
+    text-align: left;
+}
+.ir{
+    background-image: url('../../../../../assets/icons/ir.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: right;
+    margin-top: 9px;
+    margin-right: 18px;
+    width: 50px;
+    height: 50px;
+}
+.t2baja{
+    transition: 0.5s;
+    box-shadow: 0px -2px 29px 1px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+    margin-top: -25px; 
+}
+.mostrar{
+    opacity: 1;
+    transition: 0.5s;
 }
