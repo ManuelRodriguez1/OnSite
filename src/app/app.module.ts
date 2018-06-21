@@ -45,6 +45,8 @@ import { HirePriComponent } from './components/hire-pri/hire-pri.component';
 
 import { ServiceService } from './service/service.service';
 import { ReviewsComponent } from './components/JoinPro/registro/reviews/reviews.component';
+import { PerfilComponent } from './components/JoinPro/perfil/perfil.component';
+import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.component';
 
 
 
@@ -63,7 +65,12 @@ import { ReviewsComponent } from './components/JoinPro/registro/reviews/reviews.
     HomeComponent,
     HirePriComponent,
     ReviewsComponent,
+<<<<<<< HEAD
 
+=======
+    PerfilComponent,
+    HomeproComponent
+>>>>>>> master
 
   ],
   imports: [

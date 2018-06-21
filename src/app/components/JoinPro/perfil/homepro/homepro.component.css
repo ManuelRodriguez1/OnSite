@@ -1,0 +1,87 @@
+.contenedor{
+    margin: 0 auto;
+    margin-top: 95px;
+    width: 911px;
+    overflow: hidden;
+    position: relative;
+}
+.h1{
+    color: black;
+}
+.input{
+
+    cursor: pointer;
+}
+.conselec{
+    position: relative;
+    margin-top: 18px;
+}
+.arrowd{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.minitext{
+    text-align: right;
+    position: relative;
+    color: #828282;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.minitext p{
+    margin-right: 19px;
+}
+.minitext::before{
+    content: '';
+    position: absolute;
+    background-image: url('../../../../../assets/icons/grayarrow.png');
+    width: 13px;
+    height: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+.tarjetas{
+    margin-top: 53px;
+}
+.target{
+    width: 295px;
+    overflow: hidden;
+    background-color: white;
+}
+.perfil{
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #CFDCE6;
+    margin: 0 auto;
+    margin-top: 21px;
+}
+.puntos{
+    margin: 0 auto;
+    margin-top: 6px;
+    width: 35px;
+    display: -webkit-box;
+}
+.pto{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #D0C4C4;
+    margin-left: 5px;
+    background-image: url('../../../../../assets/icons/xwhite.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3px;
+}
+.pto:first-child{
+    margin-left: 0;
+}
+.red{
+    background-color: #EB5757;
+}

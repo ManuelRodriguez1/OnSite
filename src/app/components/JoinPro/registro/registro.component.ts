@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SelectComponent } from './select/select.component';
 import { selector } from 'rxjs/operator/publish';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-registro',

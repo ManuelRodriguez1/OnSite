@@ -1,3 +1,25 @@
 <div class="t1">
     <h1 class="h1">Get <label class="label">reviews</label> to be more visible.</h1>
   </div>
+
+  <p class="textoDark p1">Reach out to your past satisfied customers to get reviews. The more satisfied customer reviews, <br> more likely you’ll be hired. </p>
+
+  <div class="section">
+    <p class="textoDark">Share this link to get reviews.</p>
+    <input type="text" class="input" placeholder="Link">
+    <button class="button">Copy</button>
+  </div>
+
+  <div class="seccion2">
+    <p class="textoDark">Enter e-mails:</p>
+    <input type="text" name="" id="" class="input" *ngFor="let l of list; let i = index" [placeholder]="'Customer '+ (i+1) ">    
+    <div class="agregar" (click)="addc()">
+      <div class="xcruz"></div>
+      <p>Add Customer</p>
+    </div>
+  </div>
+
+  <div class="section3">
+    <p class="textoDark">Write a message to your customers;</p>
+    <textarea type="text" class="input textarea" placeholder="Say hello! (optional)"></textarea>
+  </div>

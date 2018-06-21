@@ -1,9 +1,11 @@
+
 <div class="contenedor" >
+    
 <section *ngIf="next == 0">
   <div class="t1">
     <h1 class="h1">Tell us more about <label class="label">you.</label></h1>
   </div>
-
+  
   <div class="cont1">
     <p class="textoDark">Enter your personal information.</p>
     <div>
@@ -45,11 +47,12 @@
   <section *ngIf="next == 3">
       <app-reviews></app-reviews>
   </section>
+
 </div>
 
 <div class="botones">
     <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
-    <button class="button" (click)="seguir()">Next</button>
+    <button class="button" (click)="seguir()"><label *ngIf="next < 3">Next</label><label *ngIf="next == 3">Finish</label></button>
 </div>
 
 <div class="modal" *ngIf="next == 2">

@@ -78,7 +78,7 @@
     top: -6px;
     right: -6px;
 }
-.input{
+.colum .input{
     cursor: pointer;
 }
 .tagswhite{
@@ -98,4 +98,10 @@
     font-size: 14px;
     top: -11px;
     left: 27px;
+}
+.seccion2{
+    margin-top: 54px;
+}
+.seccion2 .input{
+    margin-top: 14px;
 }
