@@ -10,19 +10,19 @@
                     <div class="t1m">HOME</div>
                     <div class="flechateam"></div>
                 </div>
-                <div  (click)="inbox()"  class="itemsprincipales">
+                <div class="itemsprincipales">
                     <div class="t1m">INBOX</div>
                     <div class="flechateam"></div>
                 </div>
-                <div (click)="projects()" class="itemsprincipales">
+                <div class="itemsprincipales">
                     <div class="t1m">PROJECTS</div>
                     <div class="flechateam"></div>
                 </div>
-                <div (click)="track()"  class="itemsprincipales">
+                <div class="itemsprincipales">
                     <div class="t1m">TRACK</div>
                     <div class="flechateam"></div>
                 </div>
-                <div (click)="explore()" class="itemsprincipales">
+                <div class="itemsprincipales">
                     <div class="t1m">EXPLORE</div>
                     <div class="flechateam"></div>
                 </div>
@@ -37,7 +37,7 @@
     </div>
       <div class="Contenidohire">
         <div class="conxenhireright" >
-          <div   *ngIf="menuVista == 'Home'" class="menuHome">
+          <div  class="menuHome">
             <div class="">
               <h1 class="h1">See<label class="label">who’s out there.</label></h1>
             </div>
@@ -154,57 +154,7 @@
               <div class="swiper-scrollbar"></div>
               </div>
             </div>
-          </div>
-
-          <div   *ngIf="menuVista == 'Inbox'" class="menuInbox">
-            Inbox
-          </div>
-
-          <div   *ngIf="menuVista == 'Projects'" class="menuProjects">
-            Projects
-          </div>
-
-          <div   *ngIf="menuVista == 'Track'" class="menuTrack">
-            Track
-          </div>
-
-          <div   *ngIf="menuVista == 'Explore'" class="menuExplore">
-            <div class="">
-              <h1 class="h1">See<label class="label">who’s out there.</label></h1>
-            </div>
-            <!--div class="">
-              <div class="colum last relaselect">
-                  <input type="text" readonly class="input" placeholder="What type of job do you need help with?">
-                  <img src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
-              </div>
-            </div-->
-
-                <div class="colum last">
-                    <input type="text" (click)="menu()" readonly class="input" placeholder="{{placeholder}}">
-
-                    <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
-
-                </div>
-
-                <div class="list" [ngClass]="aparecer">
-                  <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.categorias)">
-                    <p>{{l.categorias}}</p>
-                  </div>
-                </div>
-
-
-
-
-
-
-
-
-            <div class="textoselectabajo">
-              <span class="textoselectabajo1">Sort: Newest Jobs</span>
-              <span class="textoselectabajo2"></span>
-            </div>
-
-          </div>
+        </div>
         </div>
       </div>
 

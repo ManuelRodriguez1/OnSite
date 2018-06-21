@@ -48,6 +48,7 @@ import { ReviewsComponent } from './components/JoinPro/registro/reviews/reviews.
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import { ReviewsComponent } from './components/JoinPro/registro/reviews/reviews.
     SelectComponent,
     HomeComponent,
     HirePriComponent,
-    ReviewsComponent
+    ReviewsComponent,
+
 
   ],
   imports: [

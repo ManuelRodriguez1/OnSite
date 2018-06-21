@@ -11,6 +11,12 @@ import { HomeComponent } from '../components/home/home.component';
 //JoinPro
 import { RegistroComponent } from '../components/JoinPro/registro/registro.component';
 
+
+
+
+
+//menu ya menuYaLoguiado
+
 export const router: Routes = [
   { path: 'libreria', component: LibreriaComponent },
   { path: 'HirePriComponent', component: HirePriComponent },
