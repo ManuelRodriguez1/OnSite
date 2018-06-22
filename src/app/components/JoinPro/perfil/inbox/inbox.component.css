@@ -42,6 +42,7 @@
     font-size: 18px;
     margin-top: 16px;
     margin-left: 31px;
+    font-weight: 600;
 }
 .perfil{
     margin-top: 9px;
@@ -62,6 +63,7 @@
 }
 .second{
     font-size: 14px;
+    font-weight: 500;
 }
 .disp{
     margin-top: 11px;
@@ -103,12 +105,14 @@
     color: #2F80ED;
     margin-top: 16px;
     margin-left: 20px;
+    font-weight: 600;
 }
 .first2{
     color: black;
     margin-top: 11px;
     margin-left: 20px;
     font-size: 14px;
+    font-weight: 500;
 }
 .disp2{
     margin-left: 20px;
@@ -130,6 +134,7 @@
     color: #2F80ED;
     font-size: 18px;
     margin-top: 5px;
+    font-weight: 600;
 }
 .new{
     border-top-left-radius: 17px;
@@ -159,7 +164,7 @@
     height: 220px;
     overflow-y: scroll;
 }
-.body:-webkit-scrollbar{
+.body::-webkit-scrollbar{
     width: 9px;
 }
 .body::-webkit-scrollbar-track{
@@ -208,4 +213,79 @@
     position: absolute;
     margin-top: 14px;
     right: 24px;
+}
+.date{
+    text-align: center;
+    font-size: 12px;
+    color: #828282;
+    margin-top: 9px;
+}
+.contact{
+    overflow: hidden;
+    margin-left: 22px;
+    width: 407px;
+    margin-top: 11px;
+    position: relative;
+}
+.perfil2{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-image: url('../../../../../assets/login/blueprofileicon.svg');
+    background-size: cover;
+    bottom: 24px;
+}
+.textochat{
+    float: left;
+    background: #F2F2F2;
+    color: #828282;
+    border-radius: 17px;
+    font-size: 12px;
+    margin-left: 50px;
+    width: 357px;
+}
+.textochat p{
+    margin-left: 21px;
+    margin-right: 12px;
+    line-height: 14px;
+}
+.textochat .p1{
+    margin-top: 14px;
+}
+.textochat .p2, .textochat .p3{
+    margin-top: 19px;
+}
+.linea{
+    margin: 0 auto;
+    margin-top: 6px;
+    height: 1px;
+    width: 327px;
+    background: #BDBDBD;
+}
+.archadjunto{
+    margin-top: 7px;
+    overflow: hidden;
+    margin-left: 21px;
+    margin-bottom: 11px;
+}
+.clip{
+    float: left;
+    width: 12px;
+    height: 13px;
+    background-image: url('../../../../../assets/icons/adjunto.svg');
+    background-size: cover;
+}
+.archad{
+    float: left;
+    font-weight: 600;
+}
+.archad p{
+    margin-left: 11px;
+}
+.time{
+    color: #828282;
+    font-size: 12px;
+    margin-left: 53px;
+    margin-top: 13px;
+    float: left;
 }

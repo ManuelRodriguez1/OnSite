@@ -5,14 +5,28 @@
     <label>Verified</label>
   </div>
   <div class="opciones">
-    <div class="opcion select"><p>HOME</p></div>
-    <div class="opcion"><p>INBOX</p></div>
+    <div class="opcion" [class.select]="m == 1" (click)="menu(1)"><p>HOME</p></div>
+    <div class="opcion" [class.select]="m == 2" (click)="menu(2)"><p>INBOX</p></div>
+    <div class="desgloce" [class.ver]="m == 2">
+      <div class="linea">
+        <div class="bola" [class.down2]="b == 2" [class.down3]="b == 3">
+          <div class="bolablue"></div>
+        </div>
+      </div>      
+      <p (click)="bola(1)">Inbox</p>
+      <p (click)="bola(2)">Sent</p>
+      <p (click)="bola(3)">Trash</p>
+    </div>
     <div class="opcion"><p>PROJECTS</p></div>
     <div class="opcion"><p>TIMESHEET</p></div>
     <div class="opcion"><p>EXPLORE</p></div>
   </div>
 </div>
 <div class="content">
-  <!-- <app-homepro></app-homepro> -->
-  <app-inbox></app-inbox>
+  <section *ngIf="m == 1">
+    <app-homepro></app-homepro>
+  </section>
+  <section *ngIf="m == 2">
+    <app-inbox></app-inbox>
+  </section>
 </div>

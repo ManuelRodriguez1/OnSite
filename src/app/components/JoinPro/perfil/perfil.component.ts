@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
+  m = 1;
+  b = 1;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  menu(e){
+    this.m = e;
+  }
+  bola(e){
+    this.b = e;
   }
 
 }
