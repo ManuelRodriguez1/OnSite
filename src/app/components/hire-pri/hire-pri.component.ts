@@ -18,6 +18,7 @@ export class HirePriComponent  {
       rotar = '';
       click = false;
       mostrar1 = "mostrar";
+      mostrar2 = "mostrar2";
 
       list = [
         {
@@ -115,6 +116,14 @@ export class HirePriComponent  {
   }
 
   mostrar(t){
+    console.log(t);
+    if(this.mostrar1 == "nomostrar"){
+      this.mostrar1 = 'mostrar';
+    }else{
+      this.mostrar1 = 'nomostrar';
+    }
+  }
+  mostrar22(t){
     console.log(t);
     if(this.mostrar1 == "nomostrar"){
       this.mostrar1 = 'mostrar';

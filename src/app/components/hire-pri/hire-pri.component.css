@@ -422,9 +422,10 @@ box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.25);
 border-radius: 17px;
 top: 50%;
 left: 50%;
-position: relative;
+position: absolute;
 transform: translate(-50%,-50%);
 overflow: hidden;
+z-index: 3;
 }
 .parte1arribamodal{
   height: 100px;
@@ -498,7 +499,7 @@ display: flex;
 height: 290px;
 }
 .taget .v22{
-
+    overflow-y: scroll;
 height: 290px;
 }
 .taget .v3 div{
@@ -611,7 +612,7 @@ color: #828282;
 }
 .contedorTrabajadores .estrelladivprincipal{
   padding-top: 0;
-  /* background: red; */
+  margin-top: -3px;
   left: 0;
   transform: none;
   float: right;

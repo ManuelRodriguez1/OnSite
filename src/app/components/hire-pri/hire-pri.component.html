@@ -1,97 +1,98 @@
 <div [ngClass]="mostrar1"  class="modal_hire">
-    <div  class="taget">
 
-      <div (click)="nomostrar()" class="parte1arribamodal">
-        <div class="antesjzbola">
-            <div class="jzbola">J.Z.</div>
-        </div>
+</div>
+<div [ngClass]="mostrar1"  class="taget">
 
-        <div class="aladnombre">
-          <div class="nombretrabajo">Jimmy can help with </div>
+  <div (click)="nomostrar()" class="parte1arribamodal">
+    <div class="antesjzbola">
+        <div class="jzbola">J.Z.</div>
+    </div>
 
-          <div class="profesion">Drywall</div>
-          <div class="estrelladivprincipal">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="aladestrella">
-          <div class="bolasx">
-            <span class="bolaxrojo"> <img src="../../../assets/icons/Shape.svg" alt="x"> </span>
-            <span>  <img src="../../../assets/icons/Shape.svg" alt="x"> </span>
-            <span>  <img src="../../../assets/icons/Shape.svg" alt="x"> </span>
-          </div>
-          <div class="texbolas">
-            See Reviews <span class="flechateam"></span>
-          </div>
-        </div>
-      </div>
-      <!--div class="v2">
-        <div class="contenedorstyle">
-          Hourly Rate: 10$
+    <div class="aladnombre">
+      <div class="nombretrabajo">Jimmy can help with </div>
 
-        <div class="contptextoigual">
-          <div class="div2w">
-            Expertise:
-          </div>
-          <div class="div2w texbolas div2wxxx" style="text-align:right">
-            See Expertise <span class="flechateam"></span>
-          </div>
-        </div>
-          <div class="contenBotonsi" >
-            <div class="btnform">
-              Drywall Apprentice
-            </div>
-            <div class="btnform posribt">
-              General Labor
-            </div>
-          </div>
-
-
-          <div class="mapay">
-
-          </div>
-          <div class="textfiladiv2">
-            Work Radius: 50 mi from 33130
-          </div>
-
-       </div>
-     </div-->
-     <div class="v22">
-       <div class="contedorTrabajadores">
-         <div class="antesjzbola">
-             <div class="jzbola">B.D.</div>
-         </div>
-         <div class="aladnombre">
-           <div class="profesion">Bob Delong</div>
-           <div class="estrelladivprincipal">
-             <span></span>
-             <span></span>
-             <span></span>
-             <span></span>
-             <span></span>
-           </div>
-         </div>
-         <div class="textoProfesion">Jimmy was exceptional at getting his job done. The only issue I  had was that he was not on time.</div>
-
-       </div>
-     </div>
-      <div class="v3">
-        <div class="">
-          <img src="../../../assets/icons/MessageButton.svg" alt="Message">
-        </div>
-        <div class="">
-          <img src="../../../assets/icons/Call.svg" alt="Call">
-        </div>
-        <div class="">
-            <img src="../../../assets/icons/Frame.svg" alt="Tools">
-        </div>
-
+      <div class="profesion">Drywall</div>
+      <div class="estrelladivprincipal">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
+    <div class="aladestrella">
+      <div class="bolasx">
+        <span class="bolaxrojo"> <img src="../../../assets/icons/Shape.svg" alt="x"> </span>
+        <span>  <img src="../../../assets/icons/Shape.svg" alt="x"> </span>
+        <span>  <img src="../../../assets/icons/Shape.svg" alt="x"> </span>
+      </div>
+      <div class="texbolas">
+        See Reviews <span class="flechateam"></span>
+      </div>
+    </div>
+  </div>
+  <!--div class="v2">
+    <div class="contenedorstyle">
+      Hourly Rate: 10$
+
+    <div class="contptextoigual">
+      <div class="div2w">
+        Expertise:
+      </div>
+      <div class="div2w texbolas div2wxxx" style="text-align:right">
+        See Expertise <span class="flechateam"></span>
+      </div>
+    </div>
+      <div class="contenBotonsi" >
+        <div class="btnform">
+          Drywall Apprentice
+        </div>
+        <div class="btnform posribt">
+          General Labor
+        </div>
+      </div>
+
+
+      <div class="mapay">
+
+      </div>
+      <div class="textfiladiv2">
+        Work Radius: 50 mi from 33130
+      </div>
+
+   </div>
+ </div-->
+ <div class="v22">
+   <div *ngFor="let l of list" class="contedorTrabajadores">
+     <div class="antesjzbola">
+         <div class="jzbola">B.D.</div>
+     </div>
+     <div class="aladnombre">
+       <div class="profesion">Bob Delong</div>
+       <div class="estrelladivprincipal">
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+       </div>
+     </div>
+     <div class="textoProfesion">Jimmy was exceptional at getting his job done. The only issue I  had was that he was not on time.</div>
+
+   </div>
+ </div>
+  <div class="v3">
+    <div class="">
+      <img src="../../../assets/icons/MessageButton.svg" alt="Message">
+    </div>
+    <div class="">
+      <img src="../../../assets/icons/Call.svg" alt="Call">
+    </div>
+    <div class="">
+        <img src="../../../assets/icons/Frame.svg" alt="Tools">
+    </div>
+
+  </div>
 </div>
 <section class="sectionbody">
 
