@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InboxComponent implements OnInit {
 
+  list = [
+    {"estilo" : "green",
+      "dispo" : "Available"},
+      {"estilo" : "red",
+      "dispo" : "Unavailable"},
+      {"estilo" : "yellow",
+      "dispo" : "Job in Process"},
+      {"estilo" : "green",
+      "dispo" : "Available"},
+      {"estilo" : "green",
+      "dispo" : "Available"},
+      {"estilo" : "green",
+      "dispo" : "Available"},
+  ]
+
   constructor() { }
 
   ngOnInit() {

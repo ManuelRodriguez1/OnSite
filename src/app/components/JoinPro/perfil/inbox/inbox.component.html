@@ -9,20 +9,46 @@
   </div>
   <div class="chat">
     <div class="column1">
-      <div class="people">
+      <div class="people" *ngFor="let l of list">
         <p class="first">Email Subject Line</p>
         <div class="perfil">
           <div class="image"></div>
           <div class="datos">
               <p class="second">Email Name Space</p>
               <div class="disp">
-                <div class="color green"></div>
-                <p class="third">Available</p>
+                <div class="color" [ngClass]="l.estilo"></div>
+                <p class="third">{{l.dispo}}</p>
               </div>
           </div>
         </div>
       </div>
+      <div class="new">
+        <p>Compose New Message</p>
+      </div>
     </div>
-    <div class="column2"></div>
+    <div class="column2">
+      <div class="head">
+        <div class="subjet">
+          <p>Subject Line</p>
+        </div>
+        <p class="first2">Email Subject Line</p>
+        <div class="disp2">
+            <div class="color green"></div>
+            <p class="third">Available</p>
+          </div>
+          <div class="othertext">
+              <p class="first2">John Doe needs help with </p>
+              <p class="blue">Excavation</p>
+          </div>
+      </div>
+      <div class="body">
+
+      </div>
+      <div class="message">
+        <div class="adjunto"></div>
+        <input class="input" placeholder="Short Field">
+        <button class="button">Button</button>
+      </div>
+    </div>
   </div>
 </div>
