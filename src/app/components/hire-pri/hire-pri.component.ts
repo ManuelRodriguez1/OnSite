@@ -9,7 +9,7 @@ declare var Swiper;
   templateUrl: './hire-pri.component.html',
   styleUrls: ['./hire-pri.component.css','../JoinPro/registro/select/select.component.css']
 })
-export class HirePriComponent implements AfterViewInit  {
+export class HirePriComponent  {
      //mySwiper = Swiper;
      menuVista="Home";
       Sesion = true;
@@ -17,6 +17,8 @@ export class HirePriComponent implements AfterViewInit  {
       aparecer = '';
       rotar = '';
       click = false;
+      mostrar1 = "mostrar";
+      mostrar2 = "mostrar2";
 
       list = [
         {
@@ -25,13 +27,13 @@ export class HirePriComponent implements AfterViewInit  {
         {
           "categorias": "Decorator"
         },
-        {
+     {
           "categorias": "Drywall"
         },
         {
           "categorias": "Electrical"
         },
-        {
+        /*   {
           "categorias": "Excavation"
         },
         {
@@ -66,7 +68,7 @@ export class HirePriComponent implements AfterViewInit  {
         },
         {
           "categorias": "Waterproof Installation"
-        }
+        }*/
       ];
 
       constructor(public af: AngularFireAuth,private router: Router) {
@@ -80,24 +82,13 @@ export class HirePriComponent implements AfterViewInit  {
         });
        }
 
-         ngAfterViewInit() {
 
-           /*this.mySwiper =  new Swiper('.swiper-container', {
-              spaceBetween: 15,
-              direction: 'horizontal',
-              loop: true,
-              centeredSlides	:true,
-              slidesPerView: 3,
-              slideToClickedSlide	: true,
-              scrollbar: '.swiper-scrollbar',
-            });*/
-         }
 
 
 
   home(){
     this.menuVista="Home";
-  //   this.ngAfterViewInit();
+
   }
   inbox(){
     this.menuVista="Inbox";
@@ -124,4 +115,27 @@ export class HirePriComponent implements AfterViewInit  {
     }
   }
 
+  mostrar(t){
+    console.log(t);
+    if(this.mostrar1 == "nomostrar"){
+      this.mostrar1 = 'mostrar';
+    }else{
+      this.mostrar1 = 'nomostrar';
+    }
+  }
+  mostrar22(t){
+    console.log(t);
+    if(this.mostrar1 == "nomostrar"){
+      this.mostrar1 = 'mostrar';
+    }else{
+      this.mostrar1 = 'nomostrar';
+    }
+  }
+nomostrar(){
+  if(this.mostrar1 == "nomostrar"){
+    this.mostrar1 = 'mostrar';
+  }else{
+    this.mostrar1 = 'nomostrar';
+  }
+}
 }
