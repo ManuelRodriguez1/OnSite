@@ -36,6 +36,7 @@
 }
 .people{
     border-bottom: #BDBDBD solid 1px;
+    cursor: pointer;
 }
 .first{
     color: #2F80ED;
@@ -178,7 +179,7 @@
     overflow: visible;
     position: relative;
     border-top-right-radius: 17px;
-    height: -webkit-fill-available;
+    height: stretch;
 }
 .message::before{
     content: '';
@@ -288,4 +289,27 @@
     margin-left: 53px;
     margin-top: 13px;
     float: left;
+}
+.minimenu{
+   border-radius: 17px;
+   overflow: hidden;
+   background: #F2F2F2;   
+   width: 357px;
+   font-size: 12px;
+   font-weight: 500;  
+   text-align: center;
+}
+.minimenu .button{
+    position: relative;
+    width: 102px;
+    height: 26px;
+}
+.minimenu .botones{
+    display: inline-flex;
+}
+.verde{
+    background: #27AE60;
+}
+.negro{
+    background: #333333;
 }

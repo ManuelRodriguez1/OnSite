@@ -9,7 +9,7 @@
   </div>
   <div class="chat">
     <div class="column1">
-      <div class="people" *ngFor="let l of list">
+      <div class="people" *ngFor="let l of list; let i = index" (click)="call(i)">
         <p class="first">Email Subject Line</p>
         <div class="perfil">
           <div class="image"></div>
@@ -42,6 +42,7 @@
           </div>
       </div>
       <div class="body">
+        <section *ngIf="vista == 1">
           <div class="chatcont" *ngFor="let l of list">
             <div class="date">
               <p>Day, Month, Year</p>
@@ -65,6 +66,19 @@
               </div>
             </div>
           </div>
+        </section>
+        <section *ngIf="vista == 2 ">
+          <div class="perfil2"></div>
+          <div class="minimenu">
+            <p class="title"><label class="label">Tim</label> wants to hire you as a <label class="label">Drywall Hanger.</label></p>
+            <p class="text2">Will you accept $12/hour?</p>
+            <div class="botones">
+              <button class="button verde">Yes</button>
+              <button class="button negro">No</button>
+              <button class="button">Negotiate</button>
+            </div>
+          </div>
+        </section>
       </div>
       <div class="message">
         <div class="adjunto"></div>
