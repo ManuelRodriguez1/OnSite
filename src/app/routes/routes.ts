@@ -15,7 +15,6 @@ import { PerfilComponent } from '../components/JoinPro/perfil/perfil.component';
 
 
 
-
 //menu ya menuYaLoguiado
 
 export const router: Routes = [
@@ -25,8 +24,8 @@ export const router: Routes = [
   { path: 'registroHire', component: HireComponent },
   { path: 'registroPro', component: RegistroComponent },
   { path: 'perfilPro', component: PerfilComponent },
-  { path: '', component: HomeComponent }
-    //  { path: 'members', component: AuthGuard, canActivate: [AuthGuard] }//login
+  { path: '', component: HomeComponent },
+  { path: 'HirePriComponent', component: AuthGuard, canActivate: [AuthGuard] }//login
    ]
 
 

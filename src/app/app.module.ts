@@ -12,7 +12,7 @@ import { InicioSesionComponent } from './components/Login/inicio-sesion/inicio-s
 import { RecordarPasswordComponent } from './components/Login/recordar-password/recordar-password.component';
 
 //Inicio Librerias de autenticaciòn
-// import * as firebase from 'firebase/app';
+ import * as firebase from 'firebase/app';
 import { environment } from '../environments/environment';
 
 import { HttpModule } from '@angular/http';

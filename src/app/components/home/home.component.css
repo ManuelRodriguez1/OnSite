@@ -1,74 +1,76 @@
-
-.contenedorfinal{
-  height: 252px;
-  width: 100%;
-  background: #E0E0E0;
-  position: absolute;
-  bottom: 0;
-  font-size: 36px;
-  text-align: center;
-  font-family: 'Archivo', sans-serif;
+.contenedorfinal {
+    height: 252px;
+    width: 100%;
+    background: #E0E0E0;
+    position: absolute;
+    bottom: 0;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
 }
 
-.font50{
-  font-size: 50px;
+.font50 {
+    font-size: 50px;
 }
 
-.contenedorcentrado{
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  transform: translate(-50%,-50%);
+.contenedorcentrado {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }
 
-.cuadroPrincipal{
-  height: 147px;
-  width: 175px;
-  float: left;
+.cuadroPrincipal {
+    height: 147px;
+    width: 175px;
+    float: left;
 }
 
-.imgMenu{
-  height: 81px;
-  width: 104px;
-  background-image: url("../../../assets/menu/Join_as_Pro_Logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 50%;
-  transform: translateX(-50%);
-  position: relative;
-
-}
-.imgMenu2{
-  height: 81px;
-  width: 104px;
-  background-image: url("../../../assets/menu/To_Hire_Logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 50%;
-  transform: translateX(-50%);
-  position: relative;
+.imgMenu {
+    height: 81px;
+    width: 104px;
+    background-image: url("../../../assets/menu/Join_as_Pro_Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
 }
 
-.menuImagenesTo{
+.imgMenu2 {
+    height: 81px;
+    width: 104px;
+    background-image: url("../../../assets/menu/To_Hire_Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+.menuImagenesTo {
     margin-top: 40px;
     width: 655px;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
 }
-.cright{
-  float: right;
+
+.cright {
+    float: right;
 }
-.menuPrin{
+
+.menuPrin {
     position: absolute;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 33%;
     margin: 0;
     width: 894px;
     height: 229px;
     overflow: hidden;
-    }
-.button{
-  margin-top: 20px;
+}
+
+.button {
+    margin-top: 20px;
 }
