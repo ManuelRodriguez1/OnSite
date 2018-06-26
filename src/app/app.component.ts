@@ -9,14 +9,17 @@ import { Component ,OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-name="";
-email ="";
-uid="";
+  name="";
+  email ="";
+  uid="";
   constructor(public af: AngularFireAuth,private router: Router){
     this.DatosDeSesion();
     this.InsertarDatos("belxy1", "belxy2", "belxy3", "belxy1");
     this.VerDatosTiempoReal();
     this.VerDatos();
+    this.InsertarEnTablasSimultaneas("p", "pp", "ppp", "pppp", "ppppp");
+    this.InsercionConMensajeDeError();
+    this.EliminarDatos();
   }
   /*
   Funcion DatosDeSesion se recupera todos los datos de la sesion inicia
@@ -33,14 +36,16 @@ uid="";
   } else {
     console.log("usuarioincorrecto");
   }
+
 });
 }
 /*
 Funcion InsertarDatos se inserta los datos en la tabla preliminar todos usando database
+o los modifica si ya los encuentra
 */
  InsertarDatos(userId, name, email, imageUrl) {
     firebase.database().ref('users/' + userId).set({
-      username: name,
+      username: "simodifico",
       email: email,
       profile_picture : imageUrl
     });
@@ -60,14 +65,20 @@ Funcion InsertarDatos se inserta los datos en la tabla preliminar todos usando d
 VerDatos Lee los datos una sola vez no obtiene los cambios de la base de datos
 */
   VerDatos(){
-    alert("HOLAS");
+
      firebase.database().ref('/users/belxy1' ).once('value').then(function(snapshot) {
       var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
       console.log(snapshot.val());
     });
   }
-   writeNewPost(uid, username, picture, title, body) {
-    // A post entry.
+
+  /*
+  Obtén una clave para un nuevo mensaje. Escriba los datos de la nueva publicación
+  simultáneamente en la lista de publicaciones  y en la lista de publicaciones del usuario.
+  para cuando se requiere guardar los datos en tablas diferentes o tablas relacionales
+
+*/
+   InsertarEnTablasSimultaneas(uid, username, picture, title, body) {
     var postData = {
       author: username,
       uid: uid,
@@ -77,10 +88,10 @@ VerDatos Lee los datos una sola vez no obtiene los cambios de la base de datos
       authorPic: picture
     };
 
-    // Get a key for a new Post.
-    var newPostKey = firebase.database().ref().child('posts').push().key;
 
-    // Write the new post's data simultaneously in the posts list and the user's post list.
+    var newPostKey = firebase.database().ref().child('post').push().key;
+
+
     var updates = {};
     updates['/posts/' + newPostKey] = postData;
     updates['/user-posts/' + uid + '/' + newPostKey] = postData;
@@ -88,6 +99,31 @@ VerDatos Lee los datos una sola vez no obtiene los cambios de la base de datos
     return firebase.database().ref().update(updates);
   }
 
+/*
+Inserta un elemento o lo modifica si ya lo encuentra en la tabla
+si en el proceso hay algun error esta la funcionde error
+*/
+
+InsercionConMensajeDeError(){
+  firebase.database().ref('users/' + "belxy1777").set({
+     username: "moo",
+     email: "miiiii",
+     profile_picture : "imageUrl"
+   }, function(error) {
+     if (error) {
+       console.log("siiiiiiiiii"+error);
+       // The write failed...
+     } else {
+       // Data saved successfully!
+       console.log("nooooooooooo");
+     }
+   });
+ }
+ EliminarDatos(){
+   firebase.database().ref('users/' + "belxy1").set({
+  username: null,
+   });
+ }
 
   ngOnInit() {
 
