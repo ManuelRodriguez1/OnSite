@@ -22,9 +22,15 @@ export class InboxComponent implements OnInit {
       "dispo" : "Available"},
   ]
 
+  vista = 1;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  call(e){
+    this.vista = 2;
   }
 
 }

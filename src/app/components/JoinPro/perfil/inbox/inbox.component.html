@@ -9,7 +9,7 @@
   </div>
   <div class="chat">
     <div class="column1">
-      <div class="people" *ngFor="let l of list">
+      <div class="people" *ngFor="let l of list; let i = index" (click)="call(i)">
         <p class="first">Email Subject Line</p>
         <div class="perfil">
           <div class="image"></div>
@@ -42,7 +42,43 @@
           </div>
       </div>
       <div class="body">
-
+        <section *ngIf="vista == 1">
+          <div class="chatcont" *ngFor="let l of list">
+            <div class="date">
+              <p>Day, Month, Year</p>
+            </div>
+            <div class="contact">
+              <div class="perfil2"></div>
+              <div class="textochat">
+                <p class="p1">Hello it’s me John! </p>
+                <p class="p2">Is it me you’re looking for?</p>
+                <p class="p3">I need some help with lorem ipsum dolor more ipsum and I’ve attached some images labelled as lorem ipsum more dolor. Do you think you’d be able to get it done by dolor lorem ipsum amit? Let us know if dolor ipsom is possible.</p>
+                <div class="linea"></div>
+                <div class="archadjunto">
+                  <div class="clip"></div>
+                  <div class="archad">
+                    <p class="label">Lorem_ipsum.pdf</p>
+                  </div>
+                </div>
+              </div>
+              <div class="time">
+                <p>Time</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section *ngIf="vista == 2 ">
+          <div class="perfil2"></div>
+          <div class="minimenu">
+            <p class="title"><label class="label">Tim</label> wants to hire you as a <label class="label">Drywall Hanger.</label></p>
+            <p class="text2">Will you accept $12/hour?</p>
+            <div class="botones">
+              <button class="button verde">Yes</button>
+              <button class="button negro">No</button>
+              <button class="button">Negotiate</button>
+            </div>
+          </div>
+        </section>
       </div>
       <div class="message">
         <div class="adjunto"></div>
