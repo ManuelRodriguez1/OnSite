@@ -13,13 +13,13 @@ export class AppComponent implements OnInit {
   email ="";
   uid="";
   constructor(public af: AngularFireAuth,private router: Router){
-    this.DatosDeSesion();
+  /*  this.DatosDeSesion();
     this.InsertarDatos("belxy1", "belxy2", "belxy3", "belxy1");
     this.VerDatosTiempoReal();
     this.VerDatos();
     this.InsertarEnTablasSimultaneas("p", "pp", "ppp", "pppp", "ppppp");
     this.InsercionConMensajeDeError();
-    this.EliminarDatos();
+    this.EliminarDatos();*/
   }
   /*
   Funcion DatosDeSesion se recupera todos los datos de la sesion inicia
@@ -119,6 +119,11 @@ InsercionConMensajeDeError(){
      }
    });
  }
+
+ /*
+ Eliminar Datos
+ */
+
  EliminarDatos(){
    firebase.database().ref('users/' + "belxy1").set({
   username: null,
