@@ -1,12 +1,11 @@
-
-    <div class="header">
-      <div class="logo"></div>
-      <ul class="menu">
+<div class="header">
+    <div class="logo"></div>
+    <ul class="menu">
         <li>Contact</li>
         <li>Marketplace</li>
         <li>Join as OnSite Pro </li>
         <li *ngIf="Sesion==false"><a [routerLink]="['/']">Log In</a></li>
         <li *ngIf="Sesion" (click)="logout()">My Account</li>
         <!-- <li *ngIf="Sesion" ><a (click)="logout()">Logout</a></li> -->
-      </ul>
-    </div>
+    </ul>
+</div>

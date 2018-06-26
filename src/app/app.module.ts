@@ -12,7 +12,7 @@ import { InicioSesionComponent } from './components/Login/inicio-sesion/inicio-s
 import { RecordarPasswordComponent } from './components/Login/recordar-password/recordar-password.component';
 
 //Inicio Librerias de autenticaciòn
-// import * as firebase from 'firebase/app';
+ import * as firebase from 'firebase/app';
 import { environment } from '../environments/environment';
 
 import { HttpModule } from '@angular/http';
@@ -48,6 +48,7 @@ import { ReviewsComponent } from './components/JoinPro/registro/reviews/reviews.
 import { PerfilComponent } from './components/JoinPro/perfil/perfil.component';
 import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.component';
 import { InboxComponent } from './components/JoinPro/perfil/inbox/inbox.component';
+import { RegistroclientesComponent } from './registroclientes/registroclientes.component';
 
 
 
@@ -68,7 +69,8 @@ import { InboxComponent } from './components/JoinPro/perfil/inbox/inbox.componen
     ReviewsComponent,
     PerfilComponent,
     HomeproComponent,
-    InboxComponent
+    InboxComponent,
+    RegistroclientesComponent
 
   ],
   imports: [

@@ -1,11 +1,12 @@
-.header{
+.header {
     color: rgba(0, 0, 0, 0.5);
     font-size: 21px;
     line-height: 20px;
     font-family: 'Abel', sans-serif;
     overflow: hidden;
 }
-.logo{
+
+.logo {
     width: 214px;
     height: 45px;
     content: 'logo';
@@ -15,18 +16,22 @@
     margin-left: 4px;
     background-color: pink;
 }
-.menu{
+
+.menu {
     display: inline-flex;
     float: right;
-    margin-top: 33px; 
+    margin-top: 33px;
 }
-li{
+
+li {
     margin-right: 65px;
 }
-a{
+
+a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.5);
 }
-a:visited{
+
+a:visited {
     color: rgba(0, 0, 0, 0.5);
 }

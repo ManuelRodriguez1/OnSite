@@ -1,0 +1,64 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<div class="container mt-5">
+
+
+<form #formData="ngForm" (ngSubmit)="onSubmit(formData)"  method="post">
+  <div class="form-group">
+      <label for="exampleInputEmail1">First Name</label>
+  <input required type="text" name="nombre" value="" [(ngModel)]="nombre" class="form-control" placeholder="First Name">
+  </div>
+  <div class="form-group">
+      <label for="exampleInputEmail1">Last Name</label>
+  <input required type="text" name="apellido" value="" [(ngModel)]="apellido" class="form-control" placeholder="Last Name">
+  </div>
+  <div class="form-group">
+      <label for="exampleInputEmail1">Phone Number</label>
+  <input required type="text" name="telefono" value="" [(ngModel)]="telefono"  class="form-control" placeholder="Phone Number">
+</div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input  required type="email" [(ngModel)]="email" name="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter city or zipcode.</label>
+  <input required type="text" name="zipcode" [(ngModel)]="zipcode"  value="" class="form-control" placeholder="Enter city or zipcode.">
+  </div>
+  <div class="form-group">
+    <label for="exampleSelect1">Skills</label>
+    <select required class="form-control" id="exampleSelect1" [(ngModel)]="skills"   name="skills">
+      <option value="" selected>Skills</option>
+      <option *ngFor="let l of list" [value]="l.categorias">{{l.categorias}}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary" name="button" [disabled]="!formData.valid">Sign Up</button>
+
+</form>
+
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Email address</th>
+      <th scope="col">Enter city or zipcode.</th>
+      <th scope="col">Skills</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of empleados">
+      <th scope="row">1</th>
+      <td> {{ l.nombre }}</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+</div>

@@ -12,21 +12,22 @@ import { HomeComponent } from '../components/home/home.component';
 import { RegistroComponent } from '../components/JoinPro/registro/registro.component';
 import { PerfilComponent } from '../components/JoinPro/perfil/perfil.component';
 
-
-
+import { RegistroclientesComponent } from '../registroclientes/registroclientes.component';
 
 
 //menu ya menuYaLoguiado
 
 export const router: Routes = [
-  { path: 'libreria', component: LibreriaComponent },
-  { path: 'HirePriComponent', component: HirePriComponent },
-  { path: 'login', component: InicioSesionComponent },
-  { path: 'registroHire', component: HireComponent },
-  { path: 'registroPro', component: RegistroComponent },
-  { path: 'perfilPro', component: PerfilComponent },
-  { path: '', component: HomeComponent }
-    //  { path: 'members', component: AuthGuard, canActivate: [AuthGuard] }//login
+  // { path: 'libreria', component: LibreriaComponent },
+  // { path: 'HirePriComponent', component: HirePriComponent },
+  // { path: 'login', component: InicioSesionComponent },
+  // { path: 'registroHire', component: HireComponent },
+  // { path: 'registroPro', component: RegistroComponent },
+  // { path: 'perfilPro', component: PerfilComponent },
+  { path: 'Registro', component: RegistroclientesComponent },
+  { path: '', component: RegistroclientesComponent },
+  //{ path: '', component: HomeComponent },
+//  { path: 'HirePriComponent', component: AuthGuard, canActivate: [AuthGuard] }//login
    ]
 
 
