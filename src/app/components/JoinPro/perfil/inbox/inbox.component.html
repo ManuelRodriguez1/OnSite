@@ -42,7 +42,7 @@
           </div>
       </div>
       <div class="body">
-        <section *ngIf="vista == 1">
+        <section *ngIf="vista == false">
           <div class="chatcont" *ngFor="let l of list">
             <div class="date">
               <p>Day, Month, Year</p>
@@ -67,15 +67,18 @@
             </div>
           </div>
         </section>
-        <section *ngIf="vista == 2 ">
+        <section *ngIf="vista == true " class="section">
+          <div class="date">
+              <p>Day, Month, Year</p>
+            </div>
           <div class="perfil2"></div>
           <div class="minimenu">
             <p class="title"><label class="label">Tim</label> wants to hire you as a <label class="label">Drywall Hanger.</label></p>
-            <p class="text2">Will you accept $12/hour?</p>
+            <p class="text2 label">Will you accept $12/hour?</p>
             <div class="botones">
               <button class="button verde">Yes</button>
               <button class="button negro">No</button>
-              <button class="button">Negotiate</button>
+              <button class="button" (click)="mostrar()">Negotiate</button>
             </div>
           </div>
         </section>
@@ -88,3 +91,16 @@
     </div>
   </div>
 </div>
+
+<div class="modal" *ngIf="modal == true">
+  
+</div>
+
+<div class="flotante" *ngIf="modal == true">
+    <div class="xblue" (click)="mostrar()"></div>
+    <p>What is your counteroffer?</p>
+    <div class="con">
+        <input type="text" class="input" placeholder="Enter">
+        <button class="button">Negotiate</button>
+    </div>
+  </div>

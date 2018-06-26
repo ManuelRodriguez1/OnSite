@@ -22,15 +22,18 @@ export class InboxComponent implements OnInit {
       "dispo" : "Available"},
   ]
 
-  vista = 1;
-
+  vista = false;
+  modal = false;
   constructor() { }
 
   ngOnInit() {
   }
 
   call(e){
-    this.vista = 2;
+    this.vista = !this.vista;
+  }
+  mostrar(){
+    this.modal = !this.modal;
   }
 
 }
