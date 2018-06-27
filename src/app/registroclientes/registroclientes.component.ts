@@ -97,7 +97,7 @@ childData = [];
    VerDatosTiempoReal(){
 var returnArr = [];
 //console.log(childKey);
-firebase.database().ref("empleados/").once('value', function(snapshot) {
+firebase.database().ref("empleados/").on('value', function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
     var childKey = childSnapshot.key;
     var childData = childSnapshot.val();
