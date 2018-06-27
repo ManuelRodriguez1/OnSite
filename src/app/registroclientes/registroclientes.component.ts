@@ -72,7 +72,7 @@ childData = [];
     this.childData  =this.VerDatosTiempoReal();
   }
   onSubmit(formData){
-    alert("hola");
+    
     firebase.database().ref('empleados/').push({
         nombre: formData.value.nombre,
         apellido: formData.value.apellido,
@@ -97,7 +97,7 @@ childData = [];
    VerDatosTiempoReal(){
 var returnArr = [];
 //console.log(childKey);
-firebase.database().ref("empleados/").once('value', function(snapshot) {
+firebase.database().ref("empleados").on('value', function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
     var childKey = childSnapshot.key;
     var childData = childSnapshot.val();
