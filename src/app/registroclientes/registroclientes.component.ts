@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase/app';
+import { Model2 } from '../model/model';
+import { ServiceService } from '../service/service.service';
+import { AngularFireDatabase } from 'angularfire2/database';
+
 @Component({
   selector: 'app-registroclientes',
   templateUrl: './registroclientes.component.html',
@@ -58,12 +62,11 @@ export class RegistroclientesComponent implements OnInit {
     }
   ];
 
-  Model = [];
+  model: Model2[];
+  preserveSnapshot: true;
 
 
-
-
-  constructor() {
+  constructor(private service: ServiceService, private af: AngularFireDatabase) {
 
   }
   onSubmit(formData){
@@ -89,28 +92,11 @@ export class RegistroclientesComponent implements OnInit {
    }
 
    VerDatosTiempoReal(){
-   /*var starCountRef = firebase.database().ref('empleados/');
-     starCountRef.on('value', function(snapshot) {
-
-       snapshot.forEach(snapshot => {
-         console.log(snapshot.key);
-         console.log(snapshot.key, snapshot.val());
-       });
-
-
-     //this.empleados = snapshot.val();
-   });*/
-
-   this.af.database.list('/users', { preserveSnapshot: true})
-    .subscribe(snapshots=>{
-        snapshots.forEach(snapshot => {
-          console.log(snapshot.key, snapshot.val());
-        });
-    })
+  
    }
 
   ngOnInit() {
-    this.VerDatosTiempoReal();
+
   }
 
 }
