@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase/app';
-import { Model2 } from '../model/model';
-import { ServiceService } from '../service/service.service';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-registroclientes',
@@ -10,7 +11,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
   styleUrls: ['./registroclientes.component.css']
 })
 export class RegistroclientesComponent implements OnInit {
-
+Guardar2;
   list = [
     {
       "categorias": "Concrete"
@@ -62,14 +63,16 @@ export class RegistroclientesComponent implements OnInit {
     }
   ];
 
-  model: Model2[];
-  preserveSnapshot: true;
+key: any;
+
+childData = [];
 
 
-  constructor(private service: ServiceService, private af: AngularFireDatabase) {
-
+  constructor() {
+    this.childData  =this.VerDatosTiempoReal();
   }
   onSubmit(formData){
+    alert("hola");
     firebase.database().ref('empleados/').push({
         nombre: formData.value.nombre,
         apellido: formData.value.apellido,
@@ -92,11 +95,22 @@ export class RegistroclientesComponent implements OnInit {
    }
 
    VerDatosTiempoReal(){
-  
+var returnArr = [];
+//console.log(childKey);
+firebase.database().ref("empleados/").once('value', function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+    var childKey = childSnapshot.key;
+    var childData = childSnapshot.val();
+     returnArr.push(childData);
+  });
+
+
+});
+ return returnArr;
    }
 
   ngOnInit() {
 
-  }
 
+  }
 }
