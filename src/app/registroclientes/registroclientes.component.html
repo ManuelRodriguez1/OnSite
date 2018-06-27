@@ -38,7 +38,7 @@
 
 </form>
 
-<table class="table table-hover table-dark">
+<table class="table table-hover table-dark mt-5">
   <thead>
     <tr>
       <th scope="col">First Name</th>
@@ -52,8 +52,11 @@
   <tbody>
     <tr *ngFor="let l of childData">
       <th scope="row">{{l.nombre}}</th>
-      <td> 2</td>
-      <td>4</td>
+      <td> {{l.apellido}}</td>
+      <td>{{l.telefono}}</td>
+      <td>{{l.email}}</td>
+      <td>{{l.zipcode}}</td>
+      <td>{{l.skills}}</td>
 
     </tr>
 
