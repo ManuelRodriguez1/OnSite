@@ -80,10 +80,9 @@
 .content{
     margin-left: 225px;
     background-color: #E0E0E0;
-    position: fixed;
     width: calc(100% - 225px);
     overflow: scroll;
-    height: 100%;
+    height: calc(100vh - 85px);
 }
 .desgloce{
     position: relative;

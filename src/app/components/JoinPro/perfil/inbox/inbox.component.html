@@ -97,10 +97,17 @@
 </div>
 
 <div class="flotante" *ngIf="modal == true">
-    <div class="xblue" (click)="mostrar()"></div>
-    <p>What is your counteroffer?</p>
-    <div class="con">
-        <input type="text" class="input" placeholder="Enter">
-        <button class="button">Negotiate</button>
-    </div>
+  <div class="xblue" (click)="mostrar()"></div>
+  <section *ngIf="offer == ''">
+      <p>What is your counteroffer?</p>
+      <div class="con">
+        <form  #smallform='ngForm' (ngSubmit)="oferta(smallform)" method="POST">
+          <input type="number" class="input" placeholder="Enter" (ngModel)="oferta" name="oferta">
+          <button type="submit" class="button" [disabled]="!smallform.valid">Negotiate</button>
+        </form>
+      </div>
+    </section>
+    <section *ngIf="offer != ''">
+      <p class="sp">Your counter offer of <br><label for="" class="label">${{offer}}/hour</label> has been sent. </p>
+    </section>
   </div>

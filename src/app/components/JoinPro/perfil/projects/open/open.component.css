@@ -1,0 +1,254 @@
+.contenedor{
+    margin: 0 auto;
+    margin-top: 93px;
+    width: 902px;
+}
+.tagswhite{
+    background-color: white;
+}
+.text{
+    font-size: 40px;
+}
+.cont{
+    margin-top: 78px;
+    overflow: hidden;
+}
+.colum1{
+    float: left;
+    width: 479px;
+}
+.primer{
+    font-size: 40px;
+}
+.caja1, .caja2{
+    overflow: hidden;
+}
+.caja1{
+    margin-top: 38px;
+}
+.caja2{
+    margin-top: 17px;
+}
+.caja2 .tags, .caja2  .tagswhite{
+    opacity: 0.5;
+}
+.tags, .tagswhite{
+    float: left;
+}
+.tagswhite{
+    position: relative;
+    margin-left: 32px;
+}
+.tagswhite::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 1px;
+    background-color: #BDBDBD;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -33px;
+}
+.small{
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 41px;
+}
+.texto{
+    margin-top: 43px;
+    font-size: 15px;
+    line-height: 22px;
+}
+.texto p:first-child, .texto2 p:first-child{
+    font-weight: 600;
+}
+.texto2{
+    margin-top: 31px;
+    font-size: 15px;
+    line-height: 22px;
+}
+.colum2{
+    float: right;
+    width: 405px;
+}
+.mapa{
+    width: 405px;
+    height: 280px;
+    border-radius: 4px;
+    background-image: url('../../../../../../assets/icons/mapa.svg');
+}
+.teams{
+    margin-top: 72px;
+    overflow: hidden;
+}
+.title{
+    font-size: 40px;
+    margin-top: 28px;
+    font-weight: 500;
+}
+.team{
+    margin-top: 29px;
+    margin-left: 41px;
+}
+.team2{
+    margin-top: 27px;
+    float: left;
+    margin-left: 241px;
+}
+.perfiles{
+    width: 208px;
+    margin-left: 23px;
+    float: left;
+    height: 41px;
+    background: blue;
+}
+.textperfil{
+    margin-left: 17px;
+    float: left;
+    font-size: 26px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+.teams .tags{
+    width: 173px;
+    margin-top: 5px;
+}
+.team2 .perfiles{
+    margin-left: 48px;
+}
+.team2 p:first-child{
+    margin-bottom: 19px;
+    font-weight: 500;
+}
+.team2 .tags, .team2 .perfiles, .team2 .textperfil{
+    opacity: 0.5;
+}
+.title2{
+    margin-top: 62px;
+    font-size: 40px;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+}
+.title2 p{
+    float: left;
+}
+.title2 .input{
+    float: right;
+    width: 409px;
+}
+.title2 p::after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 14px;
+    background-image: url('../../../../../../assets/icons/opcionSelect.svg');
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.calendar{
+    margin-top: 23px;
+    background: white;
+    width: 100%;
+    overflow-x: scroll;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+}
+.date{
+    font-size: 12px;
+    color: #828282;
+    margin-top: 20px;
+    float: left;
+    margin-left: 11px;
+}
+.botons{
+    float: right;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-flex;
+    margin-top: 15px;
+}
+.btn{
+    width: 73px;
+    height: 28px;
+    border-radius: 17px;
+    font-size: 14px;
+    text-align: center;
+    color: #333333;
+    border: solid #2F80ED 1px;
+    line-height: 29px;
+    margin-right: 10px; 
+}
+.active{
+    background: #2F80ED;
+}
+.calendarfull{
+    overflow: hidden;
+    overflow-x: scroll;
+    width: 100%;
+    background: #E0E0E0;
+    margin-top: 13px;
+}
+.calendarfull::-webkit-scrollbar{
+    height: 9px;
+}
+.calendarfull::-webkit-scrollbar-track{
+    background: #BDBDBD;
+}
+.calendarfull::-webkit-scrollbar-thumb{
+    background: #828282;
+}
+.calendario{
+    width: 1200px;
+    height: 306px;
+    margin-bottom: 20px;
+    background: white;
+}
+.tools{
+    width: 429px;
+    overflow: hidden;
+}
+.fila{
+    width: 264px;
+    overflow: hidden;
+    float: right;
+    position: relative;
+}
+.fila::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: calc(100% - 39px);
+    width: 1px;
+    background: #BDBDBD;
+    top: 14px;
+}
+.fila .tagswhite{
+    float: left;
+    margin-bottom: 10px;
+}
+.tools .tags{
+    position: relative;
+}
+.tools .tags::after{
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    background: #BDBDBD;
+    right: -22px;
+    top: 52%;
+    transform: translateY(-50%);
+}
+.t2 p::after{
+    display: none;
+}
+.message{
+    background: white;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
+}

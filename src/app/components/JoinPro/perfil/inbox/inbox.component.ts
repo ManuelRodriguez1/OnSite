@@ -25,7 +25,7 @@ export class InboxComponent implements OnInit {
   vista = false;
   modal = false;
   constructor() { }
-
+  offer = '';
   ngOnInit() {
   }
 
@@ -34,6 +34,12 @@ export class InboxComponent implements OnInit {
   }
   mostrar(){
     this.modal = !this.modal;
+    this.offer = '';
+  }
+
+  oferta(smallform){
+    console.log(smallform);
+    this.offer = smallform.value.oferta;
   }
 
 }

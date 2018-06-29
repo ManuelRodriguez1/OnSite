@@ -4,8 +4,16 @@
     line-height: 20px;
     font-family: 'Abel', sans-serif;
     overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 3;
+    top: 0;
 }
-
+.false{
+    height: 85px;
+    z-index: -1;
+}
 .logo {
     width: 214px;
     height: 45px;

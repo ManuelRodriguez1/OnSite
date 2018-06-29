@@ -18,12 +18,12 @@ import { RegistroclientesComponent } from '../registroclientes/registroclientes.
 //menu ya menuYaLoguiado
 
 export const router: Routes = [
-  // { path: 'libreria', component: LibreriaComponent },
+  { path: 'libreria', component: LibreriaComponent },
   // { path: 'HirePriComponent', component: HirePriComponent },
   // { path: 'login', component: InicioSesionComponent },
   // { path: 'registroHire', component: HireComponent },
   // { path: 'registroPro', component: RegistroComponent },
-  // { path: 'perfilPro', component: PerfilComponent },
+  { path: 'perfilPro', component: PerfilComponent },
   { path: 'Registro', component: RegistroclientesComponent },
   { path: '', component: RegistroclientesComponent },
   //{ path: '', component: HomeComponent },
