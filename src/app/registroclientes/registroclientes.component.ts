@@ -62,55 +62,53 @@ Guardar2;
       "categorias": "Waterproof Installation"
     }
   ];
+  key: any;
 
-key: any;
-
-childData = [];
-
-
-  constructor() {
-    this.childData  =this.VerDatosTiempoReal();
-  }
-  onSubmit(formData){
-
-    firebase.database().ref('empleados/').push({
-        nombre: formData.value.nombre,
-        apellido: formData.value.apellido,
-        telefono: formData.value.telefono,
-        email: formData.value.email,
-        zipcode: formData.value.zipcode,
-        skills: formData.value.skills
-     }, function(error) {
-       if (error) {
-         console.log("Error: "+error);
-         // The write failed...
-       } else {
-         // Data saved successfully!
-         console.log("Guardado con exito");
-         formData.reset();
-       }
-     });
+  childData = [];
 
 
+   constructor() {
+     this.childData  =this.VerDatosTiempoReal();
    }
+   onSubmit(formData){
 
-   VerDatosTiempoReal(){
-var returnArr = [];
-//console.log(childKey);
-firebase.database().ref("empleados").on('value', function(snapshot) {
-  snapshot.forEach(function(childSnapshot) {
-    var childKey = childSnapshot.key;
-    var childData = childSnapshot.val();
-     returnArr.push(childData);
+     firebase.database().ref('empleados/').push({
+         nombre: formData.value.nombre,
+         apellido: formData.value.apellido,
+         telefono: formData.value.telefono,
+         email: formData.value.email,
+         zipcode: formData.value.zipcode,
+         skills: formData.value.skills
+      }, function(error) {
+        if (error) {
+          console.log("Error: "+error);
+          // The write failed...
+        } else {
+          // Data saved successfully!
+          console.log("Guardado con exito");
+          formData.reset();
+        }
+      });
+
+
+    }
+
+    VerDatosTiempoReal(){
+  var returnArr = [];
+  //console.log(childKey);
+  firebase.database().ref("empleados").on('value', function(snapshot) {
+   snapshot.forEach(function(childSnapshot) {
+     var childKey = childSnapshot.key;
+     var childData = childSnapshot.val();
+      returnArr.push(childData);
+   });
+
+
   });
+  return returnArr;
+    }
+
+   ngOnInit() {
 
 
-});
- return returnArr;
    }
-
-  ngOnInit() {
-
-
-  }
-}

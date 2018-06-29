@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-hire',
   templateUrl: './hire.component.html',
-  styleUrls: ['./hire.component.css', '../JoinPro/registro/registro.component.css']
+  styleUrls: ['./hire.component.css', '../../JoinPro/registro/registro.component.css']
 })
 export class HireComponent  {
 
@@ -16,18 +16,31 @@ export class HireComponent  {
     constructor(public af: AngularFireAuth,private router: Router) {
       }
       onSubmit(formData) {
-        console.log("hola");
+
 
           if(formData.valid) {
+            console.log("hola");
              this.af.auth.createUserAndRetrieveDataWithEmailAndPassword(
               formData.value.Email,
               formData.value.Password
+
              ).then(
                (success) => {
+                  var user = firebase.auth().currentUser;
+                  firebase.database().ref('users_hire/'+ user.uid).set({
+                  nombre: formData.value.FirstName,
+                  apellido: formData.value.LastName,
+                  telefono: formData.value.PhoneNumber,
+                  correo: user.email,
+                  zipcode: formData.value.Entercityorzipcode,
+                  rol: "hire"
+
+                });
                this.router.navigate(['/HirePriComponent'])
              }).catch(
                (err) => {
                this.error = err.message;
+
              })
            }
          }

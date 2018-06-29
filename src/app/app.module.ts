@@ -28,7 +28,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 // import { AuthGuard } from './service/auth.service';
 
 import { AuthGuard } from './service/auth.service';
-import { HireComponent } from './components/JoinHire/hire.component';
+import { HireComponent } from './components/JoinHire/Registro/hire.component';
 import { HeaderComponent } from './components/header/header.component';
 
 
@@ -37,7 +37,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegistroComponent } from './components/JoinPro/registro/registro.component';
 import { SelectComponent } from './components/JoinPro/registro/select/select.component';
 import { HomeComponent } from './components/home/home.component';
-import { HirePriComponent } from './components/hire-pri/hire-pri.component';
+import { HirePriComponent } from './components/JoinHire/home/hire-pri.component';
 
 //Fin Librerias de autenticaciòn
 
