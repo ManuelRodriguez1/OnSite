@@ -49,6 +49,7 @@ import { PerfilComponent } from './components/JoinPro/perfil/perfil.component';
 import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.component';
 import { InboxComponent } from './components/JoinPro/perfil/inbox/inbox.component';
 import { RegistroclientesComponent } from './registroclientes/registroclientes.component';
+import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.component';
 
 
 
@@ -70,7 +71,8 @@ import { RegistroclientesComponent } from './registroclientes/registroclientes.c
     PerfilComponent,
     HomeproComponent,
     InboxComponent,
-    RegistroclientesComponent
+    RegistroclientesComponent,
+    OpenComponent
 
   ],
   imports: [

@@ -17,7 +17,7 @@
       <p (click)="bola(2)">Sent</p>
       <p (click)="bola(3)">Trash</p>
     </div>
-    <div class="opcion"><p>PROJECTS</p></div>
+    <div class="opcion" [class.select]="m == 3" (click)="menu(3)"><p>PROJECTS</p></div>
     <div class="opcion"><p>TIMESHEET</p></div>
     <div class="opcion"><p>EXPLORE</p></div>
   </div>
@@ -28,5 +28,8 @@
   </section>
   <section *ngIf="m == 2">
     <app-inbox></app-inbox>
+  </section>
+  <section *ngIf="m == 3">
+    <app-open></app-open>
   </section>
 </div>
