@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
   email ="";
   uid="";
   constructor(public af: AngularFireAuth,private router: Router){
+
+
   /*  this.DatosDeSesion();
     this.InsertarDatos("belxy1", "belxy2", "belxy3", "belxy1");
     this.VerDatosTiempoReal();

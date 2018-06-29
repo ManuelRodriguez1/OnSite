@@ -1,0 +1,58 @@
+input[type="button" i]:disabled, input[type="submit" i]:disabled, input[type="reset" i]:disabled, input[type="file" i]:disabled::-webkit-file-upload-button, button:disabled, select:disabled, optgroup:disabled, option:disabled, select[disabled] > option {
+    opacity: 0.5;
+}
+
+/*  @media only screen and (min-width: 768px) {
+.container {
+    width: 820px;
+    max-width: 100%;
+}
+.input{
+  width: calc(100% - 100px);
+
+}
+}*/
+@media only screen and (max-width: 900px) {
+
+
+.contenedor {
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.colum{
+    width: 370px !important;
+}
+}
+@media only screen and (max-width: 800px) {
+
+
+.contenedor {
+
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 769px;
+}
+.colum{
+    width: 370px !important;
+}
+}
+.botones{
+  width: auto !important;
+}
+/*
+  @media only screen and (max-width: 768px) {
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+}
+
+
+        @media only screen and (min-width: 576px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+  }*/
