@@ -72,7 +72,7 @@ childData = [];
     this.childData  =this.VerDatosTiempoReal();
   }
   onSubmit(formData){
-    
+
     firebase.database().ref('empleados/').push({
         nombre: formData.value.nombre,
         apellido: formData.value.apellido,
