@@ -44,7 +44,8 @@ export class HireComponent  {
                   rol: "hire"
 
                 });
-               this.router.navigate(['/HirePriComponent'])
+              // this.router.navigate(['/HirePriComponent'])
+        //      this.router.navigate(['chat'])
              }).catch(
                (err) => {
                this.error = err.message;
