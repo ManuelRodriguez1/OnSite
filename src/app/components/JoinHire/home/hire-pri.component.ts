@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 })
 export class HirePriComponent {
     //mySwiper = Swiper;
-    menuVista = "Home";
+    menuVista = "Inbox";
     Sesion = true;
     placeholder = "Search projects.";
     aparecer = '';

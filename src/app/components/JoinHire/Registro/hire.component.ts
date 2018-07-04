@@ -27,6 +27,14 @@ export class HireComponent  {
              ).then(
                (success) => {
                   var user = firebase.auth().currentUser;
+                  user.updateProfile({
+                    displayName: formData.value.FirstName+" "+formData.value.LastName,
+                    photoURL: "",
+                    phoneNumber: formData.value.PhoneNumber,
+                    zipcode: "belxy"
+                  });
+
+
                   firebase.database().ref('users_hire/'+ user.uid).set({
                   nombre: formData.value.FirstName,
                   apellido: formData.value.LastName,
@@ -36,7 +44,8 @@ export class HireComponent  {
                   rol: "hire"
 
                 });
-               this.router.navigate(['/HirePriComponent'])
+              // this.router.navigate(['/HirePriComponent'])
+        //      this.router.navigate(['chat'])
              }).catch(
                (err) => {
                this.error = err.message;
