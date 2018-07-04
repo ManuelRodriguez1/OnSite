@@ -251,4 +251,15 @@
     background: white;
     border-top-right-radius: 17px;
     border-top-left-radius: 17px;
+    margin-top: 33px;
+}
+.button2{
+    width: 98px;
+    height: 28px;
+    background: #2F80ED;
+    text-align: center;
+    color: #F2F2F2;
+    font-size: 14px;
+    border-radius: 17px;
+    line-height: 28px;
 }
