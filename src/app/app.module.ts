@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LibreriaComponent } from './components/libreria/libreria.component';
 
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 //Rutas
 import { routes } from './routes/routes';
 //import { CrearUsuarioComponent } from './components/Login/crear-usuario/crear-usuario.component';
@@ -18,7 +19,7 @@ import { environment } from '../environments/environment';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 import { AngularFireModule } from 'angularfire2';
 
 // import { HttpModule } from '@angular/http';
@@ -50,6 +51,13 @@ import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.co
 import { InboxComponent } from './components/JoinPro/perfil/inbox/inbox.component';
 import { RegistroclientesComponent } from './registroclientes/registroclientes.component';
 import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.component';
+import { ChatFormComponent } from './chat/chat-form/chat-form.component';
+import { ChatroomComponent } from './chat/chatroom/chatroom.component';
+import { FeedComponent } from './chat/feed/feed.component';
+import { MessageComponent } from './chat/message/message.component';
+import { UserListComponent } from './chat/user-list/user-list.component';
+import { UserItemsComponent } from './chat/user-items/user-items.component';
+import { ChatService } from './chat/chat.service';
 
 
 
@@ -72,7 +80,13 @@ import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.co
     HomeproComponent,
     InboxComponent,
     RegistroclientesComponent,
-    OpenComponent
+    OpenComponent,
+    ChatFormComponent,
+    ChatroomComponent,
+    FeedComponent,
+    MessageComponent,
+    UserListComponent,
+    UserItemsComponent
 
   ],
   imports: [
@@ -87,7 +101,7 @@ import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.co
     AngularFireDatabaseModule
   ],
   //providers: [AuthGuard,AngularFirestore,MatStepperIntl,ServiceService],
-  providers:[ServiceService],
+  providers:[ServiceService,ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
