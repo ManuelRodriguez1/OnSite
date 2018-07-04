@@ -50,6 +50,7 @@ import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.co
 import { InboxComponent } from './components/JoinPro/perfil/inbox/inbox.component';
 import { RegistroclientesComponent } from './registroclientes/registroclientes.component';
 import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.component';
+import { ExploreComponent } from './components/JoinPro/perfil/explore/explore.component';
 
 
 
@@ -72,7 +73,8 @@ import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.co
     HomeproComponent,
     InboxComponent,
     RegistroclientesComponent,
-    OpenComponent
+    OpenComponent,
+    ExploreComponent
 
   ],
   imports: [

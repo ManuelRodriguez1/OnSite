@@ -223,3 +223,90 @@
     opacity: 1;
     transition: 0.5s;
 }
+.nofile{
+    background-color: #D2D1D1;
+    height: 404px;
+    text-align: center;
+    overflow: hidden;
+}
+.center{
+    margin-top: 140px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.nofile .button{
+    margin-top: 38px;
+}
+.map2{
+    height: 321px;
+    background: burlywood;
+    margin-top: 41px;
+}
+.col1{
+    width: 435px;
+    float: left;
+    margin-top: 39px;
+}
+.col1 .tagswhite{
+    background: white;
+    position: relative;
+    overflow: visible;
+    margin-left: 38px;
+}
+.col1 .tagswhite::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background: #BDBDBD;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40px;
+}
+.botones2{
+    display: inline-flex;
+    margin-top: 46px;
+}
+.col2{
+    color: #2F80ED;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
+    float: right;
+    width: 294px;
+    border-radius: 17px;
+    background: white;
+    margin-top: 27px;
+    position: relative;
+}
+.col2 p{
+    margin-left: 25px;
+    line-height: 20px;
+}
+.f1{
+    margin-top: 29px;
+}
+.nube{
+    margin-top: 14px;
+    overflow: visible;
+    margin-left: 48px;
+}
+.nube::before{
+    content: '';
+    left: 26px;
+    top: 63px;
+    position: absolute;
+    width: 36px;
+    height: 20px;
+    background-image: url('../../../../../assets/icons/nube.svg');
+}
+.f2{
+    margin-top: 42px;
+}
+.f3{
+    margin-top: 15px;
+    margin-bottom: 37px;
+}
+.f3 span{
+    font-size: 18px;
+}

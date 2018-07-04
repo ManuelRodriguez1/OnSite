@@ -21,7 +21,7 @@ export class HomeproComponent implements OnInit {
       'nombre':'pepito 4'
     }
   ]
-  
+  work = 0;
   constructor() { }
 
   ngOnInit() {

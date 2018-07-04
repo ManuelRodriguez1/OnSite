@@ -214,6 +214,13 @@
     position: absolute;
     margin-top: 14px;
     right: 24px;
+    width: 58px;
+}
+.message .button{
+    background-image: url('../../../../../assets/icons/mail.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 76px;
 }
 .date{
     text-align: center;
@@ -353,7 +360,7 @@
     font-weight: 600;
     width: 397px;
     position: absolute;
-    left: 42%;
+    left: 50%;
     top: 39%;
     transform: translate(-50%,-50%);
     border-radius: 17px;
@@ -392,4 +399,9 @@
     font-weight: 600;
     line-height: 29px;
     margin-left: 52px !important;
+}
+.message .green2{
+    right: 14px;
+    background-image: url('../../../../../assets/icons/dolar.svg');
+    background-color: #27AE60;
 }
