@@ -1,13 +1,44 @@
 <div class="contenedor">
-  <div class="h1"><p>See<label class="label"> drywall projects out there.</label></p></div>
-  <div class="conselec">
-    <input class="input" placeholder="What type of job do you want to help with?">
-    <img src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15">
-  </div>
-  <div class="minitext">
-    <p>Sort: Newest Jobs</p>
-  </div>
-  <div class="tarjetas">
+  <section *ngIf="work == 1">
+    <div class="h1"><p>See<label class="label"> projects out there.</label></p></div>
+    <div class="conselec">
+      <input class="input" placeholder="What type of job do you want to help with?">
+      <img src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15">
+    </div>
+    <div class="minitext">
+      <p>Sort: Newest Jobs</p>
+    </div>
+
+    <div class="nofile">
+      <div class="center">
+        <p class="label">You don’t have any projects. </p>
+      </div>
+      <button class="button">Get Started</button>
+    </div>
+  </section>
+  <section *ngIf="work == 0">
+    <div class="contenidow">
+        <div class="h1"><p><label class="label"> Excavation at 280 S.</label></p></div>
+    </div>
+    <div class="map2"></div>
+    <div class="col1">
+      <div class="h1">This is<label class="label"> what</label> Jimmy<label class="label"> needs</label> from you.</div>
+      <div class="botones2">
+          <div class="tags"><p>Drywall</p></div>
+          <div class="tagswhite"><p>Drywall Hanger</p></div>
+      </div>
+    </div>
+    <div class="col2">
+      <p class="f1">Cloudy</p>
+      <div class="nube"><p>78°</p></div>
+      <p class="f2">Current Time</p>
+      <p class="f3">9:01
+          <br><span> am</span></p>
+    </div>
+  </section>
+  
+
+  <!-- <div class="tarjetas">
     <div class="target" *ngFor="let l of list">
       <div class="t1" [class.mostrar]="clicked === l" (click)="clicked = l2">
         <div class="map"></div>
@@ -49,5 +80,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

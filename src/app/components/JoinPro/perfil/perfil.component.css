@@ -83,6 +83,7 @@
     width: calc(100% - 225px);
     overflow: scroll;
     height: calc(100vh - 85px);
+    overflow-x: hidden;
 }
 .desgloce{
     position: relative;

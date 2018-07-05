@@ -51,8 +51,8 @@ import { HomeproComponent } from './components/JoinPro/perfil/homepro/homepro.co
 import { InboxComponent } from './components/JoinPro/perfil/inbox/inbox.component';
 import { RegistroclientesComponent } from './registroclientes/registroclientes.component';
 import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.component';
+import { ExploreComponent } from './components/JoinPro/perfil/explore/explore.component';
 import { ChatFormComponent } from './chat/chat-form/chat-form.component';
-import { ChatroomComponent } from './chat/chatroom/chatroom.component';
 import { FeedComponent } from './chat/feed/feed.component';
 import { MessageComponent } from './chat/message/message.component';
 import { UserListComponent } from './chat/user-list/user-list.component';
@@ -81,8 +81,8 @@ import { ChatService } from './chat/chat.service';
     InboxComponent,
     RegistroclientesComponent,
     OpenComponent,
+    ExploreComponent,
     ChatFormComponent,
-    ChatroomComponent,
     FeedComponent,
     MessageComponent,
     UserListComponent,

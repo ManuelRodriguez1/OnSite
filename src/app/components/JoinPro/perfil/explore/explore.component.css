@@ -1,0 +1,22 @@
+.content{
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 95px;
+}
+.t1 p{
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+.map{
+    height: 321px;
+    background: violet;
+    margin-top: 19px;
+}
+.t2{
+    margin-top: 41px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 47px;
+}
