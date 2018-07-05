@@ -3,7 +3,7 @@ import { ChatService } from '../chat.service';
 import { ChatMessage } from '../chat-message.model';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-
+import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
@@ -11,7 +11,8 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 })
 export class FeedComponent implements OnInit, OnChanges{
 
-  feed: AngularFireList<ChatMessage[]>;
+  //feed: AngularFireList<ChatMessage[]>;
+  feed = [];
   constructor(private chat: ChatService) {
 
 
