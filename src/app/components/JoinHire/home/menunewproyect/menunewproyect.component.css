@@ -1,0 +1,101 @@
+.tagswhite{
+  background: #fff !important;
+}
+.botones{
+
+  margin-top: 70px;
+}
+.button{
+    float: right;
+}
+.back{
+  float: left;
+}
+.list,.list::after,.list::before{
+  background: #ffffff;
+}
+.input,.arrowd{
+  z-index: 2 !important;
+}
+.desplegar{
+  height: auto !important;
+}
+
+h1{
+  color: #000;
+}
+.miniselc{
+  width: 187px;
+
+display: inline-block;
+overflow: visible;
+margin-left: 35px;
+position: absolute;
+
+}
+.miniselc .input {
+height: 28px;
+  font-size: 14px !important;
+
+}
+.miniselc .arrowd
+{
+  height: 9px;
+  width: 13px;
+
+}
+.miniselc img{
+      top: 15px !important;
+}
+.selecciones:last-child span {
+    top: 9px !important;
+    float: right !important;
+    left: 0px !important;
+  }
+
+
+
+
+input[type=checkbox]{
+  display: none; /*solo se esconde para tener un campo personalisado*/
+}
+
+input[type=checkbox] + label{
+  cursor:pointer;
+}/*esta linea significa esto + el siguiente elemento*/
+
+input[type=checkbox] + label:before{
+  content:'';
+  background:transparent;
+  border: 1px solid #2F80ED;
+  display: inline-block;
+  height:36px;
+  width: 36px;
+  margin-right: 20px;
+  text-align:center;
+  vertical-align:middle;
+
+}
+input[type=checkbox]:checked + label:before{
+  content: '✔';
+  font-size: 32px;
+  color:#2F80ED;
+}
+.leftcheck{
+  font-size: 18px;
+}
+.titulocheck{
+font-size: 18px  !important;
+}
+.rifti{
+  float: right;
+}
+.leftsi{
+float:left;
+}
+
+.contenedorCheck{
+  position:relative;
+  margin-top: 100px;
+
+}

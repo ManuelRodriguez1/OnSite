@@ -9,8 +9,10 @@ import {ChatMessage} from './chat-message.model';
 import { map } from 'rxjs/operators';
 @Injectable()
 export class ChatService {
-  //chatMessages: AngularFireList<ChatMessage[]>;
-chatMessages = [];
+  chatMessages: FirebaseListObservable<ChatMessage[]>;
+//chatMessages = [];
+
+
 
 
 constructor( private db: AngularFireDatabase) {}

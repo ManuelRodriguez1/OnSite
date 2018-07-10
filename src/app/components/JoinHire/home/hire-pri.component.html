@@ -39,48 +39,12 @@
     </div>
     <div class="Contenidohire">
         <div class="conxenhireright">
-          <!--
+
             <div *ngIf="menuVista == 'Home'" class="menuHome">
-              <div class="">
-                  <h1 class="h1" style="color:#000"><label class="label">Check </label>out your <label class="label">projects.</label></h1>
-              </div>
-              <div class="colum last">
-                  <input type="text" (click)="menu()" readonly class="input" placeholder="{{placeholder}}">
-                  <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
-              </div>
-              <div class="list" [ngClass]="aparecer">
-                  <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.categorias)">
-                      <p>{{l.name}}</p>
-                  </div>
-              </div>
-
-              <div class="">
-                <div class="">
-                  You don’t have any projects.
-                </div>
-                <div class="Get Started">
-
-                </div>
-
-              </div>
-            </div-->
+            <app-menuhome></app-menuhome>
+            </div>
             <div *ngIf="menuVista == 'Inbox'" class="menuInbox">
-
-
-                <div class="mainContent">
-                <div class="userListWrapper">
-                <app-user-list></app-user-list>
-                </div>
-                <div #scroller class="feedWrapper">
-          
-                <app-feed></app-feed>
-                </div>
-                </div>
-
-                <div class="chatFormWrapper">
-                <app-chat-form></app-chat-form>
-                </div>
-
+                <app-menuinbox></app-menuinbox>
             </div>
             <!--div *ngIf="menuVista == 'Projects'" class="menuProjects">
                 Projects
@@ -108,31 +72,7 @@
             </div>
           -->
             <div  *ngIf="menuVista == 'Start'" class="menuStart">
-              <div *ngIf="next  == 0">
-                  <h1 class="h1" style="color:#000">Name your <label class="label">project.</label></h1>
-
-              <div style="margin-top :40px"class="colum last">
-                  <input type="text"   class="input" placeholder="Type project name.">
-              </div>
-              </div>
-
-              <div *ngIf="next  == 1">
-                  <h1 class="h1" style="color:#000">What do you need<label class="label"> help </label>with?</h1>
-
-                  <div class="colum last">
-                      <input type="text" (click)="menu()" readonly class="input" placeholder="{{placeholder}}">
-                      <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
-                  </div>
-                  <div class="list" [ngClass]="aparecer">
-                      <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.categorias)">
-                          <p>{{l.categorias}}</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="botones">
-                  <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
-                  <button class="button" (click)="seguir()"><label *ngIf="next < 3">Next</label><label *ngIf="next == 3">Finish</label></button>
-              </div>
+            <app-menunewproyect></app-menunewproyect>
             </div>
         </div>
     </div>

@@ -1,0 +1,22 @@
+<div class="">
+    <h1 class="h1" style="color:#000"><label class="label">Check </label>out your <label class="label">projects.</label></h1>
+</div>
+<div class="colum last">
+    <input type="text" (click)="menu()" readonly class="input" placeholder="{{placeholder}}">
+    <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
+</div>
+<div class="list" [ngClass]="aparecer">
+    <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.categorias)">
+        <p>{{l.name}}</p>
+    </div>
+</div>
+<div class="homecont">
+<div class="contenent">
+  <div class="">
+    You don’t have any projects.
+  </div>
+  <div class="button bthome">
+    Get Started
+  </div>
+</div>
+</div>

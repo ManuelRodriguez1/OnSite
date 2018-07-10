@@ -7,22 +7,19 @@ import {Router} from '@angular/router';
 @Component({
     selector: 'app-hire-pri',
     templateUrl: './hire-pri.component.html',
-    styleUrls: ['./hire-pri.component.css', '../../JoinPro/registro/select/select.component.css']
+    styleUrls: ['./hire-pri.component.css']
 })
 export class HirePriComponent {
     //mySwiper = Swiper;
-    menuVista = "Inbox";
+    menuVista = "Start";
     Sesion = true;
-    placeholder = "Search projects.";
-    aparecer = '';
-    rotar = '';
-    click = false;
+
     mostrar1 = "mostrar";
     mostrar2 = "mostrar2";
     list=[];
-    next = 0;
+
     constructor(public af: AngularFireAuth, private router: Router) {
-     this.VerDatosTiempoReal();
+  //   this.VerDatosTiempoReal();
         this.af.authState.subscribe(auth => {
             if (auth) {
                 this.Sesion = true;
@@ -33,8 +30,9 @@ export class HirePriComponent {
         })
 
     }
-    VerDatosTiempoReal(){
-    var returnArr = [];
+    //  list=[];
+//  VerDatosTiempoReal(){
+    /*var returnArr = [];
     //console.log(childKey);
     firebase.database().ref("proyectos").on('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
@@ -46,8 +44,8 @@ export class HirePriComponent {
     return returnArr;
     });
     console.log(returnArr);
-    this.list=returnArr;
-    }
+    this.list=returnArr;*/
+  //}
 
     home() {
         this.menuVista = "Home";
@@ -69,18 +67,7 @@ export class HirePriComponent {
    start() {
           this.menuVista = "Start";
     }
-    Start
-    menu() {
-        this.click = !this.click;
-        if (this.click == true) {
-            this.aparecer = 'desplegar';
-            this.rotar = 'arrow2';
-        } else {
 
-            this.aparecer = '';
-            this.rotar = '';
-        }
-    }
 
     mostrar(t) {
         console.log(t);
@@ -107,12 +94,5 @@ export class HirePriComponent {
     }
 
 
-      seguir(){
-        this.next++;
-      }
-
-      back(){
-        this.next--;
-      }
 
 }

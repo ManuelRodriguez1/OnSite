@@ -11,8 +11,7 @@ import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 })
 export class FeedComponent implements OnInit, OnChanges{
 
-  //feed: AngularFireList<ChatMessage[]>;
-  feed = [];
+  feed= [];
   constructor(private chat: ChatService) {
 
 
