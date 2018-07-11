@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menunewproyect.component.css','../../../JoinPro/registro/select/select.component.css','../../../JoinPro/registro/registro.component.css']
 })
 export class MenunewproyectComponent implements OnInit {
-  next = 2;
+  next = 0;
   selectedValue;
 botonDesabilitado="";
 nombre="Type project name.";
@@ -27,8 +27,13 @@ click3 = false;
 rotar3 = '';
 aparecer3 = '';
 skill3 = '';
-
-
+click4= false;
+rotar4 = '';
+aparecer4 = '';
+skill4= '';
+listulti= [];
+btExplorno;
+btExplor;
 constructor() {
 this.VerDatosTiempoReal1();
 
@@ -85,7 +90,7 @@ VerDatosTiempoReal1(){
 
    return returnArr;
    });
-   console.log(returnArr);
+
    this.list=returnArr;
 }
   menu(){
@@ -100,6 +105,9 @@ VerDatosTiempoReal1(){
   }
 
   ngOnInit() {
+    for(var i = 0; i <= 15; i++){
+      this.listulti.push('{"cat"},{"mus"}');
+    }
     $(document).ready(function() {
     $("#nombreProyecto").click(function(){
       $("#nombreProyecto").val("");
@@ -159,6 +167,17 @@ VerDatosTiempoReal1(){
 
     }
 
+    menu4(){
+      this.click4 = !this.click4;
+      if(this.click4 == true){
+        this.rotar4 = 'arrow2';
+        this.aparecer4 = 'desplegar2';
+      }else{
+        this.rotar4 = '';
+        this.aparecer4 = '';
+      }
+
+    }
         seguir(){
         if(this.next==0){
        if($("#nombreProyecto").val()=="" || $("#nombreProyecto").val()=="undefined" || $("#nombreProyecto").val()=="Type project name."){
@@ -167,9 +186,9 @@ VerDatosTiempoReal1(){
             $("#net").removeAttr("disabled");
                this.grabar_localstorage($("#nombreProyecto").val(),0);
             this.grabar_localstorage("datos",4);
-
+            this.next++;
             }
-          }
+          } else
           if(this.next==1){
             if($("#skill").val()=="" || $("#skill").val()=="undefined" ){
                  $("#net").attr("disabled");
@@ -179,32 +198,20 @@ VerDatosTiempoReal1(){
                  this.grabar_localstorage($("#skill2").val(),2);
                  this.grabar_localstorage($("#skill3").val(),3);
 
-//                   this.next++;
+                    this.next++;
                  }
-
-
-
-
-
-          }
+          } else
           if(this.next==2){
             this.grabar_localstorage($("#skill").val(),1);
             this.grabar_localstorage($("#skill2").val(),2);
             this.grabar_localstorage($("#skill3").val(),3);
 
             this.next++;
-
           }
-          /*if(this.obtener_localstorage(4)!=null){
-              this.nombre=this.obtener_localstorage(0);
-          }*/
-
-              this.next++;
         }
         back(){
           this.next--;
         }
-
         obtener_localstorage(valor){
           if(valor==0){
               return localStorage.getItem("nombre");
@@ -221,7 +228,6 @@ VerDatosTiempoReal1(){
           if(valor==4){
               return localStorage.getItem("datos");
           }
-
         }
         almacenar(e){
           this.click = !this.click;
@@ -242,7 +248,6 @@ VerDatosTiempoReal1(){
           this.rotar3 = '';
           this.skill3 = e;
         }
-
         cerrar(){
           this.skill = '';
           this.skill2 = '';
@@ -258,26 +263,20 @@ VerDatosTiempoReal1(){
           this.click = false;
           this.click2 = false;
         }
-
       /*
 selectedValue=obtener_localstorage()
-
   console.log(selectedValue);
   if(selectedValue!=null){
     localStorage.setItem("selectedValue",selectedValue);
   }
-
-
 }
-
-
-
-
 eliminar_localstorage(){
     let persona=JSON.parse(localStorage.getItem("persona"));
     localStorage.removeItem("persona");
 
 }*/
+
+
 grabar_localstorage(valor,id){
   if(valor!=null && id==0){
     localStorage.setItem("nombre",valor);
@@ -294,8 +293,9 @@ grabar_localstorage(valor,id){
   if(valor!=null  && id==4){
     localStorage.setItem("datos",valor);
   }
-
-
 }
-
+btExplor1(){
+  this.btExplorno="btExplorno";
+  this.btExplor ="disBlox";
+}
 }
