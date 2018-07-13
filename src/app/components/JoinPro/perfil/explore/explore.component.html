@@ -5,6 +5,37 @@
   <div class="map"></div>
   <div class="t2"><p><label class="label"> 12 available drywall pros </label>near you. </p>
     <div class="targets">
-      <div class="target"></div>
+      <div class="div" *ngFor="let l of list; let i = index">
+          <div class="data" (click)="activec(-1)">
+              <div class="minimap2"></div>
+              <div class="dir"><p>331 NW 26th St. <br>Miami, FL 33127</p></div>
+              <div class="ruta"></div>
+            </div>
+        <div class="target" [class.move]="clicked === i" (click)="activec(i)">
+          <div class="perfilr"></div>
+          <div class="tn">
+            <p>Jimmy is helping with </p>
+            <p class="label p1">Drywall</p>
+          </div>
+          <div class="line"></div>
+          <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
+          <div class="info">
+            <p><label class="dark">Work Site: </label><br>
+              331 NW 26th St. <br>
+            Miami, FL 33127</p>
+          </div>
+          <div class="mensaje">
+            <div class="imagem"></div>
+            <p>Message</p>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
+ 

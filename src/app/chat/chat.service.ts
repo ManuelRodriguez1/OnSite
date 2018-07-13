@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
@@ -33,7 +33,7 @@ constructor( private db: AngularFireDatabase) {}
 
 getMessages() : FirebaseListObservable<ChatMessage[]>{
 
- var returnArr = [];
+ var returnArr: any;
 /*   console.log("GETMENSAJES");
    firebase.database().ref('messages/').on('value', function(snapshot) {
 
