@@ -58,6 +58,12 @@ import { MessageComponent } from './chat/message/message.component';
 import { UserListComponent } from './chat/user-list/user-list.component';
 import { UserItemsComponent } from './chat/user-items/user-items.component';
 import { ChatService } from './chat/chat.service';
+import { MenuhomeComponent } from './components/JoinHire/home/menuhome/menuhome.component';
+import { MenuinboxComponent } from './components/JoinHire/home/menuinbox/menuinbox.component';
+import { MenuprojectsComponent } from './components/JoinHire/home/menuprojects/menuprojects.component';
+import { MenutrackComponent } from './components/JoinHire/home/menutrack/menutrack.component';
+import { MenuexploreComponent } from './components/JoinHire/home/menuexplore/menuexplore.component';
+import { MenunewproyectComponent } from './components/JoinHire/home/menunewproyect/menunewproyect.component';
 
 
 
@@ -86,7 +92,13 @@ import { ChatService } from './chat/chat.service';
     FeedComponent,
     MessageComponent,
     UserListComponent,
-    UserItemsComponent
+    UserItemsComponent,
+    MenuhomeComponent,
+    MenuinboxComponent,
+    MenuprojectsComponent,
+    MenutrackComponent,
+    MenuexploreComponent,
+    MenunewproyectComponent
 
   ],
   imports: [

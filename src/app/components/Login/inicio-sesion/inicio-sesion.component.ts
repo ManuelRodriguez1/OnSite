@@ -15,13 +15,8 @@ error: any[];
 estado:boolean = false;
 cerrarAbrir="";
   ngOnInit() {
-
-
   }
-
-
        function1(){
-    
         let fResponse = !this.estado;
         this.estado = fResponse;
           if(this.estado){
@@ -32,9 +27,7 @@ cerrarAbrir="";
                 this.cerrarAbrir="btnPrincipal2";
             }
         return fResponse;
-
           }
-
   constructor(public af: AngularFireAuth,private router: Router) {
     this.af.authState.subscribe(authState => {
     if(authState) {
@@ -50,10 +43,5 @@ cerrarAbrir="";
         this.error = err.message;
       })
     }
-
-    }
-
-
-
-
+  }
 }

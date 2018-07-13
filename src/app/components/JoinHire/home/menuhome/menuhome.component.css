@@ -1,0 +1,53 @@
+.last {
+    position: relative;
+        margin-top: 12px;
+}
+.seleccion {
+    background: #FFFFFF;
+}
+
+
+.relaselect {
+    position: relative;
+    margin-top: 20px;
+}
+
+
+.desplegar {
+  overflow: hidden;
+    position: relative;
+}
+.homecont{
+  height: 400px;
+  width: 100%;
+  background: #D2D1D1;
+  left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    margin-top: 15px;
+
+}
+ .contenent{
+  width: 325px;
+  height: 110px;
+  top: 50%;
+  left: 50%;
+  position: relative;
+  color: #2F80ED;
+  transform: translate(-50%,-50%);
+font-family: "Archivo";
+font-style: normal;
+font-weight: 600;
+line-height: 45px;
+font-size: 24px;
+text-align: center;
+
+}
+
+.bthome{
+  bottom: 0;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+line-height: 45px;
+}

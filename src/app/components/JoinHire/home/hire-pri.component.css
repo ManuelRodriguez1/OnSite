@@ -119,7 +119,7 @@
 }
 
 .conxenhireright {
-    width: 915px;
+    width: 916px;
     height: 515px;
     top: 50%;
     left: 50%;
@@ -127,12 +127,9 @@
     position: absolute;
 }
 
-.relaselect {
-    position: relative;
-    margin-top: 20px;
-}
 
-.swiper-wrapper {
+/***********/
+/*.swiper-wrapper {
     display: -webkit-box;
     overflow-x: scroll;
 }
@@ -167,15 +164,9 @@
 .v1 {
     height: 130px;
 }
+*/
 
-.seleccion {
-    background: #FFFFFF;
-}
-
-.last {
-    position: relative;
-}
-
+/*
 .v2 {
     height: 125px;
 }
@@ -216,7 +207,7 @@
     margin-left: 10px;
     margin-top: 10px;
 }
-
+/*
 .antesjzbola {
     position: relative;
     height: 75px;
@@ -394,7 +385,7 @@
     margin-top: 6px;
     margin-left: 6px;
 }
-
+*/
 .itemsprincipales {
     position: relative;
     cursor: pointer;
@@ -411,12 +402,14 @@
 
 .itemsprincipales:hover .flechateam {
     background-image: url("../../../../assets/icons/flechaabajomenu.svg") !important;
+    width: 15px;
+    height: 15px;
 }
 
 .flechaabajomenu .menuExplore {
     margin-top: -100px;
 }
-
+/*
 .desplegar {
   overflow: hidden;
     position: relative;
@@ -694,4 +687,4 @@
 }
 .back{
   float: left;
-}
+}*/

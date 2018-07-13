@@ -1,0 +1,291 @@
+<form class="" method="post">
+
+    <div *ngIf="next  == 0">
+        <h1 class="h1 colornegro">Name your <label class="label">project.</label></h1>
+
+        <div class="colum last mar40">
+            <input type="text" id="nombreProyecto" class="input" value="{{nombre}}" required>
+        </div>
+    </div>
+
+    <div class="overvisi" *ngIf="next  == 1">
+        <div class="t2">
+            <h1 class="h1">What do you need <label class="label">help</label> with?</h1>
+        </div>
+
+        <div class="colum last ovehide">
+            <input type="text" (click)="menu()" readonly class="input" value="{{skill}}" id="skill" placeholder="{{placeholder}}">
+
+            <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
+
+        </div>
+
+        <div class="list" [ngClass]="aparecer">
+            <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.name)">
+                <p>{{l.name}}</p>
+            </div>
+        </div>
+
+        <div class="selecciones" *ngIf="skill != ''">
+            <div class="tags">
+                <p>{{skill}}</p>
+                <div class="x" (click)="cerrar()"></div>
+            </div>
+        </div>
+
+        <div class="t1" *ngIf="skill != ''">
+            <h1 class="h1">Let’s get <label class="label">specific.</label></h1>
+        </div>
+
+        <div class="colum last" *ngIf="skill != ''">
+            <input type="text" (click)="menu2()" value="{{skill2}}" id="skill2" readonly class="input" placeholder="What {{skill}} skills do you have?">
+
+            <img (click)="menu2()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar2">
+
+        </div>
+
+        <div class="list" [ngClass]="aparecer2" *ngIf="skill != ''">
+            <div class="seleccion" *ngFor="let l of list2" (click)="almacenar2(l.especifico)">
+                <p>{{l.especifico}}</p>
+            </div>
+        </div>
+
+        <div class="selecciones" *ngIf="skill2 != ''">
+            <div class="tags">
+                <p>{{skill}}</p>
+                <div class="x" (click)="cerrar()"></div>
+            </div>
+            <div class="tagswhite">
+                <p>{{skill2}}</p>
+                <div class="x" (click)="cerrar2()"></div>
+            </div>
+            <div class="miniselc">
+                <input type="text" (click)="menu3()" id="skill3" readonly class="input" value="{{skill3}}" placeholder="How many people?">
+                <img (click)="menu3()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar3">
+                <div class="list" [ngClass]="aparecer3">
+                    <div class="seleccion" *ngFor="let l of list3" (click)="almacenar3(l.name)">
+                        <p>{{l.name}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <span class="rifti">Average rate: $10-12/hour</span>
+        </div>
+
+        <div class="contenedorCheck">
+            <div class="leftcheck">
+                <input type="checkbox" id="check1" checked/>
+                <label class="leftsi" for="check1"> </label>
+                <h1 class="h1 titulocheck colornegro">All workers <label class="label">must take</label> a background test.</h1>
+            </div>
+
+            <div class="leftcheck">
+                <input type="checkbox" id="check2" checked/>
+                <label class="leftsi" for="check2"> </label>
+                <h1 class="h1 titulocheck  colornegro">All workers <label class="label">must pass</label> a background test.</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="overvisi" *ngIf="next  == 2">
+        <div style="position:relative;">
+
+            <div class="overvisi floatleft">
+                <div class="colum2 overvisi">
+                    <h1 style="padding-left: 5px;" class="h1 overvisi">Where is the<br>  <label class="label">job’s location?</label> </h1>
+                    <div class="textoDark">
+                        Enter jobsite location:
+                    </div>
+                    <input type="text" class="input" placeholder="Enter Address">
+                    <div class="textoDark">
+                        Set hiring radius.
+                    </div>
+                    <div class="colum2 last">
+                        <input type="text" (click)="menu4()" readonly class="input" value="{{skill4}}" id="skill4" placeholder="Enter radius in miles">
+
+                        <img (click)="menu4()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar4">
+
+                    </div>
+                    <div class="list" [ngClass]="aparecer4">
+                        <div class="seleccion" *ngFor="let l of list" (click)="almacenar4(l.name)">
+                            <p>{{l.name}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="fleft">
+                <div class="colum2 ">
+                    <h1 style="padding-left: 5px;" class="h1 overvisi">What’s your <br>  <label class="label"> job’s timeframe?</label> </h1>
+                    <div class="textoDark">
+                        Enter timeframe :
+                    </div>
+                    <input type="text" class="input w50" placeholder="Date, Month, Year">
+                    <span class="towith">to</span>
+                    <input type="text" class="input w50" placeholder="Date, Month, Year">
+
+                </div>
+            </div>
+
+        </div>
+        <div style="margin-top:70px;" class="selecciones" *ngIf="skill2 != ''">
+            <div class="tags">
+                <p>{{skill}}</p>
+                <div class="x" (click)="cerrar()"></div>
+            </div>
+            <div class="tagswhite">
+                <p>{{skill2}}</p>
+                <div class="x" (click)="cerrar2()"></div>
+            </div>
+            <div class="miniselc">
+                <input type="text" (click)="menu3()" id="skill3" readonly class="input" value="{{skill3}}" placeholder="How many people?">
+                <img (click)="menu3()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar3">
+                <div class="list" [ngClass]="aparecer3">
+                    <div class="seleccion" *ngFor="let l of list3" (click)="almacenar3(l.name)">
+                        <p>{{l.name}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <span class="rifti">Average rate: $10-12/hour</span>
+        </div>
+
+        <div class="contenefornew">
+            <div class="overvisi floatleft">
+                <div class="colum2 overvisi">
+
+                    <div class="textoDark">
+                        Are you willing to hire outside of your hiring radius?
+                    </div>
+                    <div class="botones">
+                        <button class="button">Yes</button>
+                        <button class="button bno">No</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fleft">
+                <div class="colum2 ">
+                    <div class="textoDark">
+                        Please enter <span style="color:#2F80ED">extra hourly rate</span> you’d pay for outside your hiring radius.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overvisi" *ngIf="next  == 3">
+
+      <div class="contenedor">
+          <div class="text">
+            <p>This is <label class="label"> Excavation at 280 S.</label></p>
+            <div class="">
+                <input type="text" readonly class="input" value="" id="skill" placeholder="Excavation at 290 S">
+                <img style="margin-top: 10px;" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
+
+            </div>
+          </div>
+          <div class="textg"><p>Sort: Newest Jobs</p></div>
+          <div class="map"></div>
+          <div class="div">
+          <div class="col1">
+            <div class="h1">This is<label class="label"> what </label> you <label class="label"> need. </label> </div>
+            <div class="botones2">
+                <div class="tags"><p>Drywall</p></div>
+                <div class="tagswhite"><p>Drywall Hanger</p></div>
+            </div>
+          </div>
+          <div class="col2">
+            <p><label> Location</label><br>
+              1234 Meadow Dr.<br>
+              Unit 123<br>
+              Wynwood, FL 33127</p>
+              <p><label> Additional comments:</label><br>
+                My whole front driveway is disgusting and I need help installing<br> a new one. I think there are some utility lines; not sure so<br> please help.</p>
+          </div>
+        </div>
+          <div class="text2">
+
+            <p>  These are who <label class="label"> you hired. </label></p>
+
+            <div class="tetzul"  [ngClass]="btExplorno" >
+              You haven’t hired anyone yet.
+            </div>
+            <div class="">
+                  <button class="button btCentrar" (click)="btExplor1()"  [ngClass]="btExplorno"  >Explore</button>
+            </div>
+          </div>
+
+
+          <div [ngClass]="btExplor"  class="btEx">
+            <div class="service">
+              <p class="label">Drywall Team</p>
+            </div>
+
+              <div class="targets">
+                <div class="target" *ngFor="let l of list">
+                  <div class="perfilr"></div>
+                  <div class="tn">
+                    <p>Jimmy is helping with </p>
+                    <p class="label p1">Drywall</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                  <div class="mensaje">
+                    <div class="imagem"></div>
+                    <p>Message</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+              <div class="service">
+                <p class="label">Plaster Team</p>
+              </div>
+
+                <div class="targets">
+                  <div class="target" *ngFor="let l of list">
+                    <div class="perfilr"></div>
+                    <div class="tn">
+                      <p>Jimmy is helping with </p>
+                      <p class="label p1">Plaster</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="stars">
+                      <div class="star"></div>
+                      <div class="star"></div>
+                      <div class="star"></div>
+                      <div class="star"></div>
+                      <div class="star"></div>
+                    </div>
+                    <div class="mensaje">
+                      <div class="imagem"></div>
+                      <p>Message</p>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+
+        </div>
+
+    </div>
+    <div *ngIf="next < 3" class="botones">
+        <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
+        <button class="button" id="net" (click)="seguir()">
+            <label *ngIf="next < 2">Next</label>
+            <label *ngIf="next == 2">Finish</label>
+        </button>
+    </div>
+</form>
