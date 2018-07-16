@@ -36,7 +36,7 @@ constructor( private db: AngularFireDatabase) {}
 
 getMessages(){
 
- var returnArr = [];
+ var returnArr: any;
 /*   console.log("GETMENSAJES");
    firebase.database().ref('messages/').on('value', function(snapshot) {
 
