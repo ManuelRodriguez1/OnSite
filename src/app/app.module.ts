@@ -52,7 +52,7 @@ import { InboxComponent } from './components/JoinPro/perfil/inbox/inbox.componen
 import { RegistroclientesComponent } from './registroclientes/registroclientes.component';
 import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.component';
 import { ExploreComponent } from './components/JoinPro/perfil/explore/explore.component';
-import { ChatFormComponent } from './chat/chat-form/chat-form.component';
+//import { ChatFormComponent } from './chat/chat-form/chat-form.component';
 import { FeedComponent } from './chat/feed/feed.component';
 import { MessageComponent } from './chat/message/message.component';
 import { UserListComponent } from './chat/user-list/user-list.component';
@@ -88,7 +88,7 @@ import { MenunewproyectComponent } from './components/JoinHire/home/menunewproye
     RegistroclientesComponent,
     OpenComponent,
     ExploreComponent,
-    ChatFormComponent,
+    //ChatFormComponent,
     FeedComponent,
     MessageComponent,
     UserListComponent,

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menunewproyect.component.css','../../../JoinPro/registro/select/select.component.css','../../../JoinPro/registro/registro.component.css']
 })
 export class MenunewproyectComponent implements OnInit {
+  datos= [];
   next = 0;
   selectedValue;
 botonDesabilitado="";
@@ -33,6 +34,10 @@ aparecer4 = '';
 skill4= '';
 listulti= [];
 btExplorno;
+n1;
+n2;
+n3;
+n4;
 btExplor;
 constructor() {
 this.VerDatosTiempoReal1();
@@ -114,12 +119,12 @@ VerDatosTiempoReal1(){
     });
     });
 
-    if(this.obtener_localstorage(4)!=null){
-        this.nombre=this.obtener_localstorage(0);
-        this.skill=this.obtener_localstorage(1);
-        this.skill2=this.obtener_localstorage(2);
-        this.skill3=this.obtener_localstorage(3);
-    }
+        this.datos=this.obtener_localstorage();
+        this.nombre=this.datos[0];
+        this.skill=this.datos[1];
+        this.skill2=this.datos[2];
+        this.skill3=this.datos[3];
+
 
     this.list2 = [
       {
@@ -179,13 +184,20 @@ VerDatosTiempoReal1(){
 
     }
         seguir(){
+          this.n1=$("#nombreProyecto").val();
+          this.n2=$("#skill").val();
+          this.n3=$("#skill2").val();
+          this.n4=$("#skill3").val();
+          console.log(this.n1);
+
         if(this.next==0){
        if($("#nombreProyecto").val()=="" || $("#nombreProyecto").val()=="undefined" || $("#nombreProyecto").val()=="Type project name."){
               $("#net").attr("disabled");
             }else{
             $("#net").removeAttr("disabled");
-               this.grabar_localstorage($("#nombreProyecto").val(),0);
-            this.grabar_localstorage("datos",4);
+
+          this.grabar_localstorage(this.n1,this.n2,this.n3,this.n4);
+
             this.next++;
             }
           } else
@@ -194,17 +206,16 @@ VerDatosTiempoReal1(){
                  $("#net").attr("disabled");
                  }else{
                $("#net").removeAttr("disabled");
-                 this.grabar_localstorage($("#skill").val(),1);
-                 this.grabar_localstorage($("#skill2").val(),2);
-                 this.grabar_localstorage($("#skill3").val(),3);
 
+
+                  this.grabar_localstorage(this.n1,this.n2,this.n3,this.n4);
                     this.next++;
                  }
           } else
           if(this.next==2){
-            this.grabar_localstorage($("#skill").val(),1);
-            this.grabar_localstorage($("#skill2").val(),2);
-            this.grabar_localstorage($("#skill3").val(),3);
+
+             //this.grabar_localstorage($("#nombreProyecto").val(),0);
+
 
             this.next++;
           }
@@ -212,22 +223,11 @@ VerDatosTiempoReal1(){
         back(){
           this.next--;
         }
-        obtener_localstorage(valor){
-          if(valor==0){
-              return localStorage.getItem("nombre");
-          }
-          if(valor==1){
-              return localStorage.getItem("skill");
-          }
-          if(valor==2){
-              return localStorage.getItem("skill2");
-          }
-          if(valor==3){
-              return localStorage.getItem("skill3");
-          }
-          if(valor==4){
-              return localStorage.getItem("datos");
-          }
+        obtener_localstorage(){
+      let persona=JSON.parse(localStorage.getItem("datos"));
+          console.log(persona);
+              return persona;
+
         }
         almacenar(e){
           this.click = !this.click;
@@ -277,22 +277,19 @@ eliminar_localstorage(){
 }*/
 
 
-grabar_localstorage(valor,id){
-  if(valor!=null && id==0){
-    localStorage.setItem("nombre",valor);
-  }
-  if(valor!=null  && id==1){
-    localStorage.setItem("skill",valor);
-  }
-  if(valor!=null  && id==2){
-    localStorage.setItem("skill2",valor);
-  }
-  if(valor!=null  && id==3){
-    localStorage.setItem("skill3",valor);
-  }
-  if(valor!=null  && id==4){
-    localStorage.setItem("datos",valor);
-  }
+grabar_localstorage(n1,n2,n3,n4){
+    var datos = [];
+    datos[0] = n1;
+    datos[1] = n2;
+    datos[2] = n3;
+    datos[3] = n4;
+
+
+
+  console.log(datos);
+  localStorage.setItem("datos", JSON.stringify(datos));
+
+
 }
 btExplor1(){
   this.btExplorno="btExplorno";

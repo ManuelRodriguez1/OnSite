@@ -9,5 +9,121 @@
 </div>
 
 <div class="chatFormWrapper">
-<app-chat-form></app-chat-form>
+<!--app-chat-form></app-chat-form-->
 </div>
+<div class="contenedor">
+  <div class="t1">
+    <div class="text">
+      <p>See your <label class="label">inbox.</label></p>
+    </div>
+    <div class="search">
+      <input class="input" placeholder="Search by name, status or project. ">
+    </div>
+  </div>
+  <div class="chat">
+    <div class="column1">
+      <div class="people" *ngFor="let l of list; let i = index" (click)="call(i)">
+        <p class="first">Email Subject Line</p>
+        <div class="perfil">
+          <div class="image"></div>
+          <div class="datos">
+              <p class="second">Email Name Space</p>
+              <div class="disp">
+                <div class="color" [ngClass]="l.estilo"></div>
+                <p class="third">{{l.dispo}}</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="new">
+        <p>Compose New Message</p>
+      </div>
+    </div>
+    <div class="column2">
+      <div class="head">
+        <div class="subjet">
+          <p>Subject Line</p>
+        </div>
+        <p class="first2">Email Subject Line</p>
+        <div class="disp2">
+            <div class="color green"></div>
+            <p class="third">Available</p>
+          </div>
+          <div class="othertext">
+              <p class="first2">John Doe needs help with </p>
+              <p class="blue">Excavation</p>
+          </div>
+      </div>
+      <div class="body">
+        <section *ngIf="vista == false">
+          <div class="chatcont" *ngFor="let l of list">
+            <div class="date">
+              <p>Day, Month, Year</p>
+            </div>
+            <div class="contact">
+              <div class="perfil2"></div>
+              <div class="textochat">
+                <p class="p1">Hello it’s me John! </p>
+                <p class="p2">Is it me you’re looking for?</p>
+                <p class="p3">I need some help with lorem ipsum dolor more ipsum and I’ve attached some images labelled as lorem ipsum more dolor. Do you think you’d be able to get it done by dolor lorem ipsum amit? Let us know if dolor ipsom is possible.</p>
+                <div class="linea"></div>
+                <div class="archadjunto">
+                  <div class="clip"></div>
+                  <div class="archad">
+                    <p class="label">Lorem_ipsum.pdf</p>
+                  </div>
+                </div>
+              </div>
+              <div class="time">
+                <p>Time</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section *ngIf="vista == true " class="section">
+          <div class="date">
+              <p>Day, Month, Year</p>
+            </div>
+          <div class="perfil2"></div>
+          <div class="minimenu">
+            <p class="title"><label class="label">Tim</label> wants to hire you as a <label class="label">Drywall Hanger.</label></p>
+            <p class="text2 label">Will you accept $12/hour?</p>
+            <div class="botones">
+              <button class="button verde">Yes</button>
+              <button class="button negro">No</button>
+              <button class="button" (click)="mostrar()">Negotiate</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="message">
+        <div class="adjunto"></div>
+        <input       class="chatInput"
+              [(ngModel)]="message"
+              (keydown)="handleSubmit($event)" class="input" placeholder="Short Field">
+        <button class="button"></button>
+        <button class="button green2"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" *ngIf="modal == true">
+
+</div>
+
+<div class="flotante" *ngIf="modal == true">
+  <div class="xblue" (click)="mostrar()"></div>
+  <section *ngIf="offer == ''">
+      <p>What is your counteroffer?</p>
+      <div class="con">
+        <form  #smallform='ngForm' (ngSubmit)="oferta(smallform)" method="POST">
+          <input type="number" class="input" placeholder="Enter" (ngModel)="oferta" name="oferta">
+          <button type="submit" class="button" [disabled]="!smallform.valid">Negotiate</button>
+        </form>
+      </div>
+    </section>
+    <section *ngIf="offer != ''">
+      <p class="sp">Your counter offer of <br><label for="" class="label">${{offer}}/hour</label> has been sent. </p>
+    </section>
+  </div>

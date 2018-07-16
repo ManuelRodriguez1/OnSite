@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild,  Output, EventEmitter } from '@angular/core';
+  import { Component, OnInit, ViewChild,  Output, EventEmitter } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
@@ -15,7 +15,11 @@ error: any[];
 estado:boolean = false;
 cerrarAbrir="";
   ngOnInit() {
+
+
   }
+
+
        function1(){
         let fResponse = !this.estado;
         this.estado = fResponse;
@@ -37,7 +41,11 @@ cerrarAbrir="";
    }
   onSubmit(formData) {
     if(formData.valid) {
-      this.af.auth.signInWithEmailAndPassword(formData.value.email,formData.value.password)
+      this.af.auth.signInWithEmailAndPassword(formData.value.email,formData.value.password).then((resolve)=>{
+        //const status ="online";
+    //    this.setUserStatus(formData.value.email,status);
+
+      })
       .catch(
         (err) => {
         this.error = err.message;

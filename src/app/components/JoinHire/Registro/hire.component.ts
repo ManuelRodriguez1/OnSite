@@ -31,7 +31,8 @@ export class HireComponent  {
                     displayName: formData.value.FirstName+" "+formData.value.LastName,
                     photoURL: "",
                     phoneNumber: formData.value.PhoneNumber,
-                    zipcode: "belxy"
+                    zipcode: "belxy",
+                    status:'online'
                   });
 
 
@@ -41,7 +42,8 @@ export class HireComponent  {
                   telefono: formData.value.PhoneNumber,
                   correo: user.email,
                   zipcode: formData.value.Entercityorzipcode,
-                  rol: "hire"
+                  rol: "hire",
+                  status:'online'
 
                 });
               // this.router.navigate(['/HirePriComponent'])

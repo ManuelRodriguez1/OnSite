@@ -50,6 +50,22 @@ getMessages(){
   return returnArr;
 }
 
+getUsers(){
+
+ var returnArr2 = [];
+/*   console.log("GETMENSAJES");
+   firebase.database().ref('messages/').on('value', function(snapshot) {
+
+    });
+    console.log(returnArr);
+      return returnArr;*/
+
+      firebase.database().ref("users_hire/").orderByKey().on("child_added", function(snapshot) {
+         returnArr2.push(snapshot.val());
+      });
+  return returnArr2;
+}
+
 
 getTimeStamp() {
   const now = new Date();
