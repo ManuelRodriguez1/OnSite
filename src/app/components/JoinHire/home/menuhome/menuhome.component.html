@@ -1,22 +1,78 @@
-<div class="">
-    <h1 class="h1" style="color:#000"><label class="label">Check </label>out your <label class="label">projects.</label></h1>
-</div>
-<div class="colum last">
-    <input type="text" (click)="menu()" readonly class="input" placeholder="{{placeholder}}">
-    <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
-</div>
-<div class="list" [ngClass]="aparecer">
-    <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.categorias)">
-        <p>{{l.name}}</p>
+<div [ngClass]="noaparee">
+    <div class="">
+        <h1 class="h1" style="color:#000"><label class="label">Check </label>out your <label class="label">projects.</label></h1>
     </div>
-</div>
-<div class="homecont">
-<div class="contenent">
-  <div class="">
-    You don’t have any projects.
-  </div>
-  <div class="button bthome">
-    Get Started
-  </div>
-</div>
-</div>
+    <div class="ovehide">
+        <div class="colum last ">
+            <input type="text" (click)="menu()" readonly class="input" value="{{skill}}" id="skill" placeholder="{{placeholder}}">
+
+            <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
+
+        </div>
+
+        <div class="list" [ngClass]="aparecer">
+            <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.name)">
+                <p>{{l.nombre}}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div *ngIf="list.length == 0" class="homecont">
+        <div class="contenent">
+            <div class="">
+
+                You don’t have any projects.
+            </div>
+            <div (click)="saludo()" class="button bthome">
+                Get Started
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="list.length != 0" class="homecont">
+        <div *ngFor="let l of list ; let i = index">
+
+            <div *ngIf="l.estado == 'off'" class="divproyect opacityred">
+
+
+                    <div class="estadoPr">
+                        <div *ngIf="l.estado == 'on'" class="green"></div>
+                        <div *ngIf="l.estado == 'off'" class="red"></div>
+                    </div>
+                    <div class="nombreProyect">
+                        {{l.nombre}}
+                    </div>
+                    <div class="imgProyect">
+
+                    </div>
+                    <div class="Completed">
+                        Completed?
+                    </div>
+                </div>
+
+
+
+                <div *ngIf="l.estado == 'on'" class="divproyect">
+
+                    <div class="estadoPr">
+                        <div *ngIf="l.estado == 'on'" class="green"></div>
+                        <div *ngIf="l.estado == 'off'" class="red"></div>
+                    </div>
+                    <div class="nombreProyect">
+                        {{l.nombre}}
+                    </div>
+                    <div class="imgProyect">
+
+                    </div>
+                    <div class="Completed">
+                        Completed?
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+<app-menunewproyect [ngClass]="noaparee2"></app-menunewproyect>

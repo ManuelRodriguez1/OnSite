@@ -32,5 +32,6 @@ this.userp();
 
   userp(){
         this.users =   this.chat.getUsers();
+        console.log(this.users);
     }
   }

@@ -12,7 +12,7 @@ import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 })
 export class FeedComponent implements OnInit, OnChanges{
 
-  feed: FirebaseListObservable<ChatMessage[]>;
+  feed=[];
   constructor(private chat: ChatService) {
 
 

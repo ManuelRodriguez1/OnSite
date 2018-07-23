@@ -19,7 +19,9 @@ export class User {
 export class UserItemsComponent implements OnInit {
   @Input() user: User;
 
-  constructor() { }
+  constructor() {
+
+   }
 
   ngOnInit() {
   }

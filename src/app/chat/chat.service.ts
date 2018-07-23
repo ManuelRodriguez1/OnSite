@@ -20,30 +20,25 @@ constructor( private db: AngularFireDatabase) {}
 
  sendMessage(msg:string) {
       const timestamp = this.getTimeStamp();
+      const timestamp2 = this.getTimeStamp2();
    firebase.auth().onAuthStateChanged(function(user) {
 
    if (user) {
       firebase.database().ref('messages/').push({
       message: msg,
       timeSent: timestamp,
+      timeSent2: timestamp2,
       userName: user.displayName,
       email: user.email });
   }
 });
-  console.log("SENDMENSAJES");
+console.log("SENDMENSAJES");
 }
 
 
 getMessages(){
 
- var returnArr: any;
-/*   console.log("GETMENSAJES");
-   firebase.database().ref('messages/').on('value', function(snapshot) {
-
-    });
-    console.log(returnArr);
-      return returnArr;*/
-
+ var returnArr=[];
       firebase.database().ref("messages/").orderByKey().on("child_added", function(snapshot) {
          returnArr.push(snapshot.val());
       });
@@ -53,12 +48,6 @@ getMessages(){
 getUsers(){
 
  var returnArr2 = [];
-/*   console.log("GETMENSAJES");
-   firebase.database().ref('messages/').on('value', function(snapshot) {
-
-    });
-    console.log(returnArr);
-      return returnArr;*/
 
       firebase.database().ref("users_hire/").orderByKey().on("child_added", function(snapshot) {
          returnArr2.push(snapshot.val());
@@ -76,6 +65,18 @@ getTimeStamp() {
                now.getUTCMinutes() + ':' +
                now.getUTCSeconds();
 
-  return (date + ' ' + time);
+  return (date);
+}
+
+getTimeStamp2() {
+  const now = new Date();
+  const date = now.getUTCFullYear() + '/' +
+               (now.getUTCMonth() + 1) + '/' +
+               now.getUTCDate();
+  const time = now.getUTCHours() + ':' +
+               now.getUTCMinutes() + ':' +
+               now.getUTCSeconds();
+
+  return (time);
 }
 }

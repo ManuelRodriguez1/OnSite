@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i');
+
 .last {
     position: relative;
-        margin-top: 12px;
-}
+
+        z-index: 2;
+}/*
 .seleccion {
     background: #FFFFFF;
 }
@@ -11,11 +14,27 @@
     position: relative;
     margin-top: 20px;
 }
-
+*/
 
 .desplegar {
+
+ position: relative;
+    height: auto !important;
+  z-index: 1 !important;
+    background: #fff;
+
+}
+.ovehide{
+      margin-top: 12px;
   overflow: hidden;
-    position: relative;
+      position: relative;
+}
+
+input{
+      z-index: 2 !important;
+}
+.list,.list::after,.list::before{
+  background: #ffffff;
 }
 .homecont{
   height: 400px;
@@ -50,4 +69,95 @@ position: absolute;
 left: 50%;
 transform: translateX(-50%);
 line-height: 45px;
+}
+
+.siaparece{
+  display: none;
+}
+
+.noaparee2{
+  display: none;
+}
+.siaparece2{
+  display:block;
+}
+
+
+
+.opacityred{
+  opacity: 0.5;
+}
+
+.divproyect{
+  background: #ffffff;
+  border-radius: 10px;
+  width:  130px;
+/*  display: inline-flex;*/
+  height: 160px;
+  margin-left: 15px;
+  margin-top: 15px;
+overflow: hidden;
+float: left;
+
+}
+.green{
+    background-color: #219653;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    margin:  10px;
+
+         position: absolute;
+}
+.red{
+    background-color: #F30000;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    margin:  10px;
+
+     position: absolute;
+}
+.estadoPr{
+  height: 27px;
+  width: 100%;
+
+    position: relative;
+}
+.imgProyect{
+    height: 83px;
+background-position: center;
+background-repeat:no-repeat;
+  width: 100%;
+  background-image: url("../../../../../assets/icons/Group.png");
+    position: relative;
+}
+.nombreProyect{
+    height: 20px;
+
+    width: 100%;
+text-align: center;
+    font-family: Archivo;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 12px;
+      color: #2F80ED;
+      position: relative;
+}
+
+.Completed{
+  background: #2F80ED;
+  height: 30px;
+  width: 100%;
+color: #fff;
+font-family:Archivo;
+font-style: normal;
+font-weight: 500;
+line-height: 29px;
+font-size: 12px;
+text-align: center;
+position: relative;
+
+
 }

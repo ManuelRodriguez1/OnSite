@@ -1,24 +1,31 @@
-import {  Component, OnInit, AfterViewInit} from '@angular/core';
+import {  Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import { AngularFireAuth} from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import {Router} from '@angular/router';
+
 // import * as $ from 'jquery';
 
 @Component({
     selector: 'app-hire-pri',
     templateUrl: './hire-pri.component.html',
     styleUrls: ['./hire-pri.component.css']
+
 })
 export class HirePriComponent {
     //mySwiper = Swiper;
-    menuVista = "Start";
+
+    menuVista = "Inbox";
     Sesion = true;
 
     mostrar1 = "mostrar";
     mostrar2 = "mostrar2";
     list=[];
 
+
+
     constructor(public af: AngularFireAuth, private router: Router) {
+
+
   //   this.VerDatosTiempoReal();
         this.af.authState.subscribe(auth => {
             if (auth) {
@@ -48,7 +55,10 @@ export class HirePriComponent {
   //}
 
     home() {
+
+
         this.menuVista = "Home";
+
 
     }
     inbox() {
@@ -64,7 +74,9 @@ export class HirePriComponent {
     explore() {
         this.menuVista = "Explore";
     }
-   start() {
+   start(ww) {
+
+
           this.menuVista = "Start";
     }
 

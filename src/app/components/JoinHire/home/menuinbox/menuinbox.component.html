@@ -1,16 +1,3 @@
-<div class="mainContent">
-<div class="userListWrapper">
-<app-user-list></app-user-list>
-</div>
-<div #scroller class="feedWrapper">
-
-<app-feed></app-feed>
-</div>
-</div>
-
-<div class="chatFormWrapper">
-<!--app-chat-form></app-chat-form-->
-</div>
 <div class="contenedor">
   <div class="t1">
     <div class="text">
@@ -22,19 +9,10 @@
   </div>
   <div class="chat">
     <div class="column1">
-      <div class="people" *ngFor="let l of list; let i = index" (click)="call(i)">
-        <p class="first">Email Subject Line</p>
-        <div class="perfil">
-          <div class="image"></div>
-          <div class="datos">
-              <p class="second">Email Name Space</p>
-              <div class="disp">
-                <div class="color" [ngClass]="l.estilo"></div>
-                <p class="third">{{l.dispo}}</p>
-              </div>
-          </div>
-        </div>
-      </div>
+
+
+      <app-user-items  [user]=user *ngFor="let user of users">  </app-user-items>
+
       <div class="new">
         <p>Compose New Message</p>
       </div>
@@ -50,35 +28,18 @@
             <p class="third">Available</p>
           </div>
           <div class="othertext">
-              <p class="first2">John Doe needs help with </p>
+              <p class="first2">nombre needs help with </p>
               <p class="blue">Excavation</p>
           </div>
       </div>
       <div class="body">
-        <section *ngIf="vista == false">
-          <div class="chatcont" *ngFor="let l of list">
-            <div class="date">
-              <p>Day, Month, Year</p>
-            </div>
-            <div class="contact">
-              <div class="perfil2"></div>
-              <div class="textochat">
-                <p class="p1">Hello it’s me John! </p>
-                <p class="p2">Is it me you’re looking for?</p>
-                <p class="p3">I need some help with lorem ipsum dolor more ipsum and I’ve attached some images labelled as lorem ipsum more dolor. Do you think you’d be able to get it done by dolor lorem ipsum amit? Let us know if dolor ipsom is possible.</p>
-                <div class="linea"></div>
-                <div class="archadjunto">
-                  <div class="clip"></div>
-                  <div class="archad">
-                    <p class="label">Lorem_ipsum.pdf</p>
-                  </div>
-                </div>
-              </div>
-              <div class="time">
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
+        <section *ngIf="vista == false" >
+<div class="" *ngFor="let message of feed " >
+    <app-message [chatMessage]=message ></app-message>
+</div>
+
+
+
         </section>
         <section *ngIf="vista == true " class="section">
           <div class="date">

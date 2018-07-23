@@ -67,6 +67,7 @@ import { MenunewproyectComponent } from './components/JoinHire/home/menunewproye
 
 
 
+import { NouisliderModule } from 'ng2-nouislider';
 
 @NgModule({
   declarations: [
@@ -108,6 +109,7 @@ import { MenunewproyectComponent } from './components/JoinHire/home/menunewproye
     routes,
     FormsModule,
     ReactiveFormsModule,
+    NouisliderModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule

@@ -70,21 +70,21 @@
             </div>
 
             <span class="rifti">Average rate: $10-12/hour</span>
-        </div>
 
-        <div class="contenedorCheck">
-            <div class="leftcheck">
-                <input type="checkbox" id="check1" checked/>
-                <label class="leftsi" for="check1"> </label>
-                <h1 class="h1 titulocheck colornegro">All workers <label class="label">must take</label> a background test.</h1>
+            <div class="contenedorCheck">
+                <div class="leftcheck">
+                    <input type="checkbox" name="check1" id="check1" [checked]="check1" />
+                    <label class="leftsi" for="check1"> </label>
+                    <h1 class="h1 titulocheck colornegro">All workers <label class="label">must take</label> a background test.</h1>
+                </div>
+
+                <div class="leftcheck">
+                    <input type="checkbox" name="check2" id="check2" [checked]="check2" />
+                    <label class="leftsi" for="check2"> </label>
+                    <h1 class="h1 titulocheck  colornegro">All workers <label class="label">must pass</label> a background test.</h1>
+                </div>
+
             </div>
-
-            <div class="leftcheck">
-                <input type="checkbox" id="check2" checked/>
-                <label class="leftsi" for="check2"> </label>
-                <h1 class="h1 titulocheck  colornegro">All workers <label class="label">must pass</label> a background test.</h1>
-            </div>
-
         </div>
     </div>
 
@@ -97,18 +97,18 @@
                     <div class="textoDark">
                         Enter jobsite location:
                     </div>
-                    <input type="text" class="input" placeholder="Enter Address">
+                    <input type="text" class="input" placeholder="Enter Address" id="Address" value="{{Address}}">
                     <div class="textoDark">
                         Set hiring radius.
                     </div>
                     <div class="colum2 last">
-                        <input type="text" (click)="menu4()" readonly class="input" value="{{skill4}}" id="skill4" placeholder="Enter radius in miles">
+                        <input type="text" (click)="menu4()" readonly class="input" value="{{skill4}}" id="radius" placeholder="Enter radius in miles">
 
                         <img (click)="menu4()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar4">
 
                     </div>
                     <div class="list" [ngClass]="aparecer4">
-                        <div class="seleccion" *ngFor="let l of list" (click)="almacenar4(l.name)">
+                        <div class="seleccion" *ngFor="let l of list4" (click)="almacenar4(l.name)">
                             <p>{{l.name}}</p>
                         </div>
                     </div>
@@ -122,9 +122,9 @@
                     <div class="textoDark">
                         Enter timeframe :
                     </div>
-                    <input type="text" class="input w50" placeholder="Date, Month, Year">
+                    <input type="text" class="input w50" value="{{timeframe1}}" id="timeframe1" placeholder="Date, Month, Year">
                     <span class="towith">to</span>
-                    <input type="text" class="input w50" placeholder="Date, Month, Year">
+                    <input type="text" class="input w50" value="{{timeframe2}}" id="timeframe2" placeholder="Date, Month, Year">
 
                 </div>
             </div>
@@ -170,7 +170,11 @@
                 <div class="colum2 ">
                     <div class="textoDark">
                         Please enter <span style="color:#2F80ED">extra hourly rate</span> you’d pay for outside your hiring radius.
+
+                      
+
                     </div>
+
                 </div>
             </div>
         </div>
@@ -178,105 +182,117 @@
 
     <div class="overvisi" *ngIf="next  == 3">
 
-      <div class="contenedor">
-          <div class="text">
-            <p>This is <label class="label"> Excavation at 280 S.</label></p>
-            <div class="">
-                <input type="text" readonly class="input" value="" id="skill" placeholder="Excavation at 290 S">
-                <img style="margin-top: 10px;" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
+        <div class="contenedor">
+            <div class="text">
+                <p>This is
+                    <label class="label"> Excavation at 280 S.</label>
+                </p>
+                <div class="">
+                    <input type="text" readonly class="input" value="" id="skill" placeholder="Excavation at 290 S">
+                    <img style="margin-top: 10px;" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
 
-            </div>
-          </div>
-          <div class="textg"><p>Sort: Newest Jobs</p></div>
-          <div class="map"></div>
-          <div class="div">
-          <div class="col1">
-            <div class="h1">This is<label class="label"> what </label> you <label class="label"> need. </label> </div>
-            <div class="botones2">
-                <div class="tags"><p>Drywall</p></div>
-                <div class="tagswhite"><p>Drywall Hanger</p></div>
-            </div>
-          </div>
-          <div class="col2">
-            <p><label> Location</label><br>
-              1234 Meadow Dr.<br>
-              Unit 123<br>
-              Wynwood, FL 33127</p>
-              <p><label> Additional comments:</label><br>
-                My whole front driveway is disgusting and I need help installing<br> a new one. I think there are some utility lines; not sure so<br> please help.</p>
-          </div>
-        </div>
-          <div class="text2">
-
-            <p>  These are who <label class="label"> you hired. </label></p>
-
-            <div class="tetzul"  [ngClass]="btExplorno" >
-              You haven’t hired anyone yet.
-            </div>
-            <div class="">
-                  <button class="button btCentrar" (click)="btExplor1()"  [ngClass]="btExplorno"  >Explore</button>
-            </div>
-          </div>
-
-
-          <div [ngClass]="btExplor"  class="btEx">
-            <div class="service">
-              <p class="label">Drywall Team</p>
-            </div>
-
-              <div class="targets">
-                <div class="target" *ngFor="let l of list">
-                  <div class="perfilr"></div>
-                  <div class="tn">
-                    <p>Jimmy is helping with </p>
-                    <p class="label p1">Drywall</p>
-                  </div>
-                  <div class="line"></div>
-                  <div class="stars">
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                  </div>
-                  <div class="mensaje">
-                    <div class="imagem"></div>
-                    <p>Message</p>
-                  </div>
                 </div>
-              </div>
+            </div>
+            <div class="textg">
+                <p>Sort: Newest Jobs</p>
+            </div>
+            <div class="map"></div>
+            <div class="div">
+                <div class="col1">
+                    <div class="h1">This is
+                        <label class="label"> what </label> you
+                        <label class="label"> need. </label>
+                    </div>
+                    <div class="botones2">
+                        <div class="tags">
+                            <p>Drywall</p>
+                        </div>
+                        <div class="tagswhite">
+                            <p>Drywall Hanger</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col2">
+                    <p>
+                        <label> Location</label>
+                        <br> 1234 Meadow Dr.
+                        <br> Unit 123
+                        <br> Wynwood, FL 33127</p>
+                    <p>
+                        <label> Additional comments:</label>
+                        <br> My whole front driveway is disgusting and I need help installing
+                        <br> a new one. I think there are some utility lines; not sure so
+                        <br> please help.</p>
+                </div>
+            </div>
+            <div class="text2">
 
+                <p> These are who
+                    <label class="label"> you hired. </label>
+                </p>
 
+                <div class="tetzul" [ngClass]="btExplorno">
+                    You haven’t hired anyone yet.
+                </div>
+                <div class="">
+                    <button class="button btCentrar" (click)="btExplor1()" [ngClass]="btExplorno">Explore</button>
+                </div>
+            </div>
 
-
-
-              <div class="service">
-                <p class="label">Plaster Team</p>
-              </div>
+            <div [ngClass]="btExplor" class="btEx">
+                <div class="service">
+                    <p class="label">Drywall Team</p>
+                </div>
 
                 <div class="targets">
-                  <div class="target" *ngFor="let l of list">
-                    <div class="perfilr"></div>
-                    <div class="tn">
-                      <p>Jimmy is helping with </p>
-                      <p class="label p1">Plaster</p>
+                    <div class="target" *ngFor="let l of list">
+                        <div class="perfilr"></div>
+                        <div class="tn">
+                            <p>Jimmy is helping with </p>
+                            <p class="label p1">Drywall</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                        <div class="mensaje">
+                            <div class="imagem"></div>
+                            <p>Message</p>
+                        </div>
                     </div>
-                    <div class="line"></div>
-                    <div class="stars">
-                      <div class="star"></div>
-                      <div class="star"></div>
-                      <div class="star"></div>
-                      <div class="star"></div>
-                      <div class="star"></div>
-                    </div>
-                    <div class="mensaje">
-                      <div class="imagem"></div>
-                      <p>Message</p>
-                    </div>
-                  </div>
                 </div>
 
-          </div>
+                <div class="service">
+                    <p class="label">Plaster Team</p>
+                </div>
+
+                <div class="targets">
+                    <div class="target" *ngFor="let l of list">
+                        <div class="perfilr"></div>
+                        <div class="tn">
+                            <p>Jimmy is helping with </p>
+                            <p class="label p1">Plaster</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                        <div class="mensaje">
+                            <div class="imagem"></div>
+                            <p>Message</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 

@@ -1,7 +1,20 @@
-<div class="userItem">
-  <span class="status" [ngClass]=(user.status)>
-  </span>
-  <span class="userName">
-    {{user.displayName}}
-  </span>
+
+<div class="people" >
+  <p class="first">  {{user.correo}}</p>
+  <div class="perfil">
+    <div class="image"></div>
+    <div class="datos">
+        <p class="second">  {{user.nombre}}   {{user.apellido}}</p>
+        <div class="disp">
+        <div class="color yellow" *ngIf="user.status =='online1'"></div>
+        <div class="color green" *ngIf="user.status =='online2'"></div>
+        <div class="color red" *ngIf="user.status =='online3'"></div>
+          <p class="third " *ngIf="user.status =='online3'" >Job in Process</p>
+          <p class="third " *ngIf="user.status =='online2'" >Available</p>
+          <p class="third " *ngIf="user.status =='online1'" >Unavailable</p>
+
+
+        </div>
+    </div>
+  </div>
 </div>

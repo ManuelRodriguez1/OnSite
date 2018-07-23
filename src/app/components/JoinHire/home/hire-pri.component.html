@@ -32,7 +32,7 @@
             <div class="logabajo">
                 <div class="centradoFinal">
                     <div class="PlusButton"></div>
-                    <div (click)="start()"class="plustitulo">Start new project</div>
+                    <div (click)="start()" class="plustitulo">Start new project</div>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
             <div *ngIf="menuVista == 'Inbox'" class="menuInbox">
                 <app-menuinbox></app-menuinbox>
             </div>
-            <!--div *ngIf="menuVista == 'Projects'" class="menuProjects">
+            <div *ngIf="menuVista == 'Projects'" class="menuProjects">
                 Projects
             </div>
             <div *ngIf="menuVista == 'Track'" class="menuTrack">
@@ -70,9 +70,9 @@
                     <span class="textoselectabajo2"></span>
                 </div>
             </div>
-          -->
-            <div  *ngIf="menuVista == 'Start'" class="menuStart">
-            <app-menunewproyect></app-menunewproyect>
+
+            <div *ngIf="menuVista == 'Start'" class="menuStart">
+            <app-menunewproyect #child12 ></app-menunewproyect>
             </div>
         </div>
     </div>
