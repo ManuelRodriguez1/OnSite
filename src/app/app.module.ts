@@ -53,7 +53,13 @@ import { RegistroclientesComponent } from './registroclientes/registroclientes.c
 import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.component';
 import { ExploreComponent } from './components/JoinPro/perfil/explore/explore.component';
 //import { ChatFormComponent } from './chat/chat-form/chat-form.component';
+<<<<<<< HEAD
 import { MessageComponent } from './chat/message/message.component';
+=======
+import { FeedComponent } from './chat/feed-----eliminar/feed.component';
+import { MessageComponent } from './chat/message/message.component';
+import { UserListComponent } from './chat/user-list-----eliminar/user-list.component';
+>>>>>>> master
 import { UserItemsComponent } from './chat/user-items/user-items.component';
 import { ChatService } from './chat/chat.service';
 import { MenuhomeComponent } from './components/JoinHire/home/menuhome/menuhome.component';
