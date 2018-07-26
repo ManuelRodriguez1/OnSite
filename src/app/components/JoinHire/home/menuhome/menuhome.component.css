@@ -1,163 +1,150 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i');
-
 .last {
     position: relative;
-
-        z-index: 2;
-}/*
-.seleccion {
-    background: #FFFFFF;
+    z-index: 2;
 }
-
-
-.relaselect {
-    position: relative;
-    margin-top: 20px;
-}
-*/
 
 .desplegar {
-
- position: relative;
+    position: relative;
     height: auto !important;
-  z-index: 1 !important;
+    z-index: 1 !important;
     background: #fff;
-
-}
-.ovehide{
-      margin-top: 12px;
-  overflow: hidden;
-      position: relative;
 }
 
-input{
-      z-index: 2 !important;
+.ovehide {
+    margin-top: 12px;
+    overflow: hidden;
+    position: relative;
 }
-.list,.list::after,.list::before{
-  background: #ffffff;
+
+input {
+    z-index: 2 !important;
 }
-.homecont{
-  height: 400px;
-  width: 100%;
-  background: #D2D1D1;
-  left: 50%;
+
+.list,
+.list::after,
+.list::before {
+    background: #ffffff;
+}
+
+.homecont {
+    height: 400px;
+    width: 100%;
+    background: #D2D1D1;
+    left: 50%;
     transform: translateX(-50%);
     position: relative;
     margin-top: 15px;
-
-}
- .contenent{
-  width: 325px;
-  height: 110px;
-  top: 50%;
-  left: 50%;
-  position: relative;
-  color: #2F80ED;
-  transform: translate(-50%,-50%);
-font-family: "Archivo";
-font-style: normal;
-font-weight: 600;
-line-height: 45px;
-font-size: 24px;
-text-align: center;
-
 }
 
-.bthome{
-  bottom: 0;
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
-line-height: 45px;
+.contenent {
+    width: 325px;
+    height: 110px;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    color: #2F80ED;
+    transform: translate(-50%, -50%);
+    font-family: "Archivo";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 45px;
+    font-size: 24px;
+    text-align: center;
 }
 
-.siaparece{
-  display: none;
+.bthome {
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 45px;
 }
 
-.noaparee2{
-  display: none;
-}
-.siaparece2{
-  display:block;
+.siaparece {
+    display: none;
 }
 
-
-
-.opacityred{
-  opacity: 0.5;
+.noaparee2 {
+    display: none;
 }
 
-.divproyect{
-  background: #ffffff;
-  border-radius: 10px;
-  width:  130px;
-/*  display: inline-flex;*/
-  height: 160px;
-  margin-left: 15px;
-  margin-top: 15px;
-overflow: hidden;
-float: left;
-
+.siaparece2 {
+    display: block;
 }
-.green{
+
+.opacityred {
+    opacity: 0.5;
+}
+
+.divproyect {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 130px;
+    /*  display: inline-flex;*/
+    height: 160px;
+    margin-left: 15px;
+    margin-top: 15px;
+    overflow: hidden;
+    float: left;
+}
+
+.green {
     background-color: #219653;
     height: 10px;
     width: 10px;
     border-radius: 50px;
-    margin:  10px;
-
-         position: absolute;
+    margin: 10px;
+    position: absolute;
 }
-.red{
+
+.red {
     background-color: #F30000;
     height: 10px;
     width: 10px;
     border-radius: 50px;
-    margin:  10px;
-
-     position: absolute;
+    margin: 10px;
+    position: absolute;
 }
-.estadoPr{
-  height: 27px;
-  width: 100%;
 
-    position: relative;
-}
-.imgProyect{
-    height: 83px;
-background-position: center;
-background-repeat:no-repeat;
-  width: 100%;
-  background-image: url("../../../../../assets/icons/Group.png");
-    position: relative;
-}
-.nombreProyect{
-    height: 20px;
-
+.estadoPr {
+    height: 27px;
     width: 100%;
-text-align: center;
+    position: relative;
+}
+
+.imgProyect {
+    height: 83px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url("../../../../../assets/icons/Group.png");
+    position: relative;
+}
+
+.nombreProyect {
+    height: 20px;
+    width: 100%;
+    text-align: center;
     font-family: Archivo;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
     font-size: 12px;
-      color: #2F80ED;
-      position: relative;
+    color: #2F80ED;
+    position: relative;
 }
 
-.Completed{
-  background: #2F80ED;
-  height: 30px;
-  width: 100%;
-color: #fff;
-font-family:Archivo;
-font-style: normal;
-font-weight: 500;
-line-height: 29px;
-font-size: 12px;
-text-align: center;
-position: relative;
-
-
+.Completed {
+    background: #2F80ED;
+    height: 30px;
+    width: 100%;
+    color: #fff;
+    font-family: Archivo;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
 }

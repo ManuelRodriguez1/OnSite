@@ -1,3 +1,125 @@
-<p>
-  menuexplore works!
-</p>
+<div class="" *ngIf="next  == 0">
+    <div class="t2">
+        <h1 class="h1">See <label class="label"> who’s out there.</label> </h1>
+    </div>
+    <div class="colum last ovehide">
+        <input type="text" (click)="menu()" readonly class="input" value="What type of job do you need help with?" id="skill" placeholder="{{placeholder}}">
+        <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
+    </div>
+    <div class="list" [ngClass]="aparecer">
+        <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.name)">
+            <p>{{l.name}}</p>
+        </div>
+    </div>
+</div>
+<div class="" *ngIf="next  == 1">
+    <div class="t2">
+        <h1 class="h1">See <label class="label"> who’s out there.</label> </h1>
+    </div>
+    <div class="colum last ovehide">
+        <input type="text" (click)="menu()" readonly class="input" value="What type of job do you need help with?" id="skill" placeholder="{{placeholder}}">
+        <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
+    </div>
+    <div class="list" [ngClass]="aparecer">
+        <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.name)">
+            <p>{{l.name}}</p>
+        </div>
+    </div>
+
+    <div style="position:relative;margin-top: 50px;">
+
+        <div class="overvisi floatleft">
+            <div class="colum2 overvisi">
+                <h1 style="padding-left: 5px;" class="h1 overvisi">Where is the<br>  <label class="label">job’s location?</label> </h1>
+                <div class="textoDark">
+                    Enter jobsite location:
+                </div>
+                <input type="text" class="input" placeholder="Enter Address" id="Address" value="{{Address}}">
+                <div class="textoDark">
+                    Set hiring radius.
+                </div>
+                <div class="colum2 last">
+                    <input type="text" (click)="menu4()" readonly class="input" value="{{skill4}}" id="radius" placeholder="Enter radius in miles">
+
+                    <img (click)="menu4()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar4">
+
+                </div>
+                <div class="list" [ngClass]="aparecer4">
+                    <div class="seleccion" *ngFor="let l of list4" (click)="almacenar4(l.name)">
+                        <p>{{l.name}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="fleft">
+            <div class="colum2 ">
+                <h1 style="padding-left: 5px;" class="h1 overvisi">What’s your <br>  <label class="label"> job’s timeframe?</label> </h1>
+                <div class="textoDark">
+                    Enter timeframe :
+                </div>
+                <input type="text" class="input w50" value="{{timeframe1}}" id="timeframe1" placeholder="Date, Month, Year">
+                <span class="towith">to</span>
+                <input type="text" class="input w50" value="{{timeframe2}}" id="timeframe2" placeholder="Date, Month, Year">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contenefornew">
+        <div class="overvisi floatleft">
+            <div class="colum2 overvisi">
+
+                <div class="textoDark">
+                    Are you willing to hire outside of your hiring radius?
+                </div>
+                <div class="botones">
+                    <button class="button">Yes</button>
+                    <button class="button bno">No</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="fleft">
+            <div class="colum2 ">
+                <div class="textoDark">
+                    Please enter <span style="color:#2F80ED">extra hourly rate</span> you’d pay for outside your hiring radius.
+                    <p style="position:absolute" class="tooltip"> {{username | currency}}</p>
+                    <input type='range' min="1.00" (ngModel)="foo" nombre="foo" id="foo" max="100.0" (input)="username = $event.target.value">
+                    <div class="valoresdollar">
+                        <span>$1.00 USD</span> <span style="float:right">More than $100.00 USD</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="contenedorCheck">
+        <div class="leftcheck">
+            <input type="checkbox" name="check1" id="check1" [checked]="check1" />
+            <label class="leftsi" for="check1"> </label>
+            <h1 class="h1 titulocheck colornegro">All workers <label class="label">must take</label> a background test.</h1>
+        </div>
+
+        <div class="leftcheck">
+            <input type="checkbox" name="check2" id="check2" [checked]="check2" />
+            <label class="leftsi" for="check2"> </label>
+            <h1 class="h1 titulocheck  colornegro">All workers <label class="label">must pass</label> a background test.</h1>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="" *ngIf="next == 2">
+    HOLAAAAAAAAA2
+</div>
+<div *ngIf="next ==1" class="botones">
+    <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
+    <button class="button" id="net" (click)="seguir()">
+        <label *ngIf="next == 1">Finish</label>
+    </button>
+</div>

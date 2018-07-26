@@ -1,0 +1,22 @@
+h1{
+  color: #000000;
+}
+.list{
+  height: auto !important;
+  background-color: #ffffff !important;
+  margin-bottom: 100px;
+  display: none;
+}
+.ovehide{
+  z-index: 2;
+}
+.list::after{
+  background-color: #ffffff !important;
+}
+.desplegar{
+  display: block;
+}
+.desplegar2{
+  height: auto !important;
+  display: block;
+}

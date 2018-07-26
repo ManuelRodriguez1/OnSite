@@ -1,31 +1,23 @@
 <form class="" method="post">
-
     <div *ngIf="next  == 0">
         <h1 class="h1 colornegro">Name your <label class="label">project.</label></h1>
-
         <div class="colum last mar40">
             <input type="text" id="nombreProyecto" class="input" value="{{nombre}}" required>
         </div>
     </div>
-
     <div class="overvisi" *ngIf="next  == 1">
         <div class="t2">
             <h1 class="h1">What do you need <label class="label">help</label> with?</h1>
         </div>
-
         <div class="colum last ovehide">
             <input type="text" (click)="menu()" readonly class="input" value="{{skill}}" id="skill" placeholder="{{placeholder}}">
-
             <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
-
         </div>
-
         <div class="list" [ngClass]="aparecer">
             <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.name)">
                 <p>{{l.name}}</p>
             </div>
         </div>
-
         <div class="selecciones" *ngIf="skill != ''">
             <div class="tags">
                 <p>{{skill}}</p>
@@ -170,12 +162,11 @@
                 <div class="colum2 ">
                     <div class="textoDark">
                         Please enter <span style="color:#2F80ED">extra hourly rate</span> you’d pay for outside your hiring radius.
-                          <p style="position:absolute" class="tooltip"> {{username | currency}}</p>
-                          <input type='range' min="1.00"  (ngModel)="foo" nombre="foo" id="foo" max="100.0"  (input)="username = $event.target.value">
-                          <div class="valoresdollar">
-                            <span >$1.00 USD</span> <span style="float:right">More than $100.00 USD</span>
-                          </div>
-
+                        <p style="position:absolute" class="tooltip"> {{username | currency}}</p>
+                        <input type='range' min="1.00" (ngModel)="foo" nombre="foo" id="foo" max="100.0" (input)="username = $event.target.value">
+                        <div class="valoresdollar">
+                            <span>$1.00 USD</span> <span style="float:right">More than $100.00 USD</span>
+                        </div>
 
                     </div>
 

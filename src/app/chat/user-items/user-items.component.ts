@@ -1,5 +1,15 @@
-import { Component, OnInit ,Input} from '@angular/core';
-import { ChatService } from '../chat.service';
+import {
+    Component,
+    OnInit,
+    Input
+}
+
+from '@angular/core';
+import {
+    ChatService
+}
+
+from '../chat.service';
 export class User {
     uid?: string;
     apellido?: string;
@@ -11,19 +21,12 @@ export class User {
     zipcode?: string;
 }
 
-@Component({
-  selector: 'app-user-items',
-  templateUrl: './user-items.component.html',
-  styleUrls: ['./user-items.component.css']
-})
-export class UserItemsComponent implements OnInit {
-  @Input() user: User;
+@Component( {
+    selector: 'app-user-items', templateUrl: './user-items.component.html', styleUrls: ['./user-items.component.css']
+}
 
-  constructor() {
-
-   }
-
-  ngOnInit() {
-  }
-
+) export class UserItemsComponent implements OnInit {
+    @Input() user: User;
+    constructor() {}
+    ngOnInit() {}
 }

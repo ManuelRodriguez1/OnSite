@@ -8,20 +8,20 @@
         </div>
         <div class="menuTeam">
             <div class="">
-                <div (click)="menu(1)" class="itemsprincipales" [class.itemsprincipales1]="m == 1" >
+                <div (click)="menu(1)" class="itemsprincipales" [class.itemsprincipales1]="m == 1">
                     <div class="t1m">HOME</div>
                     <div class="flechateam"></div>
                 </div>
-                <div (click)="menu(2)" class="itemsprincipales" [class.itemsprincipales1]="m == 2" >
+                <div (click)="menu(2)" class="itemsprincipales" [class.itemsprincipales1]="m == 2">
                     <div class="t1m">INBOX</div>
                     <div class="flechateam"></div>
                 </div>
-                <div (click)="menu(3)" class="itemsprincipales" [class.itemsprincipales1]="m == 3" >
+                <div (click)="menu(3)" class="itemsprincipales" [class.itemsprincipales1]="m == 3">
                     <div class="t1m">PROJECTS</div>
                     <div class="flechateam"></div>
                 </div>
 
-                <div (click)="menu(4)" class="itemsprincipales" [class.itemsprincipales1]="m == 4" >
+                <div (click)="menu(4)" class="itemsprincipales" [class.itemsprincipales1]="m == 4">
                     <div class="t1m">EXPLORE</div>
                     <div class="flechateam"></div>
                 </div>
@@ -38,36 +38,21 @@
         <div class="conxenhireright">
 
             <div *ngIf="menuVista == 'Home'" class="menuHome">
-            <app-menuhome></app-menuhome>
+                <app-menuhome></app-menuhome>
             </div>
             <div *ngIf="menuVista == 'Inbox'" class="menuInbox">
                 <app-menuinbox></app-menuinbox>
             </div>
             <div *ngIf="menuVista == 'Projects'" class="menuProjects">
-              <app-menuprojects></app-menuprojects>
+                <app-menuprojects></app-menuprojects>
             </div>
-            
+
             <div *ngIf="menuVista == 'Explore'" class="menuExplore">
-                <div class="">
-                    <h1 class="h1">See<label class="label">who’s out there.</label></h1>
-                </div>
-                <div class="colum last">
-                    <input type="text" (click)="menu()" readonly class="input" placeholder="{{placeholder}}">
-                    <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
-                </div>
-                <div class="list" [ngClass]="aparecer">
-                    <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.categorias)">
-                        <p>{{l.categorias}}</p>
-                    </div>
-                </div>
-                <div class="textoselectabajo">
-                    <span class="textoselectabajo1">Sort: Newest Jobs</span>
-                    <span class="textoselectabajo2"></span>
-                </div>
+                <app-menuexplore></app-menuexplore>
             </div>
 
             <div *ngIf="menuVista == 'Start'" class="menuStart">
-            <app-menunewproyect #child12 ></app-menunewproyect>
+                <app-menunewproyect #child12></app-menunewproyect>
             </div>
         </div>
     </div>

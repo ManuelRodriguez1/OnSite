@@ -1,4 +1,7 @@
-import {    Component, OnInit, ViewChild } from '@angular/core';
+import {
+    Component, OnInit, ViewChild
+}
+from '@angular/core';
 import * as firebase from 'firebase/app';
 
 @Component({
@@ -21,7 +24,7 @@ export class MenuhomeComponent implements OnInit {
     }
 
     ngOnInit() {
-              this.list = this.VerDatosTiempoReal();
+        this.list = this.VerDatosTiempoReal();
     }
 
     VerDatosTiempoReal() {
@@ -34,7 +37,7 @@ export class MenuhomeComponent implements OnInit {
                 var childData = childSnapshot.val();
                 returnArr.push(childData);
 
-                contador=contador+1;
+                contador = contador + 1;
             });
         });
         console.log(returnArr);

@@ -4,9 +4,10 @@ import {
 from '@angular/core';
 import * as $ from 'jquery';
 import * as firebase from 'firebase/app';
-import { NouisliderModule } from 'ng2-nouislider';
-
-
+import {
+    NouisliderModule
+}
+from 'ng2-nouislider';
 
 @Component({
     selector: 'app-menunewproyect',
@@ -47,19 +48,15 @@ export class MenunewproyectComponent implements OnInit {
     n3 = '';
     n4 = '';
     btExplor;
-    Address="";
+    Address = "";
     timeframe1;
     timeframe2;
-    check1="";
-    check2="";
-    finish=[];
+    check1 = "";
+    check2 = "";
+    finish = [];
     radius;
-    constructor() {var el, newPoint, newPlace, offset,width;
-
-
-
-
-
+    constructor() {
+        var el, newPoint, newPlace, offset, width;
 
         this.VerDatosTiempoReal1();
 
@@ -129,7 +126,6 @@ export class MenunewproyectComponent implements OnInit {
 
     ngOnInit() {
 
-
         for (var i = 0; i <= 15; i++) {
             this.listulti.push('{"cat"},{"mus"}');
         }
@@ -143,30 +139,27 @@ export class MenunewproyectComponent implements OnInit {
             this.skill = this.datos[1];
             this.skill2 = this.datos[2];
             this.skill3 = this.datos[3];
-            if(this.datos[4]=="on"){
-              this.check1="checked";
+            if (this.datos[4] == "on") {
+                this.check1 = "checked";
             }
-              if(this.datos[5]=="on"){
-              this.check2="checked";
+            if (this.datos[5] == "on") {
+                this.check2 = "checked";
             }
 
         }
 
-
-        if(this.obtener_localstorage(2)){
-        this.nombre = this.obtener_localstorage(2);
+        if (this.obtener_localstorage(2)) {
+            this.nombre = this.obtener_localstorage(2);
         }
 
+        if (this.obtener_localstorage(3)) {
+            this.finish = this.obtener_localstorage(3);
 
-        if(this.obtener_localstorage(3)){
-        this.finish = this.obtener_localstorage(3);
-
-        this.Address=this.finish[0];
-        this.timeframe1=this.finish[1];
-        this.timeframe2=this.finish[2];
-        this.radius=this.finish[3];
+            this.Address = this.finish[0];
+            this.timeframe1 = this.finish[1];
+            this.timeframe2 = this.finish[2];
+            this.radius = this.finish[3];
         }
-
 
         this.list2 = [{
             "especifico": this.skill + " Hanger"
@@ -238,7 +231,7 @@ export class MenunewproyectComponent implements OnInit {
             this.next++;
         }
 
-      //  console.log(this.next++);
+        //  console.log(this.next++);
     }
     back() {
         this.next--;
@@ -248,8 +241,8 @@ export class MenunewproyectComponent implements OnInit {
             return JSON.parse(localStorage.getItem("datos"));
         } else if (num == 2) {
             return localStorage.getItem("nombre_proyecto");
-        }else if(num==3){
-          return JSON.parse(localStorage.getItem("finish"));
+        } else if (num == 3) {
+            return JSON.parse(localStorage.getItem("finish"));
         }
 
     }
@@ -305,34 +298,32 @@ eliminar_localstorage(){
     localStorage.removeItem("persona");
 
 }*/
-grabar_localstorage(){
-  var datos = [];
-  datos[0] ="hola";
-  datos[1] = $("#skill").val();
-  datos[2] = $("#skill2").val();
-  datos[3] = $("#skill3").val();
-  datos[4] = $('input:checkbox[name=check1]:checked').val();
-  datos[5] = $('input:checkbox[name=check2]:checked').val();
+    grabar_localstorage() {
+        var datos = [];
+        datos[0] = "hola";
+        datos[1] = $("#skill").val();
+        datos[2] = $("#skill2").val();
+        datos[3] = $("#skill3").val();
+        datos[4] = $('input:checkbox[name=check1]:checked').val();
+        datos[5] = $('input:checkbox[name=check2]:checked').val();
 
+        localStorage.setItem("datos", JSON.stringify(datos));
+    }
+    finish1() {
 
-  localStorage.setItem("datos", JSON.stringify(datos));
-}
-finish1(){
-
-    var finish = [];
-    finish[0] = $('#Address').val();
-    finish[1] = $('#timeframe1').val();
-    finish[2] = $('#timeframe2').val();
-    finish[3] = $('#radius').val();
-    finish[4] = "500";
-  //  finish[5] = $('#botonsi').val();
-    localStorage.setItem("finish", JSON.stringify(finish));
-}
+        var finish = [];
+        finish[0] = $('#Address').val();
+        finish[1] = $('#timeframe1').val();
+        finish[2] = $('#timeframe2').val();
+        finish[3] = $('#radius').val();
+        finish[4] = "500";
+        //  finish[5] = $('#botonsi').val();
+        localStorage.setItem("finish", JSON.stringify(finish));
+    }
 
     btExplor1() {
         this.btExplorno = "btExplorno";
         this.btExplor = "disBlox";
     }
-
 
 }

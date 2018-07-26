@@ -1,59 +1,61 @@
-
-    <div class="text2">
-      <p>See who you <label class="label"> hired.</label></p>
-    </div>
-    <div class="text21">
-      <p>  Project:  <label class="label"> Excavation at 280 S </label></p>
-    </div>
+<div class="text2">
+    <p>See who you
+        <label class="label"> hired.</label>
+    </p>
+</div>
+<div class="text21">
+    <p> Project:
+        <label class="label"> Excavation at 280 S </label>
+    </p>
+</div>
 <div class="divinbozcon">
-<div class="leftCont">
-  <div class="">
-    <div class="ff1">
-      <div class="miniselc">
-          <input type="text" (click)="menu3()" id="skill3" readonly class="input" value="{{skill3}}" placeholder="Select Projects">
-          <img (click)="menu3()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar3">
-          <div class="list" [ngClass]="aparecer3">
-              <div class="seleccion" *ngFor="let l of list3" (click)="almacenar3(l.name)">
-                  <p>{{l.name}}</p>
-              </div>
-          </div>
-      </div>
-    </div>
-    <div class="ff2">
-      <div class="divff2"  *ngFor="let l of list3">
-        <div class="estado1">
+    <div class="leftCont">
+        <div class="">
+            <div class="ff1">
+                <div class="miniselc">
+                    <input type="text" (click)="menu3()" id="skill3" readonly class="input" value="{{skill3}}" placeholder="Select Projects">
+                    <img (click)="menu3()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar3">
+                    <div class="list" [ngClass]="aparecer3">
+                        <div class="seleccion" *ngFor="let l of list3" (click)="almacenar3(l.name)">
+                            <p>{{l.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ff2">
+                <div class="divff2" *ngFor="let l of list3">
+                    <div class="estado1">
+
+                    </div>
+                    <div class="estado2">
+                        proyecto 1
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <div class="estado2">
-            proyecto 1
+
+    </div>
+    <div class="targets">
+        <div class="target" *ngFor="let l of list" (click)="targetClic()">
+            <div class="perfilr"></div>
+            <div class="tn">
+                <p>Jimmy is helping with </p>
+                <p class="label p1">Drywall</p>
+            </div>
+            <div class="line"></div>
+            <div class="stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
+            <div class="mensaje">
+                <div class="imagem"></div>
+                <p>Message</p>
+            </div>
         </div>
-      </div>
-    </div>
 
-  </div>
-
-
-</div>
-<div class="targets">
-  <div class="target" *ngFor="let l of list" (click)="targetClic()">
-    <div class="perfilr"></div>
-    <div class="tn">
-      <p>Jimmy is helping with </p>
-      <p class="label p1">Drywall</p>
     </div>
-    <div class="line"></div>
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
-    <div class="mensaje">
-      <div class="imagem"></div>
-      <p>Message</p>
-    </div>
-  </div>
-
-</div>
 </div>

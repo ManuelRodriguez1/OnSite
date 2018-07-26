@@ -35,44 +35,40 @@
 
             <div *ngIf="l.estado == 'off'" class="divproyect opacityred">
 
-
-                    <div class="estadoPr">
-                        <div *ngIf="l.estado == 'on'" class="green"></div>
-                        <div *ngIf="l.estado == 'off'" class="red"></div>
-                    </div>
-                    <div class="nombreProyect">
-                        {{l.nombre}}
-                    </div>
-                    <div class="imgProyect">
-
-                    </div>
-                    <div class="Completed">
-                        Completed?
-                    </div>
+                <div class="estadoPr">
+                    <div *ngIf="l.estado == 'on'" class="green"></div>
+                    <div *ngIf="l.estado == 'off'" class="red"></div>
                 </div>
+                <div class="nombreProyect">
+                    {{l.nombre}}
+                </div>
+                <div class="imgProyect">
 
+                </div>
+                <div class="Completed">
+                    Completed?
+                </div>
+            </div>
 
+            <div *ngIf="l.estado == 'on'" class="divproyect">
 
-                <div *ngIf="l.estado == 'on'" class="divproyect">
+                <div class="estadoPr">
+                    <div *ngIf="l.estado == 'on'" class="green"></div>
+                    <div *ngIf="l.estado == 'off'" class="red"></div>
+                </div>
+                <div class="nombreProyect">
+                    {{l.nombre}}
+                </div>
+                <div class="imgProyect">
 
-                    <div class="estadoPr">
-                        <div *ngIf="l.estado == 'on'" class="green"></div>
-                        <div *ngIf="l.estado == 'off'" class="red"></div>
-                    </div>
-                    <div class="nombreProyect">
-                        {{l.nombre}}
-                    </div>
-                    <div class="imgProyect">
-
-                    </div>
-                    <div class="Completed">
-                        Completed?
-                    </div>
+                </div>
+                <div class="Completed">
+                    Completed?
                 </div>
             </div>
         </div>
-
     </div>
 
+</div>
 
 <app-menunewproyect [ngClass]="noaparee2"></app-menunewproyect>

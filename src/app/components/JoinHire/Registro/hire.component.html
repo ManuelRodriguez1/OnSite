@@ -1,50 +1,49 @@
+<form #formData='ngForm' class="contenedor" (ngSubmit)="onSubmit(formData)" method="post">
 
-  <form #formData='ngForm' class="contenedor" (ngSubmit)="onSubmit(formData)"  method="post">
+    <section>
 
-<section>
-
-  <div class="t1">
-    <h1 class="h1">Tell us more about <label class="label">you.</label></h1>
-  </div>
-
-  <div class="cont1">
-    <p class="textoDark">Enter your personal information.</p>
-    <div>
-      <div class="colum">
-          <input required type="text" class="input validate" placeholder="First Name" (ngModel)="FirstName"  name="FirstName" >
-      </div>
-      <div class="colum der">
-          <input required type="text" class="input validate" placeholder="Last Name" (ngModel)="LastName"  name="LastName"  >
-      </div>
-      <div class="colum">
-          <input required type="text" class="input validate" placeholder="Phone Number" (ngModel)="PhoneNumber" name="PhoneNumber"  >
-      </div>
-    </div>
-  </div>
-
-  <div class="cont1">
-      <p class="textoDark">Enter account information.</p>
-      <span class="span">Your username will be your e-mail address.</span>
-      <div>
-        <div class="colum">
-            <input  required type="text"  class="input validate" placeholder="E-mail" (ngModel)="Email"  name="Email"  >
+        <div class="t1">
+            <h1 class="h1">Tell us more about <label class="label">you.</label></h1>
         </div>
-        <div class="colum der">
-            <input required type="password" class="input validate" placeholder="Password" (ngModel)="Password"  name="Password"  >
-        </div>
-      </div>
-    </div>
 
-    <div class="cont1">
-        <p class="textoDark">Where are you located?</p>
-        <div class="colum last">
-            <input type="text" required class="input validate" placeholder="Enter city or zipcode." (ngModel)="Entercityorzipcode"  name="Entercityorzipcode" >
+        <div class="cont1">
+            <p class="textoDark">Enter your personal information.</p>
+            <div>
+                <div class="colum">
+                    <input required type="text" class="input validate" placeholder="First Name" (ngModel)="FirstName" name="FirstName">
+                </div>
+                <div class="colum der">
+                    <input required type="text" class="input validate" placeholder="Last Name" (ngModel)="LastName" name="LastName">
+                </div>
+                <div class="colum">
+                    <input required type="text" class="input validate" placeholder="Phone Number" (ngModel)="PhoneNumber" name="PhoneNumber">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="botones">
-          <span class="error"  >{{error}} </span>
-          <button type='submit' class="button" name="button"  [disabled]="!formData.valid" >Finish</button>
-      </div>
-  </section>
+
+        <div class="cont1">
+            <p class="textoDark">Enter account information.</p>
+            <span class="span">Your username will be your e-mail address.</span>
+            <div>
+                <div class="colum">
+                    <input required type="text" class="input validate" placeholder="E-mail" (ngModel)="Email" name="Email">
+                </div>
+                <div class="colum der">
+                    <input required type="password" class="input validate" placeholder="Password" (ngModel)="Password" name="Password">
+                </div>
+            </div>
+        </div>
+
+        <div class="cont1">
+            <p class="textoDark">Where are you located?</p>
+            <div class="colum last">
+                <input type="text" required class="input validate" placeholder="Enter city or zipcode." (ngModel)="Entercityorzipcode" name="Entercityorzipcode">
+            </div>
+        </div>
+        <div class="botones">
+            <span class="error">{{error}} </span>
+            <button type='submit' class="button" name="button" [disabled]="!formData.valid">Finish</button>
+        </div>
+    </section>
 
 </form>
