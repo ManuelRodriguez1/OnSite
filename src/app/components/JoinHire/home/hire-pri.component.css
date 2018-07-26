@@ -104,8 +104,8 @@
 
 .flechateam {
     display: inline-flex;
-    height: 10px;
-    width: 10px;
+    height: 12px;
+    width: 12px;
     background-image: url("../../../../assets/icons/miniflechaAzul.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -125,6 +125,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    margin-top: -40px;
 }
 
 
@@ -390,6 +391,21 @@
     position: relative;
     cursor: pointer;
 }
+.itemsprincipales1 {
+    color: #FFFFFF !important;
+    background: #2F80ED;
+}
+
+.itemsprincipales1 .t1m {
+    color: #FFFFFF !important;
+}
+
+.itemsprincipales1 .flechateam {
+    background-image: url("../../../../assets/icons/flechaabajomenu.svg") !important;
+    width: 14px;
+    margin-top: 2.2px;
+    height: 14px;
+}
 
 .itemsprincipales:hover {
     color: #FFFFFF !important;
@@ -402,8 +418,8 @@
 
 .itemsprincipales:hover .flechateam {
     background-image: url("../../../../assets/icons/flechaabajomenu.svg") !important;
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
 }
 
 .flechaabajomenu .menuExplore {

@@ -170,8 +170,12 @@
                 <div class="colum2 ">
                     <div class="textoDark">
                         Please enter <span style="color:#2F80ED">extra hourly rate</span> you’d pay for outside your hiring radius.
+                          <p style="position:absolute" class="tooltip"> {{username | currency}}</p>
+                          <input type='range' min="1.00"  (ngModel)="foo" nombre="foo" id="foo" max="100.0"  (input)="username = $event.target.value">
+                          <div class="valoresdollar">
+                            <span >$1.00 USD</span> <span style="float:right">More than $100.00 USD</span>
+                          </div>
 
-                      
 
                     </div>
 

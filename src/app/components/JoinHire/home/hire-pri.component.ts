@@ -14,7 +14,8 @@ import {Router} from '@angular/router';
 export class HirePriComponent {
     //mySwiper = Swiper;
 
-    menuVista = "Inbox";
+    menuVista = "Projects";
+    m = 3;
     Sesion = true;
 
     mostrar1 = "mostrar";
@@ -53,32 +54,22 @@ export class HirePriComponent {
     console.log(returnArr);
     this.list=returnArr;*/
   //}
-
-    home() {
-
-
-        this.menuVista = "Home";
-
-
-    }
-    inbox() {
-        this.menuVista = "Inbox";
-    }
-    projects() {
-        this.menuVista = "Projects";
-    }
-
-    track() {
-        this.menuVista = "Track";
-    }
-    explore() {
-        this.menuVista = "Explore";
-    }
-   start(ww) {
-
-
+  menu(e){
+    if(e==1){
+          this.menuVista = "Home";
+    }else if(e==2){
+          this.menuVista = "Inbox";
+    }else if(e==3){
+          this.menuVista = "Projects";
+    }else if(e==4){
+          this.menuVista = "Explore";
+    }else if(e==5){
           this.menuVista = "Start";
     }
+    this.m = e;
+  }
+
+
 
 
     mostrar(t) {

@@ -53,22 +53,19 @@ import { RegistroclientesComponent } from './registroclientes/registroclientes.c
 import { OpenComponent } from './components/JoinPro/perfil/projects/open/open.component';
 import { ExploreComponent } from './components/JoinPro/perfil/explore/explore.component';
 //import { ChatFormComponent } from './chat/chat-form/chat-form.component';
-import { FeedComponent } from './chat/feed/feed.component';
 import { MessageComponent } from './chat/message/message.component';
-import { UserListComponent } from './chat/user-list/user-list.component';
 import { UserItemsComponent } from './chat/user-items/user-items.component';
 import { ChatService } from './chat/chat.service';
 import { MenuhomeComponent } from './components/JoinHire/home/menuhome/menuhome.component';
 import { MenuinboxComponent } from './components/JoinHire/home/menuinbox/menuinbox.component';
 import { MenuprojectsComponent } from './components/JoinHire/home/menuprojects/menuprojects.component';
-import { MenutrackComponent } from './components/JoinHire/home/menutrack/menutrack.component';
 import { MenuexploreComponent } from './components/JoinHire/home/menuexplore/menuexplore.component';
 import { MenunewproyectComponent } from './components/JoinHire/home/menunewproyect/menunewproyect.component';
 
 
 
 import { NouisliderModule } from 'ng2-nouislider';
-
+//import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,14 +87,13 @@ import { NouisliderModule } from 'ng2-nouislider';
     OpenComponent,
     ExploreComponent,
     //ChatFormComponent,
-    FeedComponent,
+
     MessageComponent,
-    UserListComponent,
+
     UserItemsComponent,
     MenuhomeComponent,
     MenuinboxComponent,
     MenuprojectsComponent,
-    MenutrackComponent,
     MenuexploreComponent,
     MenunewproyectComponent
 

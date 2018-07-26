@@ -8,23 +8,20 @@
         </div>
         <div class="menuTeam">
             <div class="">
-                <div (click)="home()" class="itemsprincipales">
+                <div (click)="menu(1)" class="itemsprincipales" [class.itemsprincipales1]="m == 1" >
                     <div class="t1m">HOME</div>
                     <div class="flechateam"></div>
                 </div>
-                <div (click)="inbox()" class="itemsprincipales">
+                <div (click)="menu(2)" class="itemsprincipales" [class.itemsprincipales1]="m == 2" >
                     <div class="t1m">INBOX</div>
                     <div class="flechateam"></div>
                 </div>
-                <div (click)="projects()" class="itemsprincipales">
+                <div (click)="menu(3)" class="itemsprincipales" [class.itemsprincipales1]="m == 3" >
                     <div class="t1m">PROJECTS</div>
                     <div class="flechateam"></div>
                 </div>
-                <div (click)="track()" class="itemsprincipales">
-                    <div class="t1m">TRACK</div>
-                    <div class="flechateam"></div>
-                </div>
-                <div (click)="explore()" class="itemsprincipales">
+
+                <div (click)="menu(4)" class="itemsprincipales" [class.itemsprincipales1]="m == 4" >
                     <div class="t1m">EXPLORE</div>
                     <div class="flechateam"></div>
                 </div>
@@ -32,7 +29,7 @@
             <div class="logabajo">
                 <div class="centradoFinal">
                     <div class="PlusButton"></div>
-                    <div (click)="start()" class="plustitulo">Start new project</div>
+                    <div (click)="menu(5)" class="plustitulo">Start new project</div>
                 </div>
             </div>
         </div>
@@ -47,11 +44,9 @@
                 <app-menuinbox></app-menuinbox>
             </div>
             <div *ngIf="menuVista == 'Projects'" class="menuProjects">
-                Projects
+              <app-menuprojects></app-menuprojects>
             </div>
-            <div *ngIf="menuVista == 'Track'" class="menuTrack">
-                Track
-            </div>
+            
             <div *ngIf="menuVista == 'Explore'" class="menuExplore">
                 <div class="">
                     <h1 class="h1">See<label class="label">who’s out there.</label></h1>

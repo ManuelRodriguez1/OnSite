@@ -54,7 +54,8 @@ export class MenunewproyectComponent implements OnInit {
     check2="";
     finish=[];
     radius;
-    constructor() {
+    constructor() {var el, newPoint, newPlace, offset,width;
+
 
 
 
@@ -236,6 +237,8 @@ export class MenunewproyectComponent implements OnInit {
             this.finish1();
             this.next++;
         }
+
+      //  console.log(this.next++);
     }
     back() {
         this.next--;
@@ -330,4 +333,6 @@ finish1(){
         this.btExplorno = "btExplorno";
         this.btExplor = "disBlox";
     }
+
+
 }
