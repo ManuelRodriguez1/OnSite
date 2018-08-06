@@ -1,44 +1,23 @@
-import {
-    Injectable, OnInit
-}
-from '@angular/core';
-import {
-    AngularFireDatabase, AngularFireList
-}
-from 'angularfire2/database';
-import {
-    FirebaseListObservable
-}
-from 'angularfire2/database-deprecated';
-import {
-    AngularFireAuth
-}
-from 'angularfire2/auth';
-import {
-    Observable
-}
-from 'rxjs/Observable';
+import {Injectable, OnInit} from  '@angular/core';
+import { AngularFireDatabase, AngularFireList} from 'angularfire2/database';
+import { FirebaseListObservable} from 'angularfire2/database-deprecated';
+import {AngularFireAuth} from 'angularfire2/auth';
+import {Observable} from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
+import {ChatMessage} from './chat-message.model';
+import {map} from 'rxjs/operators';
 
-import {
-    ChatMessage
-}
-from './chat-message.model';
-import {
-    map
-}
-from 'rxjs/operators';
 @Injectable()
 export class ChatService {
-    chatMessages: FirebaseListObservable < ChatMessage[] > ;
+    chatMessages: FirebaseListObservable<ChatMessage[]>;
     //chatMessages = [];
 
-    constructor(private db: AngularFireDatabase) {}
+    constructor(private db: AngularFireDatabase) { }
 
     sendMessage(msg: string) {
         const timestamp = this.getTimeStamp();
         const timestamp2 = this.getTimeStamp2();
-        firebase.auth().onAuthStateChanged(function(user) {
+        firebase.auth().onAuthStateChanged(function (user) {
 
             if (user) {
                 firebase.database().ref('messages/').push({
@@ -56,7 +35,7 @@ export class ChatService {
     getMessages() {
 
         var returnArr = [];
-        firebase.database().ref("messages/").orderByKey().on("child_added", function(snapshot) {
+        firebase.database().ref("messages/").orderByKey().on("child_added", function (snapshot) {
             returnArr.push(snapshot.val());
         });
         return returnArr;
@@ -66,7 +45,7 @@ export class ChatService {
 
         var returnArr2 = [];
 
-        firebase.database().ref("users_hire/").orderByKey().on("child_added", function(snapshot) {
+        firebase.database().ref("users_hire/").orderByKey().on("child_added", function (snapshot) {
             returnArr2.push(snapshot.val());
         });
         return returnArr2;

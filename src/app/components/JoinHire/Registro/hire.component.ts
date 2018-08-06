@@ -13,6 +13,7 @@ export class HireComponent  {
 
 
     error: any[];
+
     constructor(public af: AngularFireAuth,private router: Router) {
       }
       onSubmit(formData) {
@@ -34,7 +35,6 @@ export class HireComponent  {
                     zipcode: "belxy",
                     status:'online'
                   });
-
 
                   firebase.database().ref('users_hire/'+ user.uid).set({
                   nombre: formData.value.FirstName,

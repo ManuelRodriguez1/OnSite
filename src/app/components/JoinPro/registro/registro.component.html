@@ -1,70 +1,164 @@
+<form #formData='ngForm'  method="POST">
+    <div class="contenedor">
 
-<div class="contenedor" >
-    
-<section *ngIf="next == 0">
-  <div class="t1">
-    <h1 class="h1">Tell us more about <label class="label">you.</label></h1>
-  </div>
-  
-  <div class="cont1">
-    <p class="textoDark">Enter your personal information.</p>
-    <div>
-      <div class="colum">
-          <input type="text" class="input" placeholder="First Name">
-      </div>
-      <div class="colum der">
-          <input type="text" class="input" placeholder="Last Name">
-      </div>
-      <div class="colum">
-          <input type="text" class="input" placeholder="Phone Number">
-      </div>
+        <section [ngClass]="ver">
+            <div class="t1">
+                <h1 class="h1">Tell us more about
+                    <label class="label">you.</label>
+                </h1>
+            </div>
+
+            <div class="cont1">
+                <p class="textoDark">Enter your personal information.</p>
+                <div>
+                    <div class="colum">
+                        <input type="text" required class="input" placeholder="First Name" (ngModel)="FirstName" name="FirstName">
+                    </div>
+                    <div class="colum der">
+                        <input type="text" required class="input" placeholder="Last Name" (ngModel)="LastName" name="LastName">
+                    </div>
+                    <div class="colum">
+                        <input type="text" required class="input" placeholder="Phone Number" (ngModel)="PhoneNumber" name="PhoneNumber">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont1">
+                <p class="textoDark">Enter account information.</p>
+                <span class="span">Your username will be your e-mail address.</span>
+                <div>
+                    <div class="colum">
+                        <input type="email" required class="input" placeholder="E-mail" (ngModel)="Email" name="Email">
+                    </div>
+                    <div class="colum der">
+                        <input type="password" required class="input" placeholder="Password" (ngModel)="Password" name="Password">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont1">
+                <p class="textoDark">Where are you located?</p>
+                <div class="colum last">
+                    <input type="number" required class="input" placeholder="Enter city or zipcode." (ngModel)="zipcode" name="zipcode">
+                </div>
+            </div>
+        </section>
+        <section [ngClass]="ver1">
+            <!-- <app-select></app-select> -->
+            <div class="t1">
+                <h1 class="h1">Tell us about your
+                    <label class="label">skills.</label>
+                </h1>
+            </div>
+
+            <div class="colum last">
+                <input type="text" (click)="menu()" readonly class="input" placeholder="{{placeholder}}">
+
+                <img (click)="menu()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar">
+
+            </div>
+
+            <div class="list" [ngClass]="aparecer">
+                <div class="seleccion" *ngFor="let l of list" (click)="almacenar(l.categorias)">
+                    <p>{{l.categorias}}</p>
+                </div>
+            </div>
+
+            <div class="selecciones" *ngIf="skill != ''">
+                <div class="tags">
+                    <p>{{skill}}</p>
+                    <div class="x" (click)="cerrar3()"></div>
+                </div>
+            </div>
+
+
+            <div class="t1" *ngIf="skill != ''">
+                <h1 class="h1">Let’s get
+                    <label class="label">specific.</label>
+                </h1>
+            </div>
+
+            <div class="colum last" *ngIf="skill != ''">
+                <input type="text" (click)="menu2()" readonly class="input" placeholder="What {{skill}} skills do you have?">
+
+                <img (click)="menu2()" src="../../../../../assets/icons/opcionSelect.svg" class="arrowd" width="28" height="15" [ngClass]="rotar2">
+
+            </div>
+
+            <div class="list" [ngClass]="aparecer2" *ngIf="skill != ''">
+                <div class="seleccion" *ngFor="let l of list2" (click)="almacenar2(l.especifico)">
+                    <p>{{l.especifico}}</p>
+                </div>
+            </div>
+
+            <div class="selecciones" *ngIf="skill2 != ''">
+                <div class="tags">
+                    <input type="text" required [(ngModel)]="skill" hidden name="skill">
+                    <p>{{skill}}</p>
+                    <div class="x" (click)="cerrar3()"></div>
+                </div>
+                <div class="tagswhite">
+                    <input type="text" required [(ngModel)]="skill2" hidden name="skill2" id="">
+                    <p>{{skill2}}</p>
+                    <div class="x" (click)="cerrar2()"></div>
+                </div>
+                <span>Average rate: $10-12/hour</span>
+            </div>
+        </section>
+        <section [ngClass]="ver2">
+            <!-- <app-reviews></app-reviews> -->
+            <div class="t1">
+                <h1 class="h1">Get
+                    <label class="label">reviews</label> to be more visible.</h1>
+            </div>
+
+            <p class="textoDark p1">Reach out to your past satisfied customers to get reviews. The more satisfied customer reviews,
+                <br> more likely you’ll be hired. </p>
+
+            <div class="section">
+                <p class="textoDark">Share this link to get reviews.</p>
+                <input type="text" class="input" placeholder="Link">
+                <button class="button">Copy</button>
+            </div>
+
+            <div class="seccion2">
+                <p class="textoDark">Enter e-mails:</p>
+                <input type="text" class="input" *ngFor="let l of list3; let i = index" (focusout)="focusout(custom.value)" #custom [placeholder]="'Customer '+ (i+1) ">
+                <input type="text" name="customer" id="" hidden [(ngModel)]="variable">
+                <div class="agregar" (click)="addc()">
+                    <div class="xcruz"></div>
+                    <p>Add Customer</p>
+                </div>
+            </div>
+
+            <div class="section3">
+                <p class="textoDark">Write a message to your customers;</p>
+                <textarea type="text" class="input textarea" placeholder="Say hello! (optional)" (ngModel)="description" name="description"></textarea>
+            </div>
+        </section>
+
     </div>
-  </div>
 
-  <div class="cont1">
-      <p class="textoDark">Enter account information.</p>
-      <span class="span">Your username will be your e-mail address.</span>
-      <div>
-        <div class="colum">
-            <input type="text" class="input" placeholder="E-mail">
-        </div>
-        <div class="colum der">
-            <input type="password" class="input" placeholder="Password">
-        </div>
-      </div>
+    <div class="botones">
+        <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
+        <button *ngIf="next < 2" class="button" (click)="seguir()">
+            <label>Next</label>
+
+        </button>
+        <button *ngIf="next == 2" class="button" type="submit" (click)="onSubmit(formData)">
+            <label>Finish</label>
+        </button>
     </div>
-
-    <div class="cont1">
-        <p class="textoDark">Where are you located?</p>
-        <div class="colum last">
-            <input type="text" class="input" placeholder="Enter city or zipcode.">
-        </div>
-      </div>
-  </section>    
-  <section *ngIf="next > 0 && next < 3">
-      <app-select></app-select>
-  </section>
-  <section *ngIf="next == 3">
-      <app-reviews></app-reviews>
-  </section>
-
-</div>
-
-<div class="botones">
-    <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
-    <button class="button" (click)="seguir()"><label *ngIf="next < 3">Next</label><label *ngIf="next == 3">Finish</label></button>
-</div>
-
-<div class="modal" *ngIf="next == 2">
+</form>
+<!-- <div class="modal" *ngIf="next == 2">
     <div class="taget">
-        <p class="textoDark">Would you like to show people your proficiency as a <label class="label">{{select.skill2}}?</label></p>
+        <p class="textoDark">Would you like to show people your proficiency as a
+            <label class="label">{{select.skill2}}?</label>
+        </p>
         <div class="botones2">
             <button class="button back">Sure!</button>
             <button class="button" (click)="seguir()">Skip</button>
         </div>
         <div class="xblue" (click)="cerrar()"></div>
     </div>
-</div>
-
-
-  
+</div> -->
