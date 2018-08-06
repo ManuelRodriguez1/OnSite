@@ -12,13 +12,13 @@
                 <p class="textoDark">Enter your personal information.</p>
                 <div>
                     <div class="colum">
-                        <input type="text" required class="input" placeholder="First Name" (ngModel)="FirstName" name="FirstName">
+                        <input type="text" [ngClass]='red0' (focusout)="focus(FirstName.value, 0)" #FirstName required class="input" placeholder="First Name" (ngModel)="FirstName" name="FirstName">
                     </div>
                     <div class="colum der">
-                        <input type="text" required class="input" placeholder="Last Name" (ngModel)="LastName" name="LastName">
+                        <input type="text" [ngClass]='red1' (focusout)="focus(LastName.value, 1)" #LastName required class="input" placeholder="Last Name" (ngModel)="LastName" name="LastName">
                     </div>
                     <div class="colum">
-                        <input type="text" required class="input" placeholder="Phone Number" (ngModel)="PhoneNumber" name="PhoneNumber">
+                        <input type="text" [ngClass]='red2' (focusout)="focus(PhoneNumber.value, 2)" #PhoneNumber required class="input" placeholder="Phone Number" (ngModel)="PhoneNumber" name="PhoneNumber">
                     </div>
                 </div>
             </div>
@@ -28,10 +28,10 @@
                 <span class="span">Your username will be your e-mail address.</span>
                 <div>
                     <div class="colum">
-                        <input type="email" required class="input" placeholder="E-mail" (ngModel)="Email" name="Email">
+                        <input type="email" [ngClass]='red3' (focusout)="focus(Email.value, 3)" #Email required class="input" placeholder="E-mail" (ngModel)="Email" name="Email">
                     </div>
                     <div class="colum der">
-                        <input type="password" required class="input" placeholder="Password" (ngModel)="Password" name="Password">
+                        <input type="password" [ngClass]='red4' (focusout)="focus(Password.value, 4)" #Password required class="input" placeholder="Password" (ngModel)="Password" name="Password">
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="cont1">
                 <p class="textoDark">Where are you located?</p>
                 <div class="colum last">
-                    <input type="number" required class="input" placeholder="Enter city or zipcode." (ngModel)="zipcode" name="zipcode">
+                    <input type="number" [ngClass]='red5' (focusout)="focus(zipcode.value, 5)" #zipcode required class="input" placeholder="Enter city or zipcode." (ngModel)="zipcode" name="zipcode">
                 </div>
             </div>
         </section>
@@ -141,11 +141,11 @@
 
     <div class="botones">
         <button class="button back" *ngIf="next > 0" (click)="back()">Back</button>
-        <button *ngIf="next < 2" class="button" (click)="seguir()">
+        <button *ngIf="next < 2" class="button" [disabled]="enable == false" (click)="seguir()">
             <label>Next</label>
 
         </button>
-        <button *ngIf="next == 2" class="button" type="submit" (click)="onSubmit(formData)">
+        <button *ngIf="next == 2" class="button" [disabled]="!formData.valid" type="submit" (click)="onSubmit(formData)">
             <label>Finish</label>
         </button>
     </div>

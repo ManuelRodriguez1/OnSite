@@ -1,7 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SelectComponent } from './select/select.component';
-// import { selector } from 'rxjs/operator/publish';
-import { NgForm } from '@angular/forms';
 import { AngularFireAuth } from "angularfire2/auth";
 import { Router } from "@angular/router";
 import * as firebase from "firebase/app";
@@ -12,8 +9,6 @@ import * as firebase from "firebase/app";
   styleUrls: ['./registro.component.css', 'select/select.component.css', 'reviews/reviews.component.css']
 })
 export class RegistroComponent implements OnInit {
-
-  @ViewChild(SelectComponent) select: SelectComponent;
 
   next = 0;
   placeholder = 'Select Skills.';
@@ -86,7 +81,7 @@ export class RegistroComponent implements OnInit {
       formData.value.Email,
       formData.value.Password
     )
-    
+
     firebase.database().ref('users_pro').push({
       nombre: formData.value.FirstName,
       apellido: formData.value.LastName,
@@ -157,7 +152,7 @@ export class RegistroComponent implements OnInit {
   }
 
   back() {
-    this.next--;    
+    this.next--;
     switch (this.next) {
       case 0:
         this.ver = "";
@@ -240,8 +235,69 @@ export class RegistroComponent implements OnInit {
     this.list3.push({ "cliente": "Customer " + this.add });
     this.add++;
   }
-  
-  focusout(texto){
-    this.variable += texto+', ';
+
+  focusout(texto) {
+    this.variable += texto + ', ';
   }
+
+  red0 = 'r';
+  red1 = 'r';
+  red2 = 'r';
+  red3 = 'r';
+  red4 = 'r';
+  red5 = 'r';
+  enable = false;
+
+  focus(data, e) {
+    if (data == '') {
+      switch (e) {
+        case 0:
+          this.red0 = 'red';
+          break;
+        case 1:
+          this.red1 = 'red';
+          break;
+        case 2:
+          this.red2 = 'red';
+          break;
+        case 3:
+          this.red3 = 'red';
+          break;
+        case 4:
+          this.red4 = 'red';
+          break;
+        case 5:
+          this.red5 = 'red';
+          break;
+      }
+    }
+    if(data != ''){
+      switch (e) {
+        case 0:
+          this.red0 = '';
+          break;
+        case 1:
+          this.red1 = '';
+          break;
+        case 2:
+          this.red2 = '';
+          break;
+        case 3:
+          //Validar el email
+          this.red3 = '';
+          break;
+        case 4:
+          this.red4 = '';
+          break;
+        case 5:
+          this.red5 = '';
+          break;
+      }
+    }
+    if (this.red0 == '' && this.red1 == '' && this.red2 == '' && this.red3 == '' && this.red4 == '' && this.red5 == '') {
+      this.enable = true;
+    }
+  }
+
+
 }

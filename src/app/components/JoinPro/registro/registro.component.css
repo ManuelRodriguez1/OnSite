@@ -79,3 +79,10 @@ div,span,p,h1,h2,h3,label,button,input{
 .nover{
     display: none;
 }
+.button:disabled{
+    opacity: 0.8;
+    cursor: default;
+}
+.red{
+    border-color: red;
+}
