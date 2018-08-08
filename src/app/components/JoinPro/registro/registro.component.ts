@@ -73,31 +73,31 @@ export class RegistroComponent implements OnInit {
       "categorias": "Waterproof Installation"
     }
   ];
+  error: any[];
+  
+  list3 = [
+    { "cliente": "Customer 1" },
+    { "cliente": "Customer 2" },
+    { "cliente": "Customer 3" },
+  ]
+  add = 4;
+
+  ver = "";
+  ver1 = "nover";
+  ver2 = "nover";
+
+  emailCustomer = '';
+
+  red0 = 'r';
+  red1 = 'r';
+  red2 = 'r';
+  red3 = 'r';
+  red4 = 'r';
+  red5 = 'r';
+  enable = false;
+  emailval = false;
+
   constructor(public af: AngularFireAuth, private router: Router) { }
-
-  onSubmit(formData) {
-    // if (formData.valid) {
-    this.af.auth.createUserWithEmailAndPassword(
-      formData.value.Email,
-      formData.value.Password
-    )
-
-    firebase.database().ref('users_pro').push({
-      nombre: formData.value.FirstName,
-      apellido: formData.value.LastName,
-      telefono: formData.value.PhoneNumber,
-      zipcode: formData.value.zipcode,
-      skill: formData.value.skill,
-      skill2: formData.value.skill2,
-      customer: formData.value.customer,
-      descripcion: formData.value.description,
-      rol: "pro",
-      status: 'online'
-    });
-
-
-    // }
-  }
 
   ngOnInit() {
     this.list2 = [
@@ -120,29 +120,14 @@ export class RegistroComponent implements OnInit {
         "especifico": "Fire Taper"
       }
     ]
-
-
-
-
   }
-  //reviews
-  list3 = [
-    { "cliente": "Customer 1" },
-    { "cliente": "Customer 2" },
-    { "cliente": "Customer 3" },
-  ]
-  add = 4;
-
-  ver = "";
-  ver1 = "nover";
-  ver2 = "nover";
-
   seguir() {
     this.next++;
     switch (this.next) {
       case 1:
         this.ver = "nover";
         this.ver1 = "ver";
+        this.enable = false;
         break;
       case 2:
         this.ver2 = "ver";
@@ -220,16 +205,16 @@ export class RegistroComponent implements OnInit {
     this.aparecer2 = '';
     this.rotar2 = '';
     this.skill2 = e;
+    if (this.skill != '' && this.skill2 != '') {
+      this.enable = true;
+    }
   }
-
-
 
   cerrar2() {
     this.skill2 = '';
     this.click = false;
     this.click2 = false;
   }
-  variable = '';
 
   addc() {
     this.list3.push({ "cliente": "Customer " + this.add });
@@ -237,16 +222,8 @@ export class RegistroComponent implements OnInit {
   }
 
   focusout(texto) {
-    this.variable += texto + ', ';
+    this.emailCustomer += texto + ', ';
   }
-
-  red0 = 'r';
-  red1 = 'r';
-  red2 = 'r';
-  red3 = 'r';
-  red4 = 'r';
-  red5 = 'r';
-  enable = false;
 
   focus(data, e) {
     if (data == '') {
@@ -271,7 +248,7 @@ export class RegistroComponent implements OnInit {
           break;
       }
     }
-    if(data != ''){
+    if (data != '') {
       switch (e) {
         case 0:
           this.red0 = '';
@@ -283,8 +260,11 @@ export class RegistroComponent implements OnInit {
           this.red2 = '';
           break;
         case 3:
-          //Validar el email
-          this.red3 = '';
+          if (this.emailval) {
+            this.red3 = '';
+          } else {
+            this.red3 = 'red';
+          }
           break;
         case 4:
           this.red4 = '';
@@ -299,5 +279,44 @@ export class RegistroComponent implements OnInit {
     }
   }
 
+  email(e) {
+    var pattern = new RegExp("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}");
+    if (pattern.test(e)) {
+      this.emailval = true;
+    } else {
+      this.emailval = false;
+    }
+
+  }
+
+  onSubmit(formData) {
+    if (formData.valid) {
+      this.af.auth.createUserWithEmailAndPassword(
+        formData.value.Email,
+        formData.value.Password
+      ).then(
+        (success) => {
+          firebase.database().ref('users_pro').push({
+            nombre: formData.value.FirstName,
+            apellido: formData.value.LastName,
+            telefono: formData.value.PhoneNumber,
+            zipcode: formData.value.zipcode,
+            skill: formData.value.skill,
+            skill2: formData.value.skill2,
+            customer: formData.value.customer,
+            descripcion: formData.value.description,
+            rol: "pro",
+            status: 'online'
+          });
+
+          this.router.navigate(['/perfilPro']);
+        }
+      ).catch(
+        (err) => {
+          this.error = err.messsage;
+        }
+      )
+    }
+  }
 
 }

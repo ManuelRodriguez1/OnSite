@@ -28,7 +28,7 @@
                 <span class="span">Your username will be your e-mail address.</span>
                 <div>
                     <div class="colum">
-                        <input type="email" [ngClass]='red3' (focusout)="focus(Email.value, 3)" #Email required class="input" placeholder="E-mail" (ngModel)="Email" name="Email">
+                        <input type="email" [ngClass]='red3' (focusout)="focus(Email.value, 3)" #Email required class="input" (keyup)="email(Email.value)" placeholder="E-mail" (ngModel)="Email" name="Email">
                     </div>
                     <div class="colum der">
                         <input type="password" [ngClass]='red4' (focusout)="focus(Password.value, 4)" #Password required class="input" placeholder="Password" (ngModel)="Password" name="Password">
@@ -124,7 +124,7 @@
             <div class="seccion2">
                 <p class="textoDark">Enter e-mails:</p>
                 <input type="text" class="input" *ngFor="let l of list3; let i = index" (focusout)="focusout(custom.value)" #custom [placeholder]="'Customer '+ (i+1) ">
-                <input type="text" name="customer" id="" hidden [(ngModel)]="variable">
+                <input type="text" name="customer" id="" hidden [(ngModel)]="emailCustomer">
                 <div class="agregar" (click)="addc()">
                     <div class="xcruz"></div>
                     <p>Add Customer</p>
