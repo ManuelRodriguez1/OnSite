@@ -150,7 +150,7 @@
     font-size: 14px;
     line-height: 47px;
     cursor: pointer;
-    position: absolute;
+
 }
 .new p::before{
     content: '';

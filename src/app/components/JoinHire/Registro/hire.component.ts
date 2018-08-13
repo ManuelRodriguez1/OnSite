@@ -11,7 +11,12 @@ import { Router } from '@angular/router';
 })
 export class HireComponent  {
 
-
+FirstName;
+LastName;
+PhoneNumber;
+Entercityorzipcode;
+Email;
+Password;
     error: any[];
 
     constructor(public af: AngularFireAuth,private router: Router) {
@@ -31,9 +36,9 @@ export class HireComponent  {
                   user.updateProfile({
                     displayName: formData.value.FirstName+" "+formData.value.LastName,
                     photoURL: "",
-                    phoneNumber: formData.value.PhoneNumber,
-                    zipcode: "belxy",
-                    status:'online'
+                  //  phoneNumber: formData.value.PhoneNumber,
+                    //zipcode: "belxy",
+                  //  status:'online'
                   });
 
                   firebase.database().ref('users_hire/'+ user.uid).set({

@@ -63,6 +63,12 @@ Guardar2;
     }
   ];
   key: any;
+    nombre;
+    apellido;
+    telefono;
+    email;
+    zipcode;
+    skills;
 
   childData = [];
 

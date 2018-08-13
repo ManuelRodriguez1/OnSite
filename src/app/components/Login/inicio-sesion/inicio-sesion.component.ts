@@ -11,6 +11,8 @@ import { HomeComponent } from '../../home/home.component';
 })
 export class InicioSesionComponent implements OnInit {
 error: any[];
+password;
+email;
 @Output() emitEvent:EventEmitter<any> = new EventEmitter();
 estado:boolean = false;
 cerrarAbrir="";

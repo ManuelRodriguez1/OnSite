@@ -18,7 +18,7 @@ export class MenuhomeComponent implements OnInit {
     noaparee = "noaparee";
     noaparee2 = "noaparee2";
     contador1 = 0;
-
+skill;
     constructor() {
 
     }

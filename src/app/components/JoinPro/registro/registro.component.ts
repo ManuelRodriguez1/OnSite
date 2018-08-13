@@ -17,6 +17,7 @@ export class RegistroComponent implements OnInit {
   aparecer2 = '';
   rotar = '';
   rotar2 = '';
+  description;
   click = false;
   click2 = false;
   // list: Model[];
@@ -74,7 +75,7 @@ export class RegistroComponent implements OnInit {
     }
   ];
   error: any[];
-  
+
   list3 = [
     { "cliente": "Customer 1" },
     { "cliente": "Customer 2" },
